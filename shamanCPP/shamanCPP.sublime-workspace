@@ -35,12 +35,12 @@
 			"file": "src/shaman.cpp",
 			"settings":
 			{
-				"buffer_size": 94,
+				"buffer_size": 57,
 				"line_ending": "Unix"
 			}
 		}
 	],
-	"build_system": "",
+	"build_system": "Packages/Makefile/Make.sublime-build",
 	"command_palette":
 	{
 		"height": 392.0,
@@ -72,6 +72,7 @@
 	},
 	"file_history":
 	[
+		"/Users/Ramon/Documents/Repositories/shaman/shamanCPP/Makefile",
 		"/Users/Ramon/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
 		"/Users/Ramon/Documents/Repositories/shaman/shamanCPP/shamanCPP.sublime-project",
 		"/Users/Ramon/Documents/Repositories/shaman/shamanCPP/src/shmparser.h",
@@ -113,7 +114,6 @@
 	"groups":
 	[
 		{
-			"selected": 2,
 			"sheets":
 			[
 				{
@@ -128,8 +128,8 @@
 						"selection":
 						[
 							[
-								100,
-								100
+								107,
+								107
 							]
 						],
 						"settings":
@@ -173,15 +173,15 @@
 					"file": "src/shaman.cpp",
 					"settings":
 					{
-						"buffer_size": 94,
+						"buffer_size": 57,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								94,
-								94
+								55,
+								55
 							]
 						],
 						"settings":
@@ -228,6 +228,10 @@
 		]
 	},
 	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
 	"replace":
 	{
 		"height": 0.0

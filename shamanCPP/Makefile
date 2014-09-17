@@ -5,6 +5,9 @@ BINFOLDER = bin/
 SRCFOLDER = src/
 TGTSOURCE = $(SRCFOLDER)$(TARGET).cpp
 
+run: all
+	$(BINFOLDER)$(TARGET)
+
 all: $(TARGET)
 
 $(TARGET): $(TGTSOURCE)
