@@ -1,5 +1,6 @@
 #include "shmparser.h"
 
 int main () {
-	printf("hue\n");
+	SHMString str = "hue\n";
+	printf(str.c_str());
 }

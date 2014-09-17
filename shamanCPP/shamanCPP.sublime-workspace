@@ -19,7 +19,7 @@
 			"file": "src/shmparser.cpp",
 			"settings":
 			{
-				"buffer_size": 107,
+				"buffer_size": 92,
 				"line_ending": "Unix"
 			}
 		},
@@ -27,7 +27,7 @@
 			"file": "src/shmparser.h",
 			"settings":
 			{
-				"buffer_size": 276,
+				"buffer_size": 108,
 				"line_ending": "Unix"
 			}
 		},
@@ -35,7 +35,39 @@
 			"file": "src/shaman.cpp",
 			"settings":
 			{
-				"buffer_size": 57,
+				"buffer_size": 87,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/Ramon/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+			"settings":
+			{
+				"buffer_size": 13772,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/Ramon/Library/Application Support/Sublime Text 2/Packages/CTags/CTags.sublime-settings",
+			"settings":
+			{
+				"buffer_size": 1760,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Makefile",
+			"settings":
+			{
+				"buffer_size": 276,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/shmtypes.h",
+			"settings":
+			{
+				"buffer_size": 122,
 				"line_ending": "Unix"
 			}
 		}
@@ -99,7 +131,7 @@
 			"command"
 		],
 		"highlight": true,
-		"in_selection": false,
+		"in_selection": true,
 		"preserve_case": false,
 		"regex": false,
 		"replace_history":
@@ -114,6 +146,7 @@
 	"groups":
 	[
 		{
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -121,15 +154,15 @@
 					"file": "src/shmparser.cpp",
 					"settings":
 					{
-						"buffer_size": 107,
+						"buffer_size": 92,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								107,
-								107
+								90,
+								90
 							]
 						],
 						"settings":
@@ -147,15 +180,15 @@
 					"file": "src/shmparser.h",
 					"settings":
 					{
-						"buffer_size": 276,
+						"buffer_size": 108,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								193,
-								202
+								108,
+								108
 							]
 						],
 						"settings":
@@ -173,15 +206,123 @@
 					"file": "src/shaman.cpp",
 					"settings":
 					{
-						"buffer_size": 57,
+						"buffer_size": 87,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								55,
-								55
+								87,
+								87
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/Ramon/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+					"settings":
+					{
+						"buffer_size": 13772,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								784,
+								784
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/Users/Ramon/Library/Application Support/Sublime Text 2/Packages/CTags/CTags.sublime-settings",
+					"settings":
+					{
+						"buffer_size": 1760,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								652,
+								652
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "Makefile",
+					"settings":
+					{
+						"buffer_size": 276,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								124,
+								124
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Makefile/Makefile.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/shmtypes.h",
+					"settings":
+					{
+						"buffer_size": 122,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								122,
+								122
 							]
 						],
 						"settings":
@@ -199,7 +340,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 0.0
+		"height": 34.0
 	},
 	"input":
 	{
@@ -242,6 +383,10 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"shaman.c",
+				"src/shaman.cpp"
+			],
 			[
 				"",
 				"src/shmparser.h"
