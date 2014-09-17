@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"docu",
+				"xml_document	class"
+			],
+			[
+				"S",
+				"SRCFOLDER"
+			],
+			[
+				"SH",
+				"SHMString	typedef"
+			],
+			[
+				"SHS",
+				"SHMString	typedef"
+			],
+			[
 				"in",
 				"include"
 			],
@@ -27,15 +43,15 @@
 			"file": "src/shmparser.h",
 			"settings":
 			{
-				"buffer_size": 108,
+				"buffer_size": 126,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "src/shaman.cpp",
+			"file": "src/ast2xml.cpp",
 			"settings":
 			{
-				"buffer_size": 87,
+				"buffer_size": 179,
 				"line_ending": "Unix"
 			}
 		},
@@ -59,7 +75,7 @@
 			"file": "Makefile",
 			"settings":
 			{
-				"buffer_size": 276,
+				"buffer_size": 952,
 				"line_ending": "Unix"
 			}
 		},
@@ -75,9 +91,13 @@
 	"build_system": "Packages/Makefile/Make.sublime-build",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 47.0,
 		"selected_items":
 		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
 			[
 				"pa",
 				"Package Control: Install Package"
@@ -146,7 +166,6 @@
 	"groups":
 	[
 		{
-			"selected": 4,
 			"sheets":
 			[
 				{
@@ -161,8 +180,8 @@
 						"selection":
 						[
 							[
-								90,
-								90
+								82,
+								89
 							]
 						],
 						"settings":
@@ -180,15 +199,15 @@
 					"file": "src/shmparser.h",
 					"settings":
 					{
-						"buffer_size": 108,
+						"buffer_size": 126,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								108,
-								108
+								62,
+								62
 							]
 						],
 						"settings":
@@ -203,18 +222,18 @@
 				},
 				{
 					"buffer": 2,
-					"file": "src/shaman.cpp",
+					"file": "src/ast2xml.cpp",
 					"settings":
 					{
-						"buffer_size": 87,
+						"buffer_size": 179,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								87,
-								87
+								115,
+								115
 							]
 						],
 						"settings":
@@ -288,15 +307,15 @@
 					"file": "Makefile",
 					"settings":
 					{
-						"buffer_size": 276,
+						"buffer_size": 952,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								124,
-								124
+								397,
+								397
 							]
 						],
 						"settings":
@@ -344,7 +363,7 @@
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 31.0
 	},
 	"layout":
 	{
@@ -369,9 +388,13 @@
 		]
 	},
 	"menu_visible": true,
-	"output.exec":
+	"output.clang":
 	{
 		"height": 100.0
+	},
+	"output.exec":
+	{
+		"height": 184.0
 	},
 	"replace":
 	{

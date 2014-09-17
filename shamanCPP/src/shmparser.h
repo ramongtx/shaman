@@ -2,6 +2,8 @@
 #include "shmtypes.h"
 
 class SHMParser {
-    SHMString test(SHMString address);
+	
+	public:
+    static SHMString test(SHMString address);
     
 };

@@ -1,0 +1,52 @@
+`-FunctionDecl 0x1028bcce0 <input/teste.c:3:1, line:16:1> main 'int ()'
+  `-CompoundStmt 0x1028bd6c0 <line:4:1, line:16:1>
+    |-DeclStmt 0x1028bcf08 <line:5:3, col:21>
+    | |-VarDecl 0x1028bcd90 <col:3, col:7> c 'int'
+    | |-VarDecl 0x1028bce00 <col:3, col:10> n 'int'
+    | `-VarDecl 0x1028bce70 <col:3, col:20> fact 'int'
+    |   `-IntegerLiteral 0x1028bcec8 <col:20> 'int' 1
+    |-CallExpr 0x1028bd020 <line:7:3, col:56> 'int'
+    | |-ImplicitCastExpr 0x1028bd008 <col:3> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x1028bcf20 <col:3> 'int (const char *, ...)' Function 0x1028ad030 'printf' 'int (const char *, ...)'
+    | `-ImplicitCastExpr 0x1028bd068 <col:10> 'const char *' <BitCast>
+    |   `-ImplicitCastExpr 0x1028bd050 <col:10> 'char *' <ArrayToPointerDecay>
+    |     `-StringLiteral 0x1028bcf88 <col:10> 'char [44]' lvalue "Enter a number to calculate it's factorial\n"
+    |-CallExpr 0x1028bd1d0 <line:8:3, col:17> 'int'
+    | |-ImplicitCastExpr 0x1028bd1b8 <col:3> 'int (*)(const char *restrict, ...)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x1028bd080 <col:3> 'int (const char *restrict, ...)' Function 0x1028adcc0 'scanf' 'int (const char *restrict, ...)'
+    | |-ImplicitCastExpr 0x1028bd220 <col:9> 'const char *' <BitCast>
+    | | `-ImplicitCastExpr 0x1028bd208 <col:9> 'char *' <ArrayToPointerDecay>
+    | |   `-StringLiteral 0x1028bd0e8 <col:9> 'char [3]' lvalue "%d"
+    | `-UnaryOperator 0x1028bd168 <col:15, col:16> 'int *' prefix '&'
+    |   `-DeclRefExpr 0x1028bd118 <col:16> 'int' lvalue Var 0x1028bce00 'n' 'int'
+    |-ForStmt 0x1028bd490 <line:10:3, line:11:19>
+    | |-BinaryOperator 0x1028bd280 <line:10:8, col:12> 'int' '='
+    | | |-DeclRefExpr 0x1028bd238 <col:8> 'int' lvalue Var 0x1028bcd90 'c' 'int'
+    | | `-IntegerLiteral 0x1028bd260 <col:12> 'int' 1
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x1028bd328 <col:15, col:20> 'int' '<='
+    | | |-ImplicitCastExpr 0x1028bd2f8 <col:15> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x1028bd2a8 <col:15> 'int' lvalue Var 0x1028bcd90 'c' 'int'
+    | | `-ImplicitCastExpr 0x1028bd310 <col:20> 'int' <LValueToRValue>
+    | |   `-DeclRefExpr 0x1028bd2d0 <col:20> 'int' lvalue Var 0x1028bce00 'n' 'int'
+    | |-UnaryOperator 0x1028bd378 <col:23, col:24> 'int' postfix '++'
+    | | `-DeclRefExpr 0x1028bd350 <col:23> 'int' lvalue Var 0x1028bcd90 'c' 'int'
+    | `-BinaryOperator 0x1028bd468 <line:11:5, col:19> 'int' '='
+    |   |-DeclRefExpr 0x1028bd398 <col:5> 'int' lvalue Var 0x1028bce70 'fact' 'int'
+    |   `-BinaryOperator 0x1028bd440 <col:12, col:19> 'int' '*'
+    |     |-ImplicitCastExpr 0x1028bd410 <col:12> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x1028bd3c0 <col:12> 'int' lvalue Var 0x1028bce70 'fact' 'int'
+    |     `-ImplicitCastExpr 0x1028bd428 <col:19> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x1028bd3e8 <col:19> 'int' lvalue Var 0x1028bcd90 'c' 'int'
+    |-CallExpr 0x1028bd5e0 <line:13:3, col:43> 'int'
+    | |-ImplicitCastExpr 0x1028bd5c8 <col:3> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x1028bd4d0 <col:3> 'int (const char *, ...)' Function 0x1028ad030 'printf' 'int (const char *, ...)'
+    | |-ImplicitCastExpr 0x1028bd638 <col:10> 'const char *' <BitCast>
+    | | `-ImplicitCastExpr 0x1028bd620 <col:10> 'char *' <ArrayToPointerDecay>
+    | |   `-StringLiteral 0x1028bd538 <col:10> 'char [22]' lvalue "Factorial of %d = %d\n"
+    | |-ImplicitCastExpr 0x1028bd650 <col:36> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x1028bd578 <col:36> 'int' lvalue Var 0x1028bce00 'n' 'int'
+    | `-ImplicitCastExpr 0x1028bd668 <col:39> 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x1028bd5a0 <col:39> 'int' lvalue Var 0x1028bce70 'fact' 'int'
+    `-ReturnStmt 0x1028bd6a0 <line:15:3, col:10>
+      `-IntegerLiteral 0x1028bd680 <col:10> 'int' 0
