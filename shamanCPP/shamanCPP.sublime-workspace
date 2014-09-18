@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"clea",
+				"clean-ast"
+			],
+			[
+				"INP",
+				"INPEXT"
+			],
+			[
+				"CLA",
+				"CLANGFLAGS"
+			],
+			[
 				"docu",
 				"xml_document	class"
 			],
@@ -51,7 +63,7 @@
 			"file": "src/ast2xml.cpp",
 			"settings":
 			{
-				"buffer_size": 179,
+				"buffer_size": 88,
 				"line_ending": "Unix"
 			}
 		},
@@ -75,7 +87,7 @@
 			"file": "Makefile",
 			"settings":
 			{
-				"buffer_size": 952,
+				"buffer_size": 1422,
 				"line_ending": "Unix"
 			}
 		},
@@ -83,7 +95,7 @@
 			"file": "src/shmtypes.h",
 			"settings":
 			{
-				"buffer_size": 122,
+				"buffer_size": 111,
 				"line_ending": "Unix"
 			}
 		}
@@ -147,6 +159,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"CLANGFLAGS",
 			"path",
 			"command"
 		],
@@ -166,6 +179,7 @@
 	"groups":
 	[
 		{
+			"selected": 5,
 			"sheets":
 			[
 				{
@@ -225,15 +239,15 @@
 					"file": "src/ast2xml.cpp",
 					"settings":
 					{
-						"buffer_size": 179,
+						"buffer_size": 88,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								115,
-								115
+								83,
+								83
 							]
 						],
 						"settings":
@@ -307,15 +321,15 @@
 					"file": "Makefile",
 					"settings":
 					{
-						"buffer_size": 952,
+						"buffer_size": 1422,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								397,
-								397
+								0,
+								1422
 							]
 						],
 						"settings":
@@ -333,15 +347,15 @@
 					"file": "src/shmtypes.h",
 					"settings":
 					{
-						"buffer_size": 122,
+						"buffer_size": 111,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								122,
-								122
+								30,
+								30
 							]
 						],
 						"settings":
