@@ -11,7 +11,7 @@ CFLAGS := -g # -Wall
 LIB := -lstdc++
 INC := -I include
 
-run: $(TARGET) ast
+run: clean $(TARGET) ast
 	@echo "\n---- ---- ----\n"
 	$(TARGET)
 

@@ -1,7 +1,6 @@
 #include "shmtreenode.h"
 
 SHMTreeNode::SHMTreeNode() {
-	set_name("ASTNode");
 }
 
 SHMTreeNode::~SHMTreeNode() {
@@ -9,6 +8,18 @@ SHMTreeNode::~SHMTreeNode() {
 
 void SHMTreeNode::setLineContents(SHMString string) {
 	addAttribute("lineContents", string);
+}
+
+SHMString SHMTreeNode::lineContents() const {
+	return _propertyMap.find("lineContents")->second;
+}
+
+void SHMTreeNode::setNodeType(SHMString string) {
+	addAttribute("nodeType", string);
+}
+
+SHMString SHMTreeNode::nodeType() const {
+	return _propertyMap.find("nodeType")->second;
 }
 
 void SHMTreeNode::setLineSingle(int line) {
@@ -26,25 +37,37 @@ void SHMTreeNode::setLineEnd(int line) {
 
 void SHMTreeNode::appendChild(SHMTreeNode& child) {
 	_children.push_back(child);
-	append_copy(child);
 }
 
-SHMList<SHMTreeNode> SHMTreeNode::children() {
+SHMList<SHMTreeNode> SHMTreeNode::children() const {
 	return _children;
 }
 
-void SHMTreeNode::addAttribute(SHMString name, SHMString string) {
-	pugi::xml_attribute attr;
-	attr.set_name(name.c_str());
-	attr.set_value(string.c_str());
-	remove_attribute(name.c_str());
-	append_attribute(name.c_str());
+SHMString SHMTreeNode::toString() const {
+	SHMString str = nodeType();
+	for(SHMList<SHMTreeNode>::const_iterator it = _children.begin(); it != _children.end(); ++it) {
+		str.append("\n\t");
+		str.append(SHMSupport::replaceSubstring((*it).toString(),"\n\t","\n\t\t"));
+	}
+	return str;
+}
+
+SHMString SHMTreeNode::mapToString () const {
+	SHMString str = "{";
+	for(SHMMap<SHMString, SHMString>::const_iterator it = _propertyMap.begin(); it != _propertyMap.end(); ++it) {
+		str.append(it->first);
+		str.append(": \"");
+		str.append(it->second);
+		str.append("\"");
+	}
+	str.append("}");
+	return str;
+}
+
+void SHMTreeNode::addAttribute(SHMString name, SHMString &string) {
+	_propertyMap[name] = string;
 }
 
 void SHMTreeNode::addAttribute(SHMString name, int value) {
-	pugi::xml_attribute attr;
-	attr.set_name(name.c_str());
-	attr.set_value(value);
-	remove_attribute(name.c_str());
-	append_attribute(name.c_str());
+	_propertyMap.erase(name);
 }

@@ -1,7 +1,7 @@
 #include "shmtypes.h"
 #include "pugixml.hpp"
 
-class SHMTreeNode : pugi::xml_node{
+class SHMTreeNode {
 public:
 	SHMTreeNode();
 	~SHMTreeNode();
@@ -10,19 +10,25 @@ public:
 	void setLineSingle(int line);
 	void setLineStart(int line);
 	void setLineEnd(int line);
+	void setNodeType(SHMString string);
 	void appendChild(SHMTreeNode& child);
 
-	SHMString lineContents();
-	int lineEnd();
-	int lineStart();
-	SHMList<SHMTreeNode> children();
+	SHMString lineContents() const;
+	int lineEnd() const;
+	int lineStart() const;
+	SHMString nodeType() const;
+	SHMList<SHMTreeNode> children() const;
+
+	SHMString toString() const;
+	SHMString mapToString() const;
 
 protected:
-	void addAttribute(SHMString name, SHMString string);
+	void addAttribute(SHMString name, SHMString &string);
 	void addAttribute(SHMString name, int value);
 
 private:
 	SHMList<SHMTreeNode> _children;
+	SHMMap<SHMString,SHMString> _propertyMap;
 
 	/* data */
 };
