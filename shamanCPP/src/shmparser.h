@@ -1,4 +1,3 @@
-#include <iostream>
 #include "shmtreenode.h"
 
 class SHMParser {

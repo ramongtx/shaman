@@ -11,9 +11,7 @@ CFLAGS := -g # -Wall
 LIB := -lstdc++
 INC := -I include
 
-run: clean $(TARGET) ast
-	@echo "\n---- ---- ----\n"
-	$(TARGET)
+run: xml
 
 $(TARGET): $(OBJECTS)
 	@echo " Linking..."
@@ -23,7 +21,9 @@ $(BUILDDIR)/%.o: $(SRCDIR)/%.$(SRCEXT)
 	@mkdir -p $(BUILDDIR)
 	@echo " $(CC) $(CFLAGS) $(INC) -c -o $@ $<"; $(CC) $(CFLAGS) $(INC) -c -o $@ $<
 
-clean: clean-ast
+clean-all: clean clean-ast clean-xml
+
+clean:
 	@echo " Cleaning build..."; 
 	@echo " $(RM) -r $(BUILDDIR) $(TARGET)"; $(RM) -r $(BUILDDIR) $(TARGET)
 
@@ -38,18 +38,31 @@ ticket:
 
 INPDIR := input
 INPEXT := c
+ASTEXT := ast
+XMLEXT := xml
 INPUTS := $(shell find $(INPDIR) -type f -name *.$(INPEXT))
-ASTS := $(patsubst $(INPDIR)/%,$(INPDIR)/%,$(INPUTS:.$(INPEXT)=.ast))
+ASTS := $(patsubst $(INPDIR)/%,$(INPDIR)/%,$(INPUTS:.$(INPEXT)=.$(ASTEXT)))
+XMLS := $(patsubst $(INPDIR)/%,$(INPDIR)/%,$(INPUTS:.$(INPEXT)=.$(XMLEXT)))
 CLANG := clang
 CLANGFLAGS = -cc1 -ast-dump
 
 ast: $(ASTS)
 
 clean-ast:
+	@echo " Cleaning ASTS..."; 
 	@echo " $(RM) -r $(ASTS)"; $(RM) -r $(ASTS)
 	
-$(INPDIR)/%.ast: $(INPDIR)/%.$(INPEXT)
+$(INPDIR)/%.$(ASTEXT): $(INPDIR)/%.$(INPEXT)
 	@echo " $(CLANG) $(CLANGFLAGS) $< | sed -n '/$(notdir $<)/,$$p' >$@ ";  $(CLANG) $(CLANGFLAGS) $< | sed -n '/$(notdir $<)/,$$p' >$@ 
+
+xml: $(TARGET) $(XMLS)
+
+clean-xml:
+	@echo " Cleaning XMLS..."; 
+	@echo " $(RM) -r $(XMLS)"; $(RM) -r $(XMLS)
+
+$(INPDIR)/%.$(XMLEXT): $(INPDIR)/%.$(ASTEXT)
+	@echo "$(TARGET) $< $@ ";  $(TARGET) $< $@
 
 
 .PHONY: clean

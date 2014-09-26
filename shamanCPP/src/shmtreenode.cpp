@@ -9,32 +9,27 @@ SHMTreeNode::~SHMTreeNode() {
 }
 
 void SHMTreeNode::setLineContents(SHMString string) {
-	addAttribute("lineContents", string);
+	_lineContents = string;
 }
 
 SHMString SHMTreeNode::lineContents() const {
-	SHMMap<SHMString, SHMString>::const_iterator it = _propertyMap.find("lineContents");
-	if (it == _propertyMap.end()) return "";
-	return it->second;
+	return _lineContents;
 }
 
 void SHMTreeNode::setNodeType(SHMString string) {
-	addAttribute("nodeType", string);
+	_nodeType = string;
 }
 
 SHMString SHMTreeNode::nodeType() const {
-	SHMMap<SHMString, SHMString>::const_iterator it = _propertyMap.find("nodeType");
-	if (it == _propertyMap.end()) return "";
-	return it->second;}
+	return _nodeType;
+}
 
 void SHMTreeNode::setNodeAddress(SHMString string) {
-	addAttribute("nodeAddress", string);
+	_nodeAddress = string;
 }
 
 SHMString SHMTreeNode::nodeAddress() const {
-	SHMMap<SHMString, SHMString>::const_iterator it = _propertyMap.find("nodeAddress");
-	if (it == _propertyMap.end()) return "";
-	return it->second;
+	return _nodeAddress;
 }
 
 void SHMTreeNode::setLineSingle(int line) {
@@ -84,19 +79,79 @@ SHMString SHMTreeNode::toString() const {
 SHMString SHMTreeNode::mapToString () const {
 	SHMString str = "{";
 	for(SHMMap<SHMString, SHMString>::const_iterator it = _propertyMap.begin(); it != _propertyMap.end(); ++it) {
-		str.append(it->first);
+		str.append(SHMString(it->first).c_str());
 		str.append(": \"");
-		str.append(it->second);
+		str = it->second;
+		str.append(str.c_str());
 		str.append("\"");
 	}
 	str.append("}");
 	return str;
 }
 
-void SHMTreeNode::addAttribute(SHMString name, SHMString &string) {
+void SHMTreeNode::addAttribute(const SHMString &name, const SHMString &string) {
 	_propertyMap[name] = string;
 }
 
-void SHMTreeNode::addAttribute(SHMString name, int value) {
+void SHMTreeNode::addAttribute(const SHMString &name, int value) {
 	_propertyMap.erase(name);
+}
+
+#pragma mark XML
+
+SHMString SHMTreeNode::toXML() const {
+    
+    SHMXMLDocument doc;
+    //[code_modify_add
+    // add node with some name
+    SHMXMLNode node = doc.append_child();
+
+    toXML(node);
+
+    SHMOutputStringStream oss;
+    doc.print(oss);
+    return oss.str();
+}
+
+void SHMTreeNode::toXML(SHMXMLNode &node) const {
+	node.set_name("node");
+
+	node.append_attribute("lineStart") = _lineStart;
+	node.append_attribute("lineEnd") = _lineEnd;
+	node.append_attribute("nodeType") = _nodeType.c_str();
+
+    for(SHMMap<SHMString, SHMString>::const_iterator it = _propertyMap.begin(); it != _propertyMap.end(); ++it) {
+		node.append_attribute(SHMString(it->first).c_str()) = SHMString(it->second).c_str();
+	}
+
+	for(SHMList<SHMTreeNode>::const_iterator it = _children.begin(); it != _children.end(); ++it) {
+		SHMXMLNode newChild = node.append_child();
+		(*it).toXML(newChild);
+	}
+}
+
+void SHMTreeNode::loadXML(const SHMString &contents) {
+
+    SHMXMLDocument doc;
+    doc.load(contents.c_str());
+    SHMXMLNode node = doc.first_child();
+    loadXML(node);
+}
+
+void SHMTreeNode::loadXML(const SHMXMLNode &node) {
+	static SHMString _lineStartName = "lineStart";
+	static SHMString _lineEndName = "lineEnd";
+	static SHMString _nodeTypeName = "nodeType";
+	for (SHMXMLAttribute attr = node.first_attribute(); attr; attr = attr.next_attribute()) {
+		SHMString name = attr.name();
+		if (!name.compare(_lineStartName)) setLineStart(attr.as_int());
+		else if (!name.compare(_lineEndName)) setLineEnd(attr.as_int());
+		else if (!name.compare(_nodeTypeName)) setNodeType(attr.value());
+   	 }
+
+	for (SHMXMLNode child = node.first_child(); child; child = child.next_sibling()) {
+		SHMTreeNode childNode;
+		childNode.loadXML(child);
+		appendChild(childNode);
+	}
 }
