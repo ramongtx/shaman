@@ -11,7 +11,7 @@ CFLAGS := -g # -Wall
 LIB := -lstdc++
 INC := -I include
 
-run: xml
+run: clean-xml print-xml
 
 $(TARGET): $(OBJECTS)
 	@echo " Linking..."
@@ -39,7 +39,7 @@ ticket:
 INPDIR := input
 INPEXT := c
 ASTEXT := ast
-XMLEXT := xml
+XMLEXT := $(INPEXT).xml
 INPUTS := $(shell find $(INPDIR) -type f -name *.$(INPEXT))
 ASTS := $(patsubst $(INPDIR)/%,$(INPDIR)/%,$(INPUTS:.$(INPEXT)=.$(ASTEXT)))
 XMLS := $(patsubst $(INPDIR)/%,$(INPDIR)/%,$(INPUTS:.$(INPEXT)=.$(XMLEXT)))
@@ -56,6 +56,9 @@ $(INPDIR)/%.$(ASTEXT): $(INPDIR)/%.$(INPEXT)
 	@echo " $(CLANG) $(CLANGFLAGS) $< | sed -n '/$(notdir $<)/,$$p' >$@ ";  $(CLANG) $(CLANGFLAGS) $< | sed -n '/$(notdir $<)/,$$p' >$@ 
 
 xml: $(TARGET) $(XMLS)
+
+print-xml: xml
+	$(foreach file,$(XMLS),echo "\n\n\n=== $(file) ======\n"; cat $(file);)
 
 clean-xml:
 	@echo " Cleaning XMLS..."; 
