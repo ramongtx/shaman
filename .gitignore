@@ -28,6 +28,6 @@
 *.app
 
 
-shamanCPP/input/*.ast
-shamanCPP/input/*.xml
-shamanCPP/bin/*
+input/*.ast
+input/*.xml
+bin/*
