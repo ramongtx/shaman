@@ -1,0 +1,1208 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ASTEXT	Makefile	/^ASTEXT := ast$/;"	m
+ASTS	Makefile	/^ASTS := $(patsubst $(INPDIR)\/%,$(INPDIR)\/%,$(INPUTS:.$(INPEXT)=.$(ASTEXT)))$/;"	m
+BUILDDIR	Makefile	/^BUILDDIR := bin$/;"	m
+CC	Makefile	/^CC := g++ # This is the main compiler$/;"	m
+CFLAGS	Makefile	/^CFLAGS := -g # -Wall$/;"	m
+CLANG	Makefile	/^CLANG := clang$/;"	m
+CLANGFLAGS	Makefile	/^CLANGFLAGS = -cc1 -ast-dump$/;"	m
+ENDSWITH	src/pugixml.cpp	/^	#define ENDSWITH(/;"	d	file:
+HEADER_PUGICONFIG_HPP	src/pugiconfig.hpp	/^#define HEADER_PUGICONFIG_HPP$/;"	d
+HEADER_PUGIXML_HPP	src/pugixml.hpp	/^#define HEADER_PUGIXML_HPP$/;"	d
+INC	Makefile	/^INC := -I include$/;"	m
+INPDIR	Makefile	/^INPDIR := input$/;"	m
+INPEXT	Makefile	/^INPEXT := c$/;"	m
+INPUTS	Makefile	/^INPUTS := $(shell find $(INPDIR) -type f -name *.$(INPEXT))$/;"	m
+LIB	Makefile	/^LIB := -lstdc++$/;"	m
+OBJECTS	Makefile	/^OBJECTS := $(patsubst $(SRCDIR)\/%,$(BUILDDIR)\/%,$(SOURCES:.$(SRCEXT)=.o))$/;"	m
+PUGIXML_API	src/pugixml.hpp	/^#	define PUGIXML_API$/;"	d
+PUGIXML_CHAR	src/pugixml.hpp	/^#	define PUGIXML_CHAR /;"	d
+PUGIXML_CLASS	src/pugixml.hpp	/^#	define PUGIXML_CLASS /;"	d
+PUGIXML_DEPRECATED	src/pugixml.hpp	/^#		define PUGIXML_DEPRECATED /;"	d
+PUGIXML_DEPRECATED	src/pugixml.hpp	/^#		define PUGIXML_DEPRECATED$/;"	d
+PUGIXML_FUNCTION	src/pugixml.hpp	/^#	define PUGIXML_FUNCTION /;"	d
+PUGIXML_TEXT	src/pugixml.hpp	/^#	define PUGIXML_TEXT(/;"	d
+PUGIXML_VERSION	src/pugixml.hpp	/^#	define PUGIXML_VERSION /;"	d
+PUGI__CHECK_ERROR	src/pugixml.cpp	/^		#define PUGI__CHECK_ERROR(/;"	d	file:
+PUGI__CHECK_ERROR	src/pugixml.cpp	/^#undef PUGI__CHECK_ERROR$/;"	d	file:
+PUGI__DMC_VOLATILE	src/pugixml.cpp	/^#	define PUGI__DMC_VOLATILE /;"	d	file:
+PUGI__DMC_VOLATILE	src/pugixml.cpp	/^#	define PUGI__DMC_VOLATILE$/;"	d	file:
+PUGI__DMC_VOLATILE	src/pugixml.cpp	/^#undef PUGI__DMC_VOLATILE$/;"	d	file:
+PUGI__ENDSEG	src/pugixml.cpp	/^		#define PUGI__ENDSEG(/;"	d	file:
+PUGI__ENDSEG	src/pugixml.cpp	/^#undef PUGI__ENDSEG$/;"	d	file:
+PUGI__FN	src/pugixml.cpp	/^#	define PUGI__FN /;"	d	file:
+PUGI__FN	src/pugixml.cpp	/^#undef PUGI__FN$/;"	d	file:
+PUGI__FN_NO_INLINE	src/pugixml.cpp	/^#	define PUGI__FN_NO_INLINE /;"	d	file:
+PUGI__FN_NO_INLINE	src/pugixml.cpp	/^#undef PUGI__FN_NO_INLINE$/;"	d	file:
+PUGI__IS_CHARTYPE	src/pugixml.cpp	/^	#define PUGI__IS_CHARTYPE(/;"	d	file:
+PUGI__IS_CHARTYPE	src/pugixml.cpp	/^#undef PUGI__IS_CHARTYPE$/;"	d	file:
+PUGI__IS_CHARTYPEX	src/pugixml.cpp	/^	#define PUGI__IS_CHARTYPEX(/;"	d	file:
+PUGI__IS_CHARTYPEX	src/pugixml.cpp	/^#undef PUGI__IS_CHARTYPEX$/;"	d	file:
+PUGI__IS_CHARTYPE_IMPL	src/pugixml.cpp	/^	#define PUGI__IS_CHARTYPE_IMPL(/;"	d	file:
+PUGI__IS_CHARTYPE_IMPL	src/pugixml.cpp	/^#undef PUGI__IS_CHARTYPE_IMPL$/;"	d	file:
+PUGI__MSVC_CRT_VERSION	src/pugixml.cpp	/^#	define PUGI__MSVC_CRT_VERSION /;"	d	file:
+PUGI__MSVC_CRT_VERSION	src/pugixml.cpp	/^#undef PUGI__MSVC_CRT_VERSION$/;"	d	file:
+PUGI__NO_INLINE	src/pugixml.cpp	/^#	define PUGI__NO_INLINE /;"	d	file:
+PUGI__NO_INLINE	src/pugixml.cpp	/^#undef PUGI__NO_INLINE$/;"	d	file:
+PUGI__NS_BEGIN	src/pugixml.cpp	/^#	define PUGI__NS_BEGIN /;"	d	file:
+PUGI__NS_BEGIN	src/pugixml.cpp	/^#undef PUGI__NS_BEGIN$/;"	d	file:
+PUGI__NS_END	src/pugixml.cpp	/^#	define PUGI__NS_END /;"	d	file:
+PUGI__NS_END	src/pugixml.cpp	/^#undef PUGI__NS_END$/;"	d	file:
+PUGI__OPTSET	src/pugixml.cpp	/^		#define PUGI__OPTSET(/;"	d	file:
+PUGI__OPTSET	src/pugixml.cpp	/^#undef PUGI__OPTSET$/;"	d	file:
+PUGI__POPNODE	src/pugixml.cpp	/^		#define PUGI__POPNODE(/;"	d	file:
+PUGI__POPNODE	src/pugixml.cpp	/^#undef PUGI__POPNODE$/;"	d	file:
+PUGI__PUSHNODE	src/pugixml.cpp	/^		#define PUGI__PUSHNODE(/;"	d	file:
+PUGI__PUSHNODE	src/pugixml.cpp	/^#undef PUGI__PUSHNODE$/;"	d	file:
+PUGI__SCANFOR	src/pugixml.cpp	/^		#define PUGI__SCANFOR(/;"	d	file:
+PUGI__SCANFOR	src/pugixml.cpp	/^#undef PUGI__SCANFOR$/;"	d	file:
+PUGI__SCANWHILE	src/pugixml.cpp	/^		#define PUGI__SCANWHILE(/;"	d	file:
+PUGI__SCANWHILE	src/pugixml.cpp	/^#undef PUGI__SCANWHILE$/;"	d	file:
+PUGI__SKIPWS	src/pugixml.cpp	/^		#define PUGI__SKIPWS(/;"	d	file:
+PUGI__SKIPWS	src/pugixml.cpp	/^#undef PUGI__SKIPWS$/;"	d	file:
+PUGI__STATIC_ASSERT	src/pugixml.cpp	/^#define PUGI__STATIC_ASSERT(/;"	d	file:
+PUGI__STATIC_ASSERT	src/pugixml.cpp	/^#undef PUGI__STATIC_ASSERT$/;"	d	file:
+PUGI__THROW_ERROR	src/pugixml.cpp	/^		#define PUGI__THROW_ERROR(/;"	d	file:
+PUGI__THROW_ERROR	src/pugixml.cpp	/^#undef PUGI__THROW_ERROR$/;"	d	file:
+SHMBasic	src/shmbasic.h	/^class SHMBasic {$/;"	c
+SHMInputFileStream	src/shmbasic.h	/^typedef std::ifstream SHMInputFileStream;$/;"	t
+SHMInputStringStream	src/shmbasic.h	/^typedef std::istringstream SHMInputStringStream;$/;"	t
+SHMList	src/shmbasic.h	/^#define SHMList /;"	d
+SHMMap	src/shmbasic.h	/^#define SHMMap /;"	d
+SHMOutputFileStream	src/shmbasic.h	/^#define SHMOutputFileStream /;"	d
+SHMOutputStringStream	src/shmbasic.h	/^#define SHMOutputStringStream /;"	d
+SHMParser	src/shmparser.h	/^class SHMParser {$/;"	c
+SHMRegex	src/shmbasic.h	/^typedef std::regex SHMRegex;$/;"	t
+SHMRegexIterator	src/shmbasic.h	/^typedef std::sregex_iterator SHMRegexIterator;$/;"	t
+SHMRegexMatch	src/shmbasic.h	/^typedef std::smatch SHMRegexMatch;$/;"	t
+SHMString	src/shmbasic.h	/^typedef std::string SHMString;$/;"	t
+SHMStringStream	src/shmbasic.h	/^typedef std::stringstream SHMStringStream;$/;"	t
+SHMTreeNode	src/shmtreenode.cpp	/^SHMTreeNode::SHMTreeNode() {$/;"	f	class:SHMTreeNode
+SHMTreeNode	src/shmtreenode.h	/^class SHMTreeNode {$/;"	c
+SHMXMLAttribute	src/shmbasic.h	/^typedef pugi::xml_attribute SHMXMLAttribute;$/;"	t
+SHMXMLDocument	src/shmbasic.h	/^typedef pugi::xml_document SHMXMLDocument;$/;"	t
+SHMXMLNode	src/shmbasic.h	/^typedef pugi::xml_node SHMXMLNode;$/;"	t
+SOURCES	Makefile	/^SOURCES := $(shell find $(SRCDIR) -type f -name *.$(SRCEXT))$/;"	m
+SOURCE_PUGIXML_CPP	src/pugixml.cpp	/^#define SOURCE_PUGIXML_CPP$/;"	d	file:
+SRCDIR	Makefile	/^SRCDIR := src$/;"	m
+SRCEXT	Makefile	/^SRCEXT := cpp$/;"	m
+TARGET	Makefile	/^TARGET := bin\/ast2xml$/;"	m
+XMLEXT	Makefile	/^XMLEXT := xml$/;"	m
+XMLS	Makefile	/^XMLS := $(patsubst $(INPDIR)\/%,$(INPDIR)\/%,$(INPUTS:.$(INPEXT)=.$(XMLEXT)))$/;"	m
+_Iter_cat	src/pugixml.cpp	/^	PUGI__FN std::bidirectional_iterator_tag _Iter_cat(const pugi::xml_attribute_iterator&)$/;"	f	namespace:std
+_Iter_cat	src/pugixml.cpp	/^	PUGI__FN std::bidirectional_iterator_tag _Iter_cat(const pugi::xml_node_iterator&)$/;"	f	namespace:std
+_Iter_cat	src/pugixml.cpp	/^	PUGI__FN std::forward_iterator_tag _Iter_cat(const pugi::xml_named_node_iterator&)$/;"	f	namespace:std
+_SHM_TYPES	src/shmbasic.h	/^#define _SHM_TYPES$/;"	d
+__iterator_category	src/pugixml.cpp	/^	PUGI__FN std::bidirectional_iterator_tag __iterator_category(const pugi::xml_attribute_iterator&)$/;"	f	namespace:std
+__iterator_category	src/pugixml.cpp	/^	PUGI__FN std::bidirectional_iterator_tag __iterator_category(const pugi::xml_node_iterator&)$/;"	f	namespace:std
+__iterator_category	src/pugixml.cpp	/^	PUGI__FN std::forward_iterator_tag __iterator_category(const pugi::xml_named_node_iterator&)$/;"	f	namespace:std
+_alloc	src/pugixml.cpp	/^		xpath_allocator* _alloc;$/;"	m	struct:xpath_parser	file:
+_assign	src/pugixml.cpp	/^	PUGI__FN void xpath_node_set::_assign(const_iterator begin_, const_iterator end_)$/;"	f	class:pugi::xpath_node_set
+_attr	src/pugixml.hpp	/^		xml_attribute_struct* _attr;$/;"	m	class:pugi::xml_attribute
+_attribute	src/pugixml.hpp	/^		xml_attribute _attribute;$/;"	m	class:pugi::xpath_node
+_axis	src/pugixml.cpp	/^		char _axis;$/;"	m	class:xpath_ast_node	file:
+_begin	src/pugixml.cpp	/^		xpath_node* _begin;$/;"	m	class:xpath_node_set_raw	file:
+_begin	src/pugixml.hpp	/^		It _begin, _end;$/;"	m	class:pugi::xml_object_range
+_begin	src/pugixml.hpp	/^		xpath_node* _begin;$/;"	m	class:pugi::xpath_node_set
+_buffer	src/pugixml.cpp	/^		const char_t* _buffer;$/;"	m	class:xpath_string	file:
+_buffer	src/pugixml.hpp	/^		char_t* _buffer;$/;"	m	class:pugi::xml_document
+_busy_size	src/pugixml.cpp	/^		size_t _busy_size;$/;"	m	struct:xml_allocator	file:
+_children	src/shmtreenode.h	/^	SHMList<SHMTreeNode> _children;$/;"	m	class:SHMTreeNode
+_cur	src/pugixml.cpp	/^		const char_t* _cur;$/;"	m	class:xpath_lexer	file:
+_cur_lexeme	src/pugixml.cpp	/^		lexeme_t _cur_lexeme;$/;"	m	class:xpath_lexer	file:
+_cur_lexeme_contents	src/pugixml.cpp	/^		xpath_lexer_string _cur_lexeme_contents;$/;"	m	class:xpath_lexer	file:
+_cur_lexeme_pos	src/pugixml.cpp	/^		const char_t* _cur_lexeme_pos;$/;"	m	class:xpath_lexer	file:
+_data	src/pugixml.cpp	/^		} _data;$/;"	m	class:xpath_ast_node	typeref:union:xpath_ast_node::__anon5	file:
+_data	src/pugixml.cpp	/^	PUGI__FN xml_node_struct* xml_text::_data() const$/;"	f	class:pugi::xml_text
+_data	src/pugixml.hpp	/^		xpath_variable* _data[64];$/;"	m	class:pugi::xpath_variable_set
+_data_new	src/pugixml.cpp	/^	PUGI__FN xml_node_struct* xml_text::_data_new()$/;"	f	class:pugi::xml_text
+_depth	src/pugixml.hpp	/^		int _depth;$/;"	m	class:pugi::xml_tree_walker
+_end	src/pugixml.cpp	/^		xpath_node* _end;$/;"	m	class:xpath_node_set_raw	file:
+_end	src/pugixml.hpp	/^		It _begin, _end;$/;"	m	class:pugi::xml_object_range
+_end	src/pugixml.hpp	/^		xpath_node* _end;$/;"	m	class:pugi::xpath_node_set
+_eos	src/pugixml.cpp	/^		xpath_node* _eos;$/;"	m	class:xpath_node_set_raw	file:
+_error_handler	src/pugixml.cpp	/^		jmp_buf _error_handler;$/;"	m	struct:xpath_parser	file:
+_impl	src/pugixml.hpp	/^		void* _impl;$/;"	m	class:pugi::xpath_query
+_left	src/pugixml.cpp	/^		xpath_ast_node* _left;$/;"	m	class:xpath_ast_node	file:
+_lexer	src/pugixml.cpp	/^		xpath_lexer _lexer;$/;"	m	struct:xpath_parser	file:
+_lineContents	src/shmtreenode.h	/^	SHMString _lineContents, _nodeAddress, _nodeType;$/;"	m	class:SHMTreeNode
+_lineEnd	src/shmtreenode.h	/^	int _lineStart, _lineEnd;$/;"	m	class:SHMTreeNode
+_lineStart	src/shmtreenode.h	/^	int _lineStart, _lineEnd;$/;"	m	class:SHMTreeNode
+_memory	src/pugixml.hpp	/^		char _memory[192];$/;"	m	class:pugi::xml_document
+_name	src/pugixml.hpp	/^		const char_t* _name;$/;"	m	class:pugi::xml_named_node_iterator
+_next	src/pugixml.cpp	/^		xpath_ast_node* _next;$/;"	m	class:xpath_ast_node	file:
+_next	src/pugixml.hpp	/^		xpath_variable* _next;$/;"	m	class:pugi::xpath_variable
+_node	src/pugixml.hpp	/^		mutable xml_node _node;$/;"	m	class:pugi::xml_named_node_iterator
+_node	src/pugixml.hpp	/^		xml_node _node;$/;"	m	class:pugi::xpath_node
+_nodeAddress	src/shmtreenode.h	/^	SHMString _lineContents, _nodeAddress, _nodeType;$/;"	m	class:SHMTreeNode
+_nodeType	src/shmtreenode.h	/^	SHMString _lineContents, _nodeAddress, _nodeType;$/;"	m	class:SHMTreeNode
+_parent	src/pugixml.hpp	/^		xml_node _parent;$/;"	m	class:pugi::xml_attribute_iterator
+_parent	src/pugixml.hpp	/^		xml_node _parent;$/;"	m	class:pugi::xml_node_iterator
+_propertyMap	src/shmtreenode.h	/^	SHMMap<SHMString,SHMString> _propertyMap;$/;"	m	class:SHMTreeNode
+_query	src/pugixml.cpp	/^		const char_t* _query;$/;"	m	struct:xpath_parser	file:
+_result	src/pugixml.cpp	/^		xpath_parse_result* _result;$/;"	m	struct:xpath_parser	file:
+_result	src/pugixml.hpp	/^		xpath_parse_result _result;$/;"	m	class:pugi::xpath_exception
+_result	src/pugixml.hpp	/^		xpath_parse_result _result;$/;"	m	class:pugi::xpath_query
+_rettype	src/pugixml.cpp	/^		char _rettype;$/;"	m	class:xpath_ast_node	file:
+_right	src/pugixml.cpp	/^		xpath_ast_node* _right;$/;"	m	class:xpath_ast_node	file:
+_root	src/pugixml.cpp	/^		xml_memory_page* _root;$/;"	m	struct:xml_allocator	file:
+_root	src/pugixml.cpp	/^		xpath_memory_block* _root;$/;"	m	class:xpath_allocator	file:
+_root	src/pugixml.hpp	/^		xml_node_struct* _root;$/;"	m	class:pugi::xml_node
+_root	src/pugixml.hpp	/^		xml_node_struct* _root;$/;"	m	class:pugi::xml_text
+_root_size	src/pugixml.cpp	/^		size_t _root_size;$/;"	m	class:xpath_allocator	file:
+_state	src/pugixml.cpp	/^		xpath_allocator _state;$/;"	m	struct:xpath_allocator_capture	file:
+_storage	src/pugixml.hpp	/^		xpath_node _storage;$/;"	m	class:pugi::xpath_node_set
+_target	src/pugixml.cpp	/^		xpath_allocator* _target;$/;"	m	struct:xpath_allocator_capture	file:
+_test	src/pugixml.cpp	/^		char _test;$/;"	m	class:xpath_ast_node	file:
+_type	src/pugixml.cpp	/^		char _type;$/;"	m	class:xpath_ast_node	file:
+_type	src/pugixml.cpp	/^		xpath_node_set::type_t _type;$/;"	m	class:xpath_node_set_raw	file:
+_type	src/pugixml.hpp	/^		type_t _type;$/;"	m	class:pugi::xpath_node_set
+_type	src/pugixml.hpp	/^		xpath_value_type _type;$/;"	m	class:pugi::xpath_variable
+_uses_heap	src/pugixml.cpp	/^		bool _uses_heap;$/;"	m	class:xpath_string	file:
+_variables	src/pugixml.cpp	/^		xpath_variable_set* _variables;$/;"	m	struct:xpath_parser	file:
+_wrap	src/pugixml.hpp	/^		mutable xml_attribute _wrap;$/;"	m	class:pugi::xml_attribute_iterator
+_wrap	src/pugixml.hpp	/^		mutable xml_node _wrap;$/;"	m	class:pugi::xml_node_iterator
+add	src/pugixml.cpp	/^	PUGI__FN xpath_variable* xpath_variable_set::add(const char_t* name, xpath_value_type type)$/;"	f	class:pugi::xpath_variable_set
+addAttribute	src/shmtreenode.cpp	/^void SHMTreeNode::addAttribute(const SHMString &name, const SHMString &string) {$/;"	f	class:SHMTreeNode
+addAttribute	src/shmtreenode.cpp	/^void SHMTreeNode::addAttribute(const SHMString &name, int value) {$/;"	f	class:SHMTreeNode
+alloc	src/pugixml.cpp	/^		xml_allocator alloc;$/;"	m	struct:xml_parser	file:
+alloc	src/pugixml.cpp	/^		xpath_allocator alloc;$/;"	m	struct:xpath_query_impl	file:
+alloc_node	src/pugixml.cpp	/^		void* alloc_node()$/;"	f	struct:xpath_parser
+alloc_string	src/pugixml.cpp	/^		const char_t* alloc_string(const xpath_lexer_string& value)$/;"	f	struct:xpath_parser
+allocate	src/pugixml.cpp	/^		static allocation_function allocate;$/;"	m	struct:xml_memory_management_function_storage	file:
+allocate	src/pugixml.cpp	/^		void* allocate(size_t size)$/;"	f	class:xpath_allocator
+allocate	src/pugixml.cpp	/^	template <typename T> allocation_function xml_memory_management_function_storage<T>::allocate = default_allocate;$/;"	m	class:xml_memory_management_function_storage	file:
+allocate_attribute	src/pugixml.cpp	/^	inline xml_attribute_struct* allocate_attribute(xml_allocator& alloc)$/;"	f
+allocate_memory	src/pugixml.cpp	/^		void* allocate_memory(size_t size, xml_memory_page*& out_page)$/;"	f	struct:xml_allocator
+allocate_memory_oob	src/pugixml.cpp	/^	PUGI__FN_NO_INLINE void* xml_allocator::allocate_memory_oob(size_t size, xml_memory_page*& out_page)$/;"	f	class:xml_allocator
+allocate_node	src/pugixml.cpp	/^	inline xml_node_struct* allocate_node(xml_allocator& alloc, xml_node_type type)$/;"	f
+allocate_nothrow	src/pugixml.cpp	/^		void* allocate_nothrow(size_t size)$/;"	f	class:xpath_allocator
+allocate_page	src/pugixml.cpp	/^		xml_memory_page* allocate_page(size_t data_size)$/;"	f	struct:xml_allocator
+allocate_string	src/pugixml.cpp	/^		char_t* allocate_string(size_t length)$/;"	f	struct:xml_allocator
+allocation_function	src/pugixml.hpp	/^	typedef void* (*allocation_function)(size_t size);$/;"	t	namespace:pugi
+allocator	src/pugixml.cpp	/^		xml_allocator* allocator;$/;"	m	struct:xml_memory_page	file:
+allow_insert_child	src/pugixml.cpp	/^	inline bool allow_insert_child(xml_node_type parent, xml_node_type child)$/;"	f
+any	src/pugixml.cpp	/^		static value_type any(value_type result, uint32_t ch)$/;"	f	struct:utf16_writer
+any	src/pugixml.cpp	/^		static value_type any(value_type result, uint32_t ch)$/;"	f	struct:utf32_writer
+any	src/pugixml.cpp	/^		static value_type any(value_type result, uint32_t ch)$/;"	f	struct:utf8_writer
+append	src/pugixml.cpp	/^		void append(const xpath_node* begin_, const xpath_node* end_, xpath_allocator* alloc)$/;"	f	class:xpath_node_set_raw
+append	src/pugixml.cpp	/^		void append(const xpath_string& o, xpath_allocator* alloc)$/;"	f	class:xpath_string
+appendChild	src/shmtreenode.cpp	/^void SHMTreeNode::appendChild(SHMTreeNode& child) {$/;"	f	class:SHMTreeNode
+append_attribute	src/pugixml.cpp	/^	PUGI__FN xml_attribute xml_node::append_attribute(const char_t* name_)$/;"	f	class:pugi::xml_node
+append_attribute_ll	src/pugixml.cpp	/^	PUGI__FN_NO_INLINE xml_attribute_struct* append_attribute_ll(xml_node_struct* node, xml_allocator& alloc)$/;"	f
+append_child	src/pugixml.cpp	/^	PUGI__FN xml_node xml_node::append_child(const char_t* name_)$/;"	f	class:pugi::xml_node
+append_child	src/pugixml.cpp	/^	PUGI__FN xml_node xml_node::append_child(xml_node_type type_)$/;"	f	class:pugi::xml_node
+append_copy	src/pugixml.cpp	/^	PUGI__FN xml_attribute xml_node::append_copy(const xml_attribute& proto)$/;"	f	class:pugi::xml_node
+append_copy	src/pugixml.cpp	/^	PUGI__FN xml_node xml_node::append_copy(const xml_node& proto)$/;"	f	class:pugi::xml_node
+append_node	src/pugixml.cpp	/^	PUGI__FN_NO_INLINE xml_node_struct* append_node(xml_node_struct* node, xml_allocator& alloc, xml_node_type type = node_element)$/;"	f
+apply_predicate	src/pugixml.cpp	/^		void apply_predicate(xpath_node_set_raw& ns, size_t first, xpath_ast_node* expr, const xpath_stack& stack)$/;"	f	class:xpath_ast_node	file:
+apply_predicates	src/pugixml.cpp	/^		void apply_predicates(xpath_node_set_raw& ns, size_t first, const xpath_stack& stack)$/;"	f	class:xpath_ast_node	file:
+as_bool	src/pugixml.cpp	/^	PUGI__FN bool xml_attribute::as_bool(bool def) const$/;"	f	class:pugi::xml_attribute
+as_bool	src/pugixml.cpp	/^	PUGI__FN bool xml_text::as_bool(bool def) const$/;"	f	class:pugi::xml_text
+as_double	src/pugixml.cpp	/^	PUGI__FN double xml_attribute::as_double(double def) const$/;"	f	class:pugi::xml_attribute
+as_double	src/pugixml.cpp	/^	PUGI__FN double xml_text::as_double(double def) const$/;"	f	class:pugi::xml_text
+as_float	src/pugixml.cpp	/^	PUGI__FN float xml_attribute::as_float(float def) const$/;"	f	class:pugi::xml_attribute
+as_float	src/pugixml.cpp	/^	PUGI__FN float xml_text::as_float(float def) const$/;"	f	class:pugi::xml_text
+as_int	src/pugixml.cpp	/^	PUGI__FN int xml_attribute::as_int(int def) const$/;"	f	class:pugi::xml_attribute
+as_int	src/pugixml.cpp	/^	PUGI__FN int xml_text::as_int(int def) const$/;"	f	class:pugi::xml_text
+as_string	src/pugixml.cpp	/^	PUGI__FN const char_t* xml_attribute::as_string(const char_t* def) const$/;"	f	class:pugi::xml_attribute
+as_string	src/pugixml.cpp	/^	PUGI__FN const char_t* xml_text::as_string(const char_t* def) const$/;"	f	class:pugi::xml_text
+as_uint	src/pugixml.cpp	/^	PUGI__FN unsigned int xml_attribute::as_uint(unsigned int def) const$/;"	f	class:pugi::xml_attribute
+as_uint	src/pugixml.cpp	/^	PUGI__FN unsigned int xml_text::as_uint(unsigned int def) const$/;"	f	class:pugi::xml_text
+as_utf8	src/pugixml.cpp	/^	PUGI__FN std::string PUGIXML_FUNCTION as_utf8(const std::basic_string<wchar_t>& str)$/;"	f	namespace:pugi
+as_utf8	src/pugixml.cpp	/^	PUGI__FN std::string PUGIXML_FUNCTION as_utf8(const wchar_t* str)$/;"	f	namespace:pugi
+as_utf8_begin	src/pugixml.cpp	/^	PUGI__FN size_t as_utf8_begin(const wchar_t* str, size_t length)$/;"	f
+as_utf8_end	src/pugixml.cpp	/^	PUGI__FN void as_utf8_end(char* buffer, size_t size, const wchar_t* str, size_t length)$/;"	f
+as_utf8_impl	src/pugixml.cpp	/^	PUGI__FN std::string as_utf8_impl(const wchar_t* str, size_t length)$/;"	f
+as_wide	src/pugixml.cpp	/^	PUGI__FN std::basic_string<wchar_t> PUGIXML_FUNCTION as_wide(const char* str)$/;"	f	namespace:pugi
+as_wide	src/pugixml.cpp	/^	PUGI__FN std::basic_string<wchar_t> PUGIXML_FUNCTION as_wide(const std::string& str)$/;"	f	namespace:pugi
+as_wide_impl	src/pugixml.cpp	/^	PUGI__FN std::basic_string<wchar_t> as_wide_impl(const char* str, size_t size)$/;"	f
+ast_filter	src/pugixml.cpp	/^		ast_filter,						\/\/ select * from left where right$/;"	e	enum:ast_type_t	file:
+ast_filter_posinv	src/pugixml.cpp	/^		ast_filter_posinv,				\/\/ select * from left where right; proximity position invariant$/;"	e	enum:ast_type_t	file:
+ast_func_boolean	src/pugixml.cpp	/^		ast_func_boolean,				\/\/ boolean(left)$/;"	e	enum:ast_type_t	file:
+ast_func_ceiling	src/pugixml.cpp	/^		ast_func_ceiling,				\/\/ ceiling(left)$/;"	e	enum:ast_type_t	file:
+ast_func_concat	src/pugixml.cpp	/^		ast_func_concat,				\/\/ concat(left, right, siblings)$/;"	e	enum:ast_type_t	file:
+ast_func_contains	src/pugixml.cpp	/^		ast_func_contains,				\/\/ contains(left, right)$/;"	e	enum:ast_type_t	file:
+ast_func_count	src/pugixml.cpp	/^		ast_func_count,					\/\/ count(left)$/;"	e	enum:ast_type_t	file:
+ast_func_false	src/pugixml.cpp	/^		ast_func_false,					\/\/ false()$/;"	e	enum:ast_type_t	file:
+ast_func_floor	src/pugixml.cpp	/^		ast_func_floor,					\/\/ floor(left)$/;"	e	enum:ast_type_t	file:
+ast_func_id	src/pugixml.cpp	/^		ast_func_id,					\/\/ id(left)$/;"	e	enum:ast_type_t	file:
+ast_func_lang	src/pugixml.cpp	/^		ast_func_lang,					\/\/ lang(left)$/;"	e	enum:ast_type_t	file:
+ast_func_last	src/pugixml.cpp	/^		ast_func_last,					\/\/ last()$/;"	e	enum:ast_type_t	file:
+ast_func_local_name_0	src/pugixml.cpp	/^		ast_func_local_name_0,			\/\/ local-name()$/;"	e	enum:ast_type_t	file:
+ast_func_local_name_1	src/pugixml.cpp	/^		ast_func_local_name_1,			\/\/ local-name(left)$/;"	e	enum:ast_type_t	file:
+ast_func_name_0	src/pugixml.cpp	/^		ast_func_name_0,				\/\/ name()$/;"	e	enum:ast_type_t	file:
+ast_func_name_1	src/pugixml.cpp	/^		ast_func_name_1,				\/\/ name(left)$/;"	e	enum:ast_type_t	file:
+ast_func_namespace_uri_0	src/pugixml.cpp	/^		ast_func_namespace_uri_0,		\/\/ namespace-uri()$/;"	e	enum:ast_type_t	file:
+ast_func_namespace_uri_1	src/pugixml.cpp	/^		ast_func_namespace_uri_1,		\/\/ namespace-uri(left)$/;"	e	enum:ast_type_t	file:
+ast_func_normalize_space_0	src/pugixml.cpp	/^		ast_func_normalize_space_0,		\/\/ normalize-space()$/;"	e	enum:ast_type_t	file:
+ast_func_normalize_space_1	src/pugixml.cpp	/^		ast_func_normalize_space_1,		\/\/ normalize-space(left)$/;"	e	enum:ast_type_t	file:
+ast_func_not	src/pugixml.cpp	/^		ast_func_not,					\/\/ not(left)$/;"	e	enum:ast_type_t	file:
+ast_func_number_0	src/pugixml.cpp	/^		ast_func_number_0,				\/\/ number()$/;"	e	enum:ast_type_t	file:
+ast_func_number_1	src/pugixml.cpp	/^		ast_func_number_1,				\/\/ number(left)$/;"	e	enum:ast_type_t	file:
+ast_func_position	src/pugixml.cpp	/^		ast_func_position,				\/\/ position()$/;"	e	enum:ast_type_t	file:
+ast_func_round	src/pugixml.cpp	/^		ast_func_round,					\/\/ round(left)$/;"	e	enum:ast_type_t	file:
+ast_func_starts_with	src/pugixml.cpp	/^		ast_func_starts_with,			\/\/ starts_with(left, right)$/;"	e	enum:ast_type_t	file:
+ast_func_string_0	src/pugixml.cpp	/^		ast_func_string_0,				\/\/ string()$/;"	e	enum:ast_type_t	file:
+ast_func_string_1	src/pugixml.cpp	/^		ast_func_string_1,				\/\/ string(left)$/;"	e	enum:ast_type_t	file:
+ast_func_string_length_0	src/pugixml.cpp	/^		ast_func_string_length_0,		\/\/ string-length()$/;"	e	enum:ast_type_t	file:
+ast_func_string_length_1	src/pugixml.cpp	/^		ast_func_string_length_1,		\/\/ string-length(left)$/;"	e	enum:ast_type_t	file:
+ast_func_substring_2	src/pugixml.cpp	/^		ast_func_substring_2,			\/\/ substring(left, right)$/;"	e	enum:ast_type_t	file:
+ast_func_substring_3	src/pugixml.cpp	/^		ast_func_substring_3,			\/\/ substring(left, right, third)$/;"	e	enum:ast_type_t	file:
+ast_func_substring_after	src/pugixml.cpp	/^		ast_func_substring_after,		\/\/ substring-after(left, right)$/;"	e	enum:ast_type_t	file:
+ast_func_substring_before	src/pugixml.cpp	/^		ast_func_substring_before,		\/\/ substring-before(left, right)$/;"	e	enum:ast_type_t	file:
+ast_func_sum	src/pugixml.cpp	/^		ast_func_sum,					\/\/ sum(left)$/;"	e	enum:ast_type_t	file:
+ast_func_translate	src/pugixml.cpp	/^		ast_func_translate,				\/\/ translate(left, right, third)$/;"	e	enum:ast_type_t	file:
+ast_func_true	src/pugixml.cpp	/^		ast_func_true,					\/\/ true()$/;"	e	enum:ast_type_t	file:
+ast_number_constant	src/pugixml.cpp	/^		ast_number_constant,			\/\/ number constant$/;"	e	enum:ast_type_t	file:
+ast_op_add	src/pugixml.cpp	/^		ast_op_add,						\/\/ left + right$/;"	e	enum:ast_type_t	file:
+ast_op_and	src/pugixml.cpp	/^		ast_op_and,						\/\/ left and right$/;"	e	enum:ast_type_t	file:
+ast_op_divide	src/pugixml.cpp	/^		ast_op_divide,					\/\/ left \/ right$/;"	e	enum:ast_type_t	file:
+ast_op_equal	src/pugixml.cpp	/^		ast_op_equal,					\/\/ left = right$/;"	e	enum:ast_type_t	file:
+ast_op_greater	src/pugixml.cpp	/^		ast_op_greater,					\/\/ left > right$/;"	e	enum:ast_type_t	file:
+ast_op_greater_or_equal	src/pugixml.cpp	/^		ast_op_greater_or_equal,		\/\/ left >= right$/;"	e	enum:ast_type_t	file:
+ast_op_less	src/pugixml.cpp	/^		ast_op_less,					\/\/ left < right$/;"	e	enum:ast_type_t	file:
+ast_op_less_or_equal	src/pugixml.cpp	/^		ast_op_less_or_equal,			\/\/ left <= right$/;"	e	enum:ast_type_t	file:
+ast_op_mod	src/pugixml.cpp	/^		ast_op_mod,						\/\/ left % right$/;"	e	enum:ast_type_t	file:
+ast_op_multiply	src/pugixml.cpp	/^		ast_op_multiply,				\/\/ left * right$/;"	e	enum:ast_type_t	file:
+ast_op_negate	src/pugixml.cpp	/^		ast_op_negate,					\/\/ left - right$/;"	e	enum:ast_type_t	file:
+ast_op_not_equal	src/pugixml.cpp	/^		ast_op_not_equal,				\/\/ left != right$/;"	e	enum:ast_type_t	file:
+ast_op_or	src/pugixml.cpp	/^		ast_op_or,						\/\/ left or right$/;"	e	enum:ast_type_t	file:
+ast_op_subtract	src/pugixml.cpp	/^		ast_op_subtract,				\/\/ left - right$/;"	e	enum:ast_type_t	file:
+ast_op_union	src/pugixml.cpp	/^		ast_op_union,					\/\/ left | right$/;"	e	enum:ast_type_t	file:
+ast_predicate	src/pugixml.cpp	/^		ast_predicate,					\/\/ apply predicate to set; next points to next predicate$/;"	e	enum:ast_type_t	file:
+ast_step	src/pugixml.cpp	/^		ast_step,						\/\/ process set left with step$/;"	e	enum:ast_type_t	file:
+ast_step_root	src/pugixml.cpp	/^		ast_step_root					\/\/ select root node$/;"	e	enum:ast_type_t	file:
+ast_string_constant	src/pugixml.cpp	/^		ast_string_constant,			\/\/ string constant$/;"	e	enum:ast_type_t	file:
+ast_type_t	src/pugixml.cpp	/^	enum ast_type_t$/;"	g	file:
+ast_variable	src/pugixml.cpp	/^		ast_variable,					\/\/ variable$/;"	e	enum:ast_type_t	file:
+atoi	src/shmbasic.h	/^	static int atoi (SHMString str) {$/;"	f	class:SHMBasic
+attribute	src/pugixml.cpp	/^	PUGI__FN xml_attribute xml_node::attribute(const char_t* name_) const$/;"	f	class:pugi::xml_node
+attribute	src/pugixml.cpp	/^	PUGI__FN xml_attribute xpath_node::attribute() const$/;"	f	class:pugi::xpath_node
+attribute_iterator	src/pugixml.hpp	/^		typedef xml_attribute_iterator attribute_iterator;$/;"	t	class:pugi::xml_node
+attributes	src/pugixml.cpp	/^	PUGI__FN xml_object_range<xml_attribute_iterator> xml_node::attributes() const$/;"	f	class:pugi::xml_node
+attributes_begin	src/pugixml.cpp	/^	PUGI__FN xml_node::attribute_iterator xml_node::attributes_begin() const$/;"	f	class:pugi::xml_node
+attributes_end	src/pugixml.cpp	/^	PUGI__FN xml_node::attribute_iterator xml_node::attributes_end() const$/;"	f	class:pugi::xml_node
+axis	src/pugixml.cpp	/^		static const axis_t axis;$/;"	m	struct:axis_to_type	file:
+axis	src/pugixml.cpp	/^	template <axis_t N> const axis_t axis_to_type<N>::axis = N;$/;"	m	class:axis_to_type	file:
+axis_ancestor	src/pugixml.cpp	/^		axis_ancestor,$/;"	e	enum:axis_t	file:
+axis_ancestor_or_self	src/pugixml.cpp	/^		axis_ancestor_or_self,$/;"	e	enum:axis_t	file:
+axis_attribute	src/pugixml.cpp	/^		axis_attribute,$/;"	e	enum:axis_t	file:
+axis_child	src/pugixml.cpp	/^		axis_child,$/;"	e	enum:axis_t	file:
+axis_descendant	src/pugixml.cpp	/^		axis_descendant,$/;"	e	enum:axis_t	file:
+axis_descendant_or_self	src/pugixml.cpp	/^		axis_descendant_or_self,$/;"	e	enum:axis_t	file:
+axis_following	src/pugixml.cpp	/^		axis_following,$/;"	e	enum:axis_t	file:
+axis_following_sibling	src/pugixml.cpp	/^		axis_following_sibling,$/;"	e	enum:axis_t	file:
+axis_namespace	src/pugixml.cpp	/^		axis_namespace,$/;"	e	enum:axis_t	file:
+axis_parent	src/pugixml.cpp	/^		axis_parent,$/;"	e	enum:axis_t	file:
+axis_preceding	src/pugixml.cpp	/^		axis_preceding,$/;"	e	enum:axis_t	file:
+axis_preceding_sibling	src/pugixml.cpp	/^		axis_preceding_sibling,$/;"	e	enum:axis_t	file:
+axis_self	src/pugixml.cpp	/^		axis_self$/;"	e	enum:axis_t	file:
+axis_t	src/pugixml.cpp	/^	enum axis_t$/;"	g	file:
+axis_to_type	src/pugixml.cpp	/^	template <axis_t N> struct axis_to_type$/;"	s	file:
+begin	src/pugixml.cpp	/^		const char_t* begin;$/;"	m	struct:xpath_lexer_string	file:
+begin	src/pugixml.cpp	/^		xpath_node* begin() const$/;"	f	class:xpath_node_set_raw
+begin	src/pugixml.cpp	/^	PUGI__FN bool xml_tree_walker::begin(xml_node&)$/;"	f	class:pugi::xml_tree_walker
+begin	src/pugixml.cpp	/^	PUGI__FN xml_node::iterator xml_node::begin() const$/;"	f	class:pugi::xml_node
+begin	src/pugixml.cpp	/^	PUGI__FN xpath_node_set::const_iterator xpath_node_set::begin() const$/;"	f	class:pugi::xpath_node_set
+begin	src/pugixml.hpp	/^		It begin() const { return _begin; }$/;"	f	class:pugi::xml_object_range
+block	src/pugixml.cpp	/^		xpath_memory_block block;$/;"	m	struct:xpath_query_impl	file:
+blocks	src/pugixml.cpp	/^		xpath_memory_block blocks[2];$/;"	m	struct:xpath_stack_data	file:
+bufcapacity	src/pugixml.cpp	/^			bufcapacity = bufcapacitybytes \/ (sizeof(char_t) + 4)$/;"	e	enum:xml_buffered_writer::__anon3	file:
+bufcapacitybytes	src/pugixml.cpp	/^			bufcapacitybytes =$/;"	e	enum:xml_buffered_writer::__anon3	file:
+buffer	src/pugixml.cpp	/^		char_t buffer[bufcapacity];$/;"	m	class:xml_buffered_writer	file:
+buffer	src/pugixml.cpp	/^		const char_t* buffer;$/;"	m	struct:xml_document_struct	file:
+buffer_holder	src/pugixml.cpp	/^		buffer_holder(void* data_, void (*deleter_)(void*)): data(data_), deleter(deleter_)$/;"	f	struct:buffer_holder
+buffer_holder	src/pugixml.cpp	/^	struct buffer_holder$/;"	s	file:
+bufsize	src/pugixml.cpp	/^		size_t bufsize;$/;"	m	class:xml_buffered_writer	file:
+busy_size	src/pugixml.cpp	/^		size_t busy_size;$/;"	m	struct:xml_memory_page	file:
+c_str	src/pugixml.cpp	/^		const char_t* c_str() const$/;"	f	class:xpath_string
+char_t	src/pugixml.hpp	/^	typedef PUGIXML_CHAR char_t;$/;"	t	namespace:pugi
+chartype_t	src/pugixml.cpp	/^	enum chartype_t$/;"	g	file:
+chartype_table	src/pugixml.cpp	/^	static const unsigned char chartype_table[256] =$/;"	v	file:
+chartypex_t	src/pugixml.cpp	/^	enum chartypex_t$/;"	g	file:
+chartypex_table	src/pugixml.cpp	/^	static const unsigned char chartypex_table[256] =$/;"	v	file:
+check_string_to_number_format	src/pugixml.cpp	/^	PUGI__FN bool check_string_to_number_format(const char_t* string)$/;"	f
+child	src/pugixml.cpp	/^	PUGI__FN xml_node xml_node::child(const char_t* name_) const$/;"	f	class:pugi::xml_node
+child_value	src/pugixml.cpp	/^	PUGI__FN const char_t* xml_node::child_value() const$/;"	f	class:pugi::xml_node
+child_value	src/pugixml.cpp	/^	PUGI__FN const char_t* xml_node::child_value(const char_t* name_) const$/;"	f	class:pugi::xml_node
+children	src/pugixml.cpp	/^	PUGI__FN xml_object_range<xml_named_node_iterator> xml_node::children(const char_t* name_) const$/;"	f	class:pugi::xml_node
+children	src/pugixml.cpp	/^	PUGI__FN xml_object_range<xml_node_iterator> xml_node::children() const$/;"	f	class:pugi::xml_node
+children	src/shmtreenode.cpp	/^SHMList<SHMTreeNode> SHMTreeNode::children() const {$/;"	f	class:SHMTreeNode
+compare_eq	src/pugixml.cpp	/^		template <class Comp> static bool compare_eq(xpath_ast_node* lhs, xpath_ast_node* rhs, const xpath_context& c, const xpath_stack& stack, const Comp& comp)$/;"	f	class:xpath_ast_node	file:
+compare_rel	src/pugixml.cpp	/^		template <class Comp> static bool compare_rel(xpath_ast_node* lhs, xpath_ast_node* rhs, const xpath_context& c, const xpath_stack& stack, const Comp& comp)$/;"	f	class:xpath_ast_node	file:
+const_iterator	src/pugixml.hpp	/^		typedef It const_iterator;$/;"	t	class:pugi::xml_object_range
+const_iterator	src/pugixml.hpp	/^		typedef const xpath_node* const_iterator;$/;"	t	class:pugi::xpath_node_set
+construct	src/pugixml.cpp	/^		static xml_memory_page* construct(void* memory)$/;"	f	struct:xml_memory_page
+contents	src/pugixml.cpp	/^		const xpath_lexer_string& contents() const$/;"	f	class:xpath_lexer
+convert_buffer	src/pugixml.cpp	/^	PUGI__FN bool convert_buffer(char_t*& out_buffer, size_t& out_length, xml_encoding encoding, const void* contents, size_t size, bool is_mutable)$/;"	f
+convert_buffer	src/pugixml.cpp	/^	PUGI__FN size_t convert_buffer(char_t* \/* r_char *\/, uint8_t* r_u8, uint16_t* r_u16, uint32_t* r_u32, const char_t* data, size_t length, xml_encoding encoding)$/;"	f
+convert_buffer	src/pugixml.cpp	/^	PUGI__FN size_t convert_buffer(char_t* r_char, uint8_t* r_u8, uint16_t* r_u16, uint32_t* r_u32, const char_t* data, size_t length, xml_encoding encoding)$/;"	f
+convert_buffer_endian_swap	src/pugixml.cpp	/^	PUGI__FN bool convert_buffer_endian_swap(char_t*& out_buffer, size_t& out_length, const void* contents, size_t size, bool is_mutable)$/;"	f
+convert_buffer_latin1	src/pugixml.cpp	/^	PUGI__FN bool convert_buffer_latin1(char_t*& out_buffer, size_t& out_length, const void* contents, size_t size)$/;"	f
+convert_buffer_latin1	src/pugixml.cpp	/^	PUGI__FN bool convert_buffer_latin1(char_t*& out_buffer, size_t& out_length, const void* contents, size_t size, bool is_mutable)$/;"	f
+convert_buffer_utf16	src/pugixml.cpp	/^	template <typename opt_swap> PUGI__FN bool convert_buffer_utf16(char_t*& out_buffer, size_t& out_length, const void* contents, size_t size, opt_swap)$/;"	f
+convert_buffer_utf32	src/pugixml.cpp	/^	template <typename opt_swap> PUGI__FN bool convert_buffer_utf32(char_t*& out_buffer, size_t& out_length, const void* contents, size_t size, opt_swap)$/;"	f
+convert_buffer_utf8	src/pugixml.cpp	/^	PUGI__FN bool convert_buffer_utf8(char_t*& out_buffer, size_t& out_length, const void* contents, size_t size)$/;"	f
+convert_number_to_boolean	src/pugixml.cpp	/^	PUGI__FN bool convert_number_to_boolean(double value)$/;"	f
+convert_number_to_mantissa_exponent	src/pugixml.cpp	/^	PUGI__FN void convert_number_to_mantissa_exponent(double value, char* buffer, size_t buffer_size, char** out_mantissa, int* out_exponent)$/;"	f
+convert_number_to_string	src/pugixml.cpp	/^	PUGI__FN xpath_string convert_number_to_string(double value, xpath_allocator* alloc)$/;"	f
+convert_number_to_string_special	src/pugixml.cpp	/^	PUGI__FN const char_t* convert_number_to_string_special(double value)$/;"	f
+convert_path_heap	src/pugixml.cpp	/^	PUGI__FN char* convert_path_heap(const wchar_t* str)$/;"	f
+convert_string_to_number	src/pugixml.cpp	/^	PUGI__FN bool convert_string_to_number(const char_t* begin, const char_t* end, double* out_result)$/;"	f
+convert_string_to_number	src/pugixml.cpp	/^	PUGI__FN double convert_string_to_number(const char_t* string)$/;"	f
+convert_utf_endian_swap	src/pugixml.cpp	/^	template <typename T> PUGI__FN void convert_utf_endian_swap(T* result, const T* data, size_t length)$/;"	f
+convert_wchar_endian_swap	src/pugixml.cpp	/^	PUGI__FN void convert_wchar_endian_swap(wchar_t* result, const wchar_t* data, size_t length)$/;"	f
+copy_backwards	src/pugixml.cpp	/^	template <typename I> void copy_backwards(I begin, I end, I target)$/;"	f
+counter	src/pugixml.cpp	/^		typedef utf16_counter counter;$/;"	t	struct:wchar_selector	file:
+counter	src/pugixml.cpp	/^		typedef utf32_counter counter;$/;"	t	struct:wchar_selector	file:
+create	src/pugixml.cpp	/^		static xml_stream_chunk* create()$/;"	f	struct:xml_stream_chunk
+create	src/pugixml.cpp	/^		static xpath_query_impl* create()$/;"	f	struct:xpath_query_impl
+create	src/pugixml.cpp	/^	PUGI__FN void xml_document::create()$/;"	f	class:pugi::xml_document
+ct_parse_attr	src/pugixml.cpp	/^		ct_parse_attr = 2,		\/\/ \\0, &, \\r, ', "$/;"	e	enum:chartype_t	file:
+ct_parse_attr_ws	src/pugixml.cpp	/^		ct_parse_attr_ws = 4,	\/\/ \\0, &, \\r, ', ", \\n, tab$/;"	e	enum:chartype_t	file:
+ct_parse_cdata	src/pugixml.cpp	/^		ct_parse_cdata = 16,	\/\/ \\0, ], >, \\r$/;"	e	enum:chartype_t	file:
+ct_parse_comment	src/pugixml.cpp	/^		ct_parse_comment = 32,	\/\/ \\0, -, >, \\r$/;"	e	enum:chartype_t	file:
+ct_parse_pcdata	src/pugixml.cpp	/^		ct_parse_pcdata = 1,	\/\/ \\0, &, \\r, <$/;"	e	enum:chartype_t	file:
+ct_space	src/pugixml.cpp	/^		ct_space = 8,			\/\/ \\r, \\n, space, tab$/;"	e	enum:chartype_t	file:
+ct_start_symbol	src/pugixml.cpp	/^		ct_start_symbol = 128	\/\/ Any symbol > 127, a-z, A-Z, _, :$/;"	e	enum:chartype_t	file:
+ct_symbol	src/pugixml.cpp	/^		ct_symbol = 64,			\/\/ Any symbol > 127, a-z, A-Z, 0-9, _, :, -, .$/;"	e	enum:chartype_t	file:
+ctx_digit	src/pugixml.cpp	/^		ctx_digit = 8,			  \/\/ 0-9$/;"	e	enum:chartypex_t	file:
+ctx_special_attr	src/pugixml.cpp	/^		ctx_special_attr = 2,     \/\/ Any symbol >= 0 and < 32 (except \\t), &, <, >, "$/;"	e	enum:chartypex_t	file:
+ctx_special_pcdata	src/pugixml.cpp	/^		ctx_special_pcdata = 1,   \/\/ Any symbol >= 0 and < 32 (except \\t, \\r, \\n), &, <, >$/;"	e	enum:chartypex_t	file:
+ctx_start_symbol	src/pugixml.cpp	/^		ctx_start_symbol = 4,	  \/\/ Any symbol > 127, a-z, A-Z, _$/;"	e	enum:chartypex_t	file:
+ctx_symbol	src/pugixml.cpp	/^		ctx_symbol = 16			  \/\/ Any symbol > 127, a-z, A-Z, 0-9, _, -, .$/;"	e	enum:chartypex_t	file:
+current	src/pugixml.cpp	/^		lexeme_t current() const$/;"	f	class:xpath_lexer
+current_pos	src/pugixml.cpp	/^		const char_t* current_pos() const$/;"	f	class:xpath_lexer
+data	src/pugixml.cpp	/^		T data[xml_memory_page_size \/ sizeof(T)];$/;"	m	struct:xml_stream_chunk	file:
+data	src/pugixml.cpp	/^		char data[$/;"	m	struct:xpath_memory_block	file:
+data	src/pugixml.cpp	/^		char data[1];$/;"	m	struct:xml_memory_page	file:
+data	src/pugixml.cpp	/^		char_t* data(xpath_allocator* alloc)$/;"	f	class:xpath_string
+data	src/pugixml.cpp	/^		void* data;$/;"	m	struct:buffer_holder	file:
+data	src/pugixml.cpp	/^	PUGI__FN xml_node xml_text::data() const$/;"	f	class:pugi::xml_text
+data_char	src/pugixml.cpp	/^			char_t data_char[bufcapacity];$/;"	m	union:xml_buffered_writer::__anon4	file:
+data_u16	src/pugixml.cpp	/^			uint16_t data_u16[2 * bufcapacity];$/;"	m	union:xml_buffered_writer::__anon4	file:
+data_u32	src/pugixml.cpp	/^			uint32_t data_u32[bufcapacity];$/;"	m	union:xml_buffered_writer::__anon4	file:
+data_u8	src/pugixml.cpp	/^			uint8_t data_u8[4 * bufcapacity];$/;"	m	union:xml_buffered_writer::__anon4	file:
+deallocate	src/pugixml.cpp	/^		static deallocation_function deallocate;$/;"	m	struct:xml_memory_management_function_storage	file:
+deallocate	src/pugixml.cpp	/^	template <typename T> deallocation_function xml_memory_management_function_storage<T>::deallocate = default_deallocate;$/;"	m	class:xml_memory_management_function_storage	file:
+deallocate_memory	src/pugixml.cpp	/^		void deallocate_memory(void* ptr, size_t size, xml_memory_page* page)$/;"	f	struct:xml_allocator
+deallocate_page	src/pugixml.cpp	/^		static void deallocate_page(xml_memory_page* page)$/;"	f	struct:xml_allocator
+deallocate_string	src/pugixml.cpp	/^		void deallocate_string(char_t* string)$/;"	f	struct:xml_allocator
+deallocation_function	src/pugixml.hpp	/^	typedef void (*deallocation_function)(void* ptr);$/;"	t	namespace:pugi
+decode_latin1_block	src/pugixml.cpp	/^		static inline typename Traits::value_type decode_latin1_block(const uint8_t* data, size_t size, typename Traits::value_type result)$/;"	f	struct:utf_decoder
+decode_utf16_block	src/pugixml.cpp	/^		static inline typename Traits::value_type decode_utf16_block(const uint16_t* data, size_t size, typename Traits::value_type result)$/;"	f	struct:utf_decoder
+decode_utf32_block	src/pugixml.cpp	/^		static inline typename Traits::value_type decode_utf32_block(const uint32_t* data, size_t size, typename Traits::value_type result)$/;"	f	struct:utf_decoder
+decode_utf8_block	src/pugixml.cpp	/^		static inline typename Traits::value_type decode_utf8_block(const uint8_t* data, size_t size, typename Traits::value_type result)$/;"	f	struct:utf_decoder
+decode_wchar_block	src/pugixml.cpp	/^		static inline typename Traits::value_type decode_wchar_block(const wchar_t* data, size_t size, typename Traits::value_type result)$/;"	f	struct:utf_decoder
+decode_wchar_block_impl	src/pugixml.cpp	/^		static inline typename Traits::value_type decode_wchar_block_impl(const uint16_t* data, size_t size, typename Traits::value_type result)$/;"	f	struct:utf_decoder
+decode_wchar_block_impl	src/pugixml.cpp	/^		static inline typename Traits::value_type decode_wchar_block_impl(const uint32_t* data, size_t size, typename Traits::value_type result)$/;"	f	struct:utf_decoder
+default_allocate	src/pugixml.cpp	/^	PUGI__FN void* default_allocate(size_t size)$/;"	f
+default_deallocate	src/pugixml.cpp	/^	PUGI__FN void default_deallocate(void* ptr)$/;"	f
+delete_xpath_variable	src/pugixml.cpp	/^	PUGI__FN void delete_xpath_variable(xpath_value_type type, xpath_variable* var)$/;"	f
+delete_xpath_variable	src/pugixml.cpp	/^	template <typename T> PUGI__FN void delete_xpath_variable(T* var)$/;"	f
+deleter	src/pugixml.cpp	/^		void (*deleter)(void*);$/;"	m	struct:buffer_holder	file:
+depth	src/pugixml.cpp	/^	PUGI__FN int xml_tree_walker::depth() const$/;"	f	class:pugi::xml_tree_walker
+description	src/pugixml.cpp	/^	PUGI__FN const char* xml_parse_result::description() const$/;"	f	class:pugi::xml_parse_result
+description	src/pugixml.cpp	/^	PUGI__FN const char* xpath_parse_result::description() const$/;"	f	class:pugi::xpath_parse_result
+destroy	src/pugixml.cpp	/^		static void destroy(void* ptr)$/;"	f	struct:xml_stream_chunk
+destroy	src/pugixml.cpp	/^		static void destroy(void* ptr)$/;"	f	struct:xpath_query_impl
+destroy	src/pugixml.cpp	/^	PUGI__FN void xml_document::destroy()$/;"	f	class:pugi::xml_document
+destroy_attribute	src/pugixml.cpp	/^	inline void destroy_attribute(xml_attribute_struct* a, xml_allocator& alloc)$/;"	f
+destroy_node	src/pugixml.cpp	/^	inline void destroy_node(xml_node_struct* n, xml_allocator& alloc)$/;"	f
+difference_type	src/pugixml.hpp	/^		typedef ptrdiff_t difference_type;$/;"	t	class:pugi::xml_attribute_iterator
+difference_type	src/pugixml.hpp	/^		typedef ptrdiff_t difference_type;$/;"	t	class:pugi::xml_named_node_iterator
+difference_type	src/pugixml.hpp	/^		typedef ptrdiff_t difference_type;$/;"	t	class:pugi::xml_node_iterator
+document_element	src/pugixml.cpp	/^	PUGI__FN xml_node xml_document::document_element() const$/;"	f	class:pugi::xml_document
+document_order	src/pugixml.cpp	/^	PUGI__FN const void* document_order(const xpath_node& xnode)$/;"	f
+document_order_comparator	src/pugixml.cpp	/^	struct document_order_comparator$/;"	s	file:
+dummy_node_set	src/pugixml.cpp	/^	static const xpath_node_set dummy_node_set;$/;"	v	file:
+duplicate_comparator	src/pugixml.cpp	/^	struct duplicate_comparator$/;"	s	file:
+duplicate_string	src/pugixml.cpp	/^		static char_t* duplicate_string(const char_t* string, size_t length, xpath_allocator* alloc)$/;"	f	class:xpath_string	file:
+duplicate_string	src/pugixml.cpp	/^		static char_t* duplicate_string(const char_t* string, xpath_allocator* alloc)$/;"	f	class:xpath_string	file:
+empty	src/pugixml.cpp	/^		bool empty() const$/;"	f	class:xpath_node_set_raw
+empty	src/pugixml.cpp	/^		bool empty() const$/;"	f	class:xpath_string
+empty	src/pugixml.cpp	/^	PUGI__FN bool xml_attribute::empty() const$/;"	f	class:pugi::xml_attribute
+empty	src/pugixml.cpp	/^	PUGI__FN bool xml_node::empty() const$/;"	f	class:pugi::xml_node
+empty	src/pugixml.cpp	/^	PUGI__FN bool xml_text::empty() const$/;"	f	class:pugi::xml_text
+empty	src/pugixml.cpp	/^	PUGI__FN bool xpath_node_set::empty() const$/;"	f	class:pugi::xpath_node_set
+encoding	src/pugixml.cpp	/^		xml_encoding encoding;$/;"	m	class:xml_buffered_writer	file:
+encoding	src/pugixml.hpp	/^		xml_encoding encoding;$/;"	m	struct:pugi::xml_parse_result
+encoding_auto	src/pugixml.hpp	/^		encoding_auto,		\/\/ Auto-detect input encoding using BOM or < \/ <? detection; use UTF8 if BOM is not found$/;"	e	enum:pugi::xml_encoding
+encoding_latin1	src/pugixml.hpp	/^		encoding_latin1$/;"	e	enum:pugi::xml_encoding
+encoding_utf16	src/pugixml.hpp	/^		encoding_utf16,		\/\/ UTF16 with native endianness$/;"	e	enum:pugi::xml_encoding
+encoding_utf16_be	src/pugixml.hpp	/^		encoding_utf16_be,	\/\/ Big-endian UTF16$/;"	e	enum:pugi::xml_encoding
+encoding_utf16_le	src/pugixml.hpp	/^		encoding_utf16_le,	\/\/ Little-endian UTF16$/;"	e	enum:pugi::xml_encoding
+encoding_utf32	src/pugixml.hpp	/^		encoding_utf32,		\/\/ UTF32 with native endianness$/;"	e	enum:pugi::xml_encoding
+encoding_utf32_be	src/pugixml.hpp	/^		encoding_utf32_be,	\/\/ Big-endian UTF32$/;"	e	enum:pugi::xml_encoding
+encoding_utf32_le	src/pugixml.hpp	/^		encoding_utf32_le,	\/\/ Little-endian UTF32$/;"	e	enum:pugi::xml_encoding
+encoding_utf8	src/pugixml.hpp	/^		encoding_utf8,		\/\/ UTF8 encoding$/;"	e	enum:pugi::xml_encoding
+encoding_wchar	src/pugixml.hpp	/^		encoding_wchar,		\/\/ The same encoding wchar_t has (either UTF16 or UTF32)$/;"	e	enum:pugi::xml_encoding
+end	src/pugixml.cpp	/^		char_t* end;$/;"	m	struct:gap	file:
+end	src/pugixml.cpp	/^		const char_t* end;$/;"	m	struct:xpath_lexer_string	file:
+end	src/pugixml.cpp	/^		xpath_node* end() const$/;"	f	class:xpath_node_set_raw
+end	src/pugixml.cpp	/^	PUGI__FN bool xml_tree_walker::end(xml_node&)$/;"	f	class:pugi::xml_tree_walker
+end	src/pugixml.cpp	/^	PUGI__FN xml_node::iterator xml_node::end() const$/;"	f	class:pugi::xml_node
+end	src/pugixml.cpp	/^	PUGI__FN xpath_node_set::const_iterator xpath_node_set::end() const$/;"	f	class:pugi::xpath_node_set
+end	src/pugixml.hpp	/^		It end() const { return _end; }$/;"	f	class:pugi::xml_object_range
+endian_swap	src/pugixml.cpp	/^	inline uint16_t endian_swap(uint16_t value)$/;"	f
+endian_swap	src/pugixml.cpp	/^	inline uint32_t endian_swap(uint32_t value)$/;"	f
+equal_to	src/pugixml.cpp	/^	struct equal_to$/;"	s	file:
+error	src/pugixml.hpp	/^		const char* error;$/;"	m	struct:pugi::xpath_parse_result
+error_handler	src/pugixml.cpp	/^		jmp_buf error_handler;$/;"	m	struct:xpath_stack_data	file:
+error_handler	src/pugixml.cpp	/^		jmp_buf* error_handler;$/;"	m	class:xpath_allocator	file:
+error_offset	src/pugixml.cpp	/^		char_t* error_offset;$/;"	m	struct:xml_parser	file:
+error_status	src/pugixml.cpp	/^		xml_parse_status error_status;$/;"	m	struct:xml_parser	file:
+eval_boolean	src/pugixml.cpp	/^		bool eval_boolean(const xpath_context& c, const xpath_stack& stack)$/;"	f	class:xpath_ast_node
+eval_node_set	src/pugixml.cpp	/^		xpath_node_set_raw eval_node_set(const xpath_context& c, const xpath_stack& stack)$/;"	f	class:xpath_ast_node
+eval_number	src/pugixml.cpp	/^		double eval_number(const xpath_context& c, const xpath_stack& stack)$/;"	f	class:xpath_ast_node
+eval_string	src/pugixml.cpp	/^		xpath_string eval_string(const xpath_context& c, const xpath_stack& stack)$/;"	f	class:xpath_ast_node
+eval_string_concat	src/pugixml.cpp	/^		xpath_string eval_string_concat(const xpath_context& c, const xpath_stack& stack)$/;"	f	class:xpath_ast_node
+evaluate_boolean	src/pugixml.cpp	/^	PUGI__FN bool xpath_query::evaluate_boolean(const xpath_node& n) const$/;"	f	class:pugi::xpath_query
+evaluate_node_set	src/pugixml.cpp	/^	PUGI__FN xpath_node_set xpath_query::evaluate_node_set(const xpath_node& n) const$/;"	f	class:pugi::xpath_query
+evaluate_number	src/pugixml.cpp	/^	PUGI__FN double xpath_query::evaluate_number(const xpath_node& n) const$/;"	f	class:pugi::xpath_query
+evaluate_string	src/pugixml.cpp	/^	PUGI__FN size_t xpath_query::evaluate_string(char_t* buffer, size_t capacity, const xpath_node& n) const$/;"	f	class:pugi::xpath_query
+evaluate_string	src/pugixml.cpp	/^	PUGI__FN string_t xpath_query::evaluate_string(const xpath_node& n) const$/;"	f	class:pugi::xpath_query
+evaluate_string_impl	src/pugixml.cpp	/^	PUGI__FN xpath_string evaluate_string_impl(xpath_query_impl* impl, const xpath_node& n, xpath_stack_data& sd)$/;"	f
+file	src/pugixml.hpp	/^		void* file;$/;"	m	class:pugi::xml_writer_file
+find	src/pugixml.cpp	/^	PUGI__FN xpath_variable* xpath_variable_set::find(const char_t* name) const$/;"	f	class:pugi::xpath_variable_set
+find_attribute	src/pugixml.hpp	/^		template <typename Predicate> xml_attribute find_attribute(Predicate pred) const$/;"	f	class:pugi::xml_node
+find_char	src/pugixml.cpp	/^	PUGI__FN const char_t* find_char(const char_t* s, char_t c)$/;"	f
+find_child	src/pugixml.hpp	/^		template <typename Predicate> xml_node find_child(Predicate pred) const$/;"	f	class:pugi::xml_node
+find_child_by_attribute	src/pugixml.cpp	/^	PUGI__FN xml_node xml_node::find_child_by_attribute(const char_t* attr_name, const char_t* attr_value) const$/;"	f	class:pugi::xml_node
+find_child_by_attribute	src/pugixml.cpp	/^	PUGI__FN xml_node xml_node::find_child_by_attribute(const char_t* name_, const char_t* attr_name, const char_t* attr_value) const$/;"	f	class:pugi::xml_node
+find_node	src/pugixml.hpp	/^		template <typename Predicate> xml_node find_node(Predicate pred) const$/;"	f	class:pugi::xml_node
+find_substring	src/pugixml.cpp	/^	PUGI__FN const char_t* find_substring(const char_t* s, const char_t* p)$/;"	f
+first	src/pugixml.cpp	/^		xpath_node first() const$/;"	f	class:xpath_node_set_raw
+first	src/pugixml.cpp	/^	PUGI__FN xpath_node xpath_node_set::first() const$/;"	f	class:pugi::xpath_node_set
+first_attribute	src/pugixml.cpp	/^		xml_attribute_struct*	first_attribute;		\/\/\/< First attribute$/;"	m	struct:pugi::xml_node_struct	file:
+first_attribute	src/pugixml.cpp	/^	PUGI__FN xml_attribute xml_node::first_attribute() const$/;"	f	class:pugi::xml_node
+first_child	src/pugixml.cpp	/^		xml_node_struct*		first_child;			\/\/\/< First child$/;"	m	struct:pugi::xml_node_struct	file:
+first_child	src/pugixml.cpp	/^	PUGI__FN xml_node xml_node::first_child() const$/;"	f	class:pugi::xml_node
+first_element_by_path	src/pugixml.cpp	/^	PUGI__FN xml_node xml_node::first_element_by_path(const char_t* path_, char_t delimiter) const$/;"	f	class:pugi::xml_node
+flush	src/pugixml.cpp	/^		char_t* flush(char_t* s)$/;"	f	struct:gap
+flush	src/pugixml.cpp	/^		void flush()$/;"	f	class:xml_buffered_writer
+flush	src/pugixml.cpp	/^		void flush(const char_t* data, size_t size)$/;"	f	class:xml_buffered_writer
+format_default	src/pugixml.hpp	/^	const unsigned int format_default = format_indent;$/;"	m	namespace:pugi
+format_indent	src/pugixml.hpp	/^	const unsigned int format_indent = 0x01;$/;"	m	namespace:pugi
+format_no_declaration	src/pugixml.hpp	/^	const unsigned int format_no_declaration = 0x08;$/;"	m	namespace:pugi
+format_no_escapes	src/pugixml.hpp	/^	const unsigned int format_no_escapes = 0x10;$/;"	m	namespace:pugi
+format_raw	src/pugixml.hpp	/^	const unsigned int format_raw = 0x04;$/;"	m	namespace:pugi
+format_save_file_text	src/pugixml.hpp	/^	const unsigned int format_save_file_text = 0x20;$/;"	m	namespace:pugi
+format_write_bom	src/pugixml.hpp	/^	const unsigned int format_write_bom = 0x02;$/;"	m	namespace:pugi
+freed_size	src/pugixml.cpp	/^		size_t freed_size;$/;"	m	struct:xml_memory_page	file:
+full_size	src/pugixml.cpp	/^		uint16_t full_size; \/\/ 0 if string occupies whole page$/;"	m	struct:xml_memory_string_header	file:
+gap	src/pugixml.cpp	/^		gap(): end(0), size(0)$/;"	f	struct:gap
+gap	src/pugixml.cpp	/^	struct gap$/;"	s	file:
+gen_nan	src/pugixml.cpp	/^	PUGI__FN double gen_nan()$/;"	f
+generateTree	src/shmparser.cpp	/^int SHMParser::generateTree(SHMList<SHMString> list, int pos, SHMTreeNode& root) {$/;"	f	class:SHMParser
+get	src/pugixml.cpp	/^	PUGI__FN const char_t* xml_text::get() const$/;"	f	class:pugi::xml_text
+get	src/pugixml.cpp	/^	PUGI__FN const xpath_variable* xpath_variable_set::get(const char_t* name) const$/;"	f	class:pugi::xpath_variable_set
+get	src/pugixml.cpp	/^	PUGI__FN xpath_variable* xpath_variable_set::get(const char_t* name)$/;"	f	class:pugi::xpath_variable_set
+getFileContents	src/shmparser.cpp	/^SHMString SHMParser::getFileContents(SHMString address) {$/;"	f	class:SHMParser
+get_allocator	src/pugixml.cpp	/^	inline xml_allocator& get_allocator(const xml_node_struct* node)$/;"	f
+get_boolean	src/pugixml.cpp	/^	PUGI__FN bool xpath_variable::get_boolean() const$/;"	f	class:pugi::xpath_variable
+get_buffer_encoding	src/pugixml.cpp	/^	PUGI__FN xml_encoding get_buffer_encoding(xml_encoding encoding, const void* contents, size_t size)$/;"	f
+get_file_size	src/pugixml.cpp	/^	PUGI__FN xml_parse_status get_file_size(FILE* file, size_t& out_result)$/;"	f
+get_latin1_7bit_prefix_length	src/pugixml.cpp	/^	PUGI__FN size_t get_latin1_7bit_prefix_length(const uint8_t* data, size_t size)$/;"	f
+get_memory_allocation_function	src/pugixml.cpp	/^	PUGI__FN allocation_function PUGIXML_FUNCTION get_memory_allocation_function()$/;"	f	namespace:pugi
+get_memory_deallocation_function	src/pugixml.cpp	/^	PUGI__FN deallocation_function PUGIXML_FUNCTION get_memory_deallocation_function()$/;"	f	namespace:pugi
+get_mutable_buffer	src/pugixml.cpp	/^	PUGI__FN bool get_mutable_buffer(char_t*& out_buffer, size_t& out_length, const void* contents, size_t size, bool is_mutable)$/;"	f
+get_node_set	src/pugixml.cpp	/^	PUGI__FN const xpath_node_set& xpath_variable::get_node_set() const$/;"	f	class:pugi::xpath_variable
+get_number	src/pugixml.cpp	/^	PUGI__FN double xpath_variable::get_number() const$/;"	f	class:pugi::xpath_variable
+get_strconv_attribute	src/pugixml.cpp	/^	PUGI__FN strconv_attribute_t get_strconv_attribute(unsigned int optmask)$/;"	f
+get_strconv_pcdata	src/pugixml.cpp	/^	PUGI__FN strconv_pcdata_t get_strconv_pcdata(unsigned int optmask)$/;"	f
+get_string	src/pugixml.cpp	/^	PUGI__FN const char_t* xpath_variable::get_string() const$/;"	f	class:pugi::xpath_variable
+get_valid_length	src/pugixml.cpp	/^	PUGI__FN size_t get_valid_length(const char_t* data, size_t length)$/;"	f
+get_value_bool	src/pugixml.cpp	/^	PUGI__FN bool get_value_bool(const char_t* value, bool def)$/;"	f
+get_value_double	src/pugixml.cpp	/^	PUGI__FN double get_value_double(const char_t* value, double def)$/;"	f
+get_value_float	src/pugixml.cpp	/^	PUGI__FN float get_value_float(const char_t* value, float def)$/;"	f
+get_value_int	src/pugixml.cpp	/^	PUGI__FN int get_value_int(const char_t* value, int def)$/;"	f
+get_value_uint	src/pugixml.cpp	/^	PUGI__FN unsigned int get_value_uint(const char_t* value, unsigned int def)$/;"	f
+get_variable	src/pugixml.cpp	/^	PUGI__FN xpath_variable* get_variable(xpath_variable_set* set, const char_t* begin, const char_t* end)$/;"	f
+get_wchar_encoding	src/pugixml.cpp	/^	PUGI__FN xml_encoding get_wchar_encoding()$/;"	f
+get_write_encoding	src/pugixml.cpp	/^	PUGI__FN xml_encoding get_write_encoding(xml_encoding encoding)$/;"	f
+get_write_native_encoding	src/pugixml.cpp	/^	PUGI__FN xml_encoding get_write_native_encoding()$/;"	f
+guess_buffer_encoding	src/pugixml.cpp	/^	PUGI__FN xml_encoding guess_buffer_encoding(uint8_t d0, uint8_t d1, uint8_t d2, uint8_t d3)$/;"	f
+has_declaration	src/pugixml.cpp	/^	inline bool has_declaration(const xml_node& node)$/;"	f
+hash_string	src/pugixml.cpp	/^	PUGI__FN unsigned int hash_string(const char_t* str)$/;"	f
+hash_value	src/pugixml.cpp	/^	PUGI__FN size_t xml_attribute::hash_value() const$/;"	f	class:pugi::xml_attribute
+hash_value	src/pugixml.cpp	/^	PUGI__FN size_t xml_node::hash_value() const$/;"	f	class:pugi::xml_node
+header	src/pugixml.cpp	/^		uintptr_t header;$/;"	m	struct:pugi::xml_attribute_struct	file:
+header	src/pugixml.cpp	/^		uintptr_t header;$/;"	m	struct:pugi::xml_node_struct	file:
+high	src/pugixml.cpp	/^		static value_type high(value_type result, uint32_t ch)$/;"	f	struct:latin1_writer
+high	src/pugixml.cpp	/^		static value_type high(value_type result, uint32_t ch)$/;"	f	struct:utf16_writer
+high	src/pugixml.cpp	/^		static value_type high(value_type result, uint32_t ch)$/;"	f	struct:utf32_writer
+high	src/pugixml.cpp	/^		static value_type high(value_type result, uint32_t ch)$/;"	f	struct:utf8_writer
+high	src/pugixml.cpp	/^		static value_type high(value_type result, uint32_t)$/;"	f	struct:utf16_counter
+high	src/pugixml.cpp	/^		static value_type high(value_type result, uint32_t)$/;"	f	struct:utf32_counter
+high	src/pugixml.cpp	/^		static value_type high(value_type result, uint32_t)$/;"	f	struct:utf8_counter
+indexFirstAlnum	src/shmparser.cpp	/^int SHMParser::indexFirstAlnum(SHMString line) {$/;"	f	class:SHMParser
+insert_attribute_after	src/pugixml.cpp	/^	PUGI__FN xml_attribute xml_node::insert_attribute_after(const char_t* name_, const xml_attribute& attr)$/;"	f	class:pugi::xml_node
+insert_attribute_before	src/pugixml.cpp	/^	PUGI__FN xml_attribute xml_node::insert_attribute_before(const char_t* name_, const xml_attribute& attr)$/;"	f	class:pugi::xml_node
+insert_child_after	src/pugixml.cpp	/^	PUGI__FN xml_node xml_node::insert_child_after(const char_t* name_, const xml_node& node)$/;"	f	class:pugi::xml_node
+insert_child_after	src/pugixml.cpp	/^	PUGI__FN xml_node xml_node::insert_child_after(xml_node_type type_, const xml_node& node)$/;"	f	class:pugi::xml_node
+insert_child_before	src/pugixml.cpp	/^	PUGI__FN xml_node xml_node::insert_child_before(const char_t* name_, const xml_node& node)$/;"	f	class:pugi::xml_node
+insert_child_before	src/pugixml.cpp	/^	PUGI__FN xml_node xml_node::insert_child_before(xml_node_type type_, const xml_node& node)$/;"	f	class:pugi::xml_node
+insert_copy_after	src/pugixml.cpp	/^	PUGI__FN xml_attribute xml_node::insert_copy_after(const xml_attribute& proto, const xml_attribute& attr)$/;"	f	class:pugi::xml_node
+insert_copy_after	src/pugixml.cpp	/^	PUGI__FN xml_node xml_node::insert_copy_after(const xml_node& proto, const xml_node& node)$/;"	f	class:pugi::xml_node
+insert_copy_before	src/pugixml.cpp	/^	PUGI__FN xml_attribute xml_node::insert_copy_before(const xml_attribute& proto, const xml_attribute& attr)$/;"	f	class:pugi::xml_node
+insert_copy_before	src/pugixml.cpp	/^	PUGI__FN xml_node xml_node::insert_copy_before(const xml_node& proto, const xml_node& node)$/;"	f	class:pugi::xml_node
+insertion_sort	src/pugixml.cpp	/^	template <typename I, typename Pred, typename T> void insertion_sort(I begin, I end, const Pred& pred, T*)$/;"	f
+internal_object	src/pugixml.cpp	/^	PUGI__FN xml_attribute_struct* xml_attribute::internal_object() const$/;"	f	class:pugi::xml_attribute
+internal_object	src/pugixml.cpp	/^	PUGI__FN xml_node_struct* xml_node::internal_object() const$/;"	f	class:pugi::xml_node
+is_little_endian	src/pugixml.cpp	/^	PUGI__FN bool is_little_endian()$/;"	f
+is_nan	src/pugixml.cpp	/^	PUGI__FN bool is_nan(double value)$/;"	f
+is_posinv	src/pugixml.cpp	/^		bool is_posinv()$/;"	f	class:xpath_ast_node
+is_text_node	src/pugixml.cpp	/^	inline bool is_text_node(xml_node_struct* node)$/;"	f
+iterator	src/pugixml.hpp	/^		typedef xml_node_iterator iterator;$/;"	t	class:pugi::xml_node
+iterator_category	src/pugixml.hpp	/^		typedef std::bidirectional_iterator_tag iterator_category;$/;"	t	class:pugi::xml_attribute_iterator
+iterator_category	src/pugixml.hpp	/^		typedef std::bidirectional_iterator_tag iterator_category;$/;"	t	class:pugi::xml_node_iterator
+iterator_category	src/pugixml.hpp	/^		typedef std::forward_iterator_tag iterator_category;$/;"	t	class:pugi::xml_named_node_iterator
+last_attribute	src/pugixml.cpp	/^	PUGI__FN xml_attribute xml_node::last_attribute() const$/;"	f	class:pugi::xml_node
+last_child	src/pugixml.cpp	/^	PUGI__FN xml_node xml_node::last_child() const$/;"	f	class:pugi::xml_node
+latin1_writer	src/pugixml.cpp	/^	struct latin1_writer$/;"	s	file:
+length	src/pugixml.cpp	/^		size_t length() const$/;"	f	class:xpath_string
+less	src/pugixml.cpp	/^	struct less$/;"	s	file:
+less_equal	src/pugixml.cpp	/^	struct less_equal$/;"	s	file:
+lex_axis_attribute	src/pugixml.cpp	/^		lex_axis_attribute,$/;"	e	enum:lexeme_t	file:
+lex_close_brace	src/pugixml.cpp	/^		lex_close_brace,$/;"	e	enum:lexeme_t	file:
+lex_close_square_brace	src/pugixml.cpp	/^		lex_close_square_brace,$/;"	e	enum:lexeme_t	file:
+lex_comma	src/pugixml.cpp	/^		lex_comma,$/;"	e	enum:lexeme_t	file:
+lex_dot	src/pugixml.cpp	/^		lex_dot,$/;"	e	enum:lexeme_t	file:
+lex_double_colon	src/pugixml.cpp	/^		lex_double_colon,$/;"	e	enum:lexeme_t	file:
+lex_double_dot	src/pugixml.cpp	/^		lex_double_dot,$/;"	e	enum:lexeme_t	file:
+lex_double_slash	src/pugixml.cpp	/^		lex_double_slash,$/;"	e	enum:lexeme_t	file:
+lex_eof	src/pugixml.cpp	/^		lex_eof$/;"	e	enum:lexeme_t	file:
+lex_equal	src/pugixml.cpp	/^		lex_equal,$/;"	e	enum:lexeme_t	file:
+lex_greater	src/pugixml.cpp	/^		lex_greater,$/;"	e	enum:lexeme_t	file:
+lex_greater_or_equal	src/pugixml.cpp	/^		lex_greater_or_equal,$/;"	e	enum:lexeme_t	file:
+lex_less	src/pugixml.cpp	/^		lex_less,$/;"	e	enum:lexeme_t	file:
+lex_less_or_equal	src/pugixml.cpp	/^		lex_less_or_equal,$/;"	e	enum:lexeme_t	file:
+lex_minus	src/pugixml.cpp	/^		lex_minus,$/;"	e	enum:lexeme_t	file:
+lex_multiply	src/pugixml.cpp	/^		lex_multiply,$/;"	e	enum:lexeme_t	file:
+lex_none	src/pugixml.cpp	/^		lex_none = 0,$/;"	e	enum:lexeme_t	file:
+lex_not_equal	src/pugixml.cpp	/^		lex_not_equal,$/;"	e	enum:lexeme_t	file:
+lex_number	src/pugixml.cpp	/^		lex_number,$/;"	e	enum:lexeme_t	file:
+lex_open_brace	src/pugixml.cpp	/^		lex_open_brace,$/;"	e	enum:lexeme_t	file:
+lex_open_square_brace	src/pugixml.cpp	/^		lex_open_square_brace,$/;"	e	enum:lexeme_t	file:
+lex_plus	src/pugixml.cpp	/^		lex_plus,$/;"	e	enum:lexeme_t	file:
+lex_quoted_string	src/pugixml.cpp	/^		lex_quoted_string,$/;"	e	enum:lexeme_t	file:
+lex_slash	src/pugixml.cpp	/^		lex_slash,$/;"	e	enum:lexeme_t	file:
+lex_string	src/pugixml.cpp	/^		lex_string,$/;"	e	enum:lexeme_t	file:
+lex_union	src/pugixml.cpp	/^		lex_union,$/;"	e	enum:lexeme_t	file:
+lex_var_ref	src/pugixml.cpp	/^		lex_var_ref,$/;"	e	enum:lexeme_t	file:
+lexeme_t	src/pugixml.cpp	/^	enum lexeme_t$/;"	g	file:
+lineContents	src/shmtreenode.cpp	/^SHMString SHMTreeNode::lineContents() const {$/;"	f	class:SHMTreeNode
+lineEnd	src/shmtreenode.cpp	/^int SHMTreeNode::lineEnd() const {$/;"	f	class:SHMTreeNode
+lineStart	src/shmtreenode.cpp	/^int SHMTreeNode::lineStart() const {$/;"	f	class:SHMTreeNode
+load	src/pugixml.cpp	/^	PUGI__FN xml_parse_result xml_document::load(const char_t* contents, unsigned int options)$/;"	f	class:pugi::xml_document
+load	src/pugixml.cpp	/^	PUGI__FN xml_parse_result xml_document::load(std::basic_istream<char, std::char_traits<char> >& stream, unsigned int options, xml_encoding encoding)$/;"	f	class:pugi::xml_document
+load	src/pugixml.cpp	/^	PUGI__FN xml_parse_result xml_document::load(std::basic_istream<wchar_t, std::char_traits<wchar_t> >& stream, unsigned int options)$/;"	f	class:pugi::xml_document
+loadXML	src/shmtreenode.cpp	/^void SHMTreeNode::loadXML(const SHMString &contents) {$/;"	f	class:SHMTreeNode
+loadXML	src/shmtreenode.cpp	/^void SHMTreeNode::loadXML(const SHMXMLNode &node) {$/;"	f	class:SHMTreeNode
+load_buffer	src/pugixml.cpp	/^	PUGI__FN xml_parse_result xml_document::load_buffer(const void* contents, size_t size, unsigned int options, xml_encoding encoding)$/;"	f	class:pugi::xml_document
+load_buffer_impl	src/pugixml.cpp	/^	PUGI__FN xml_parse_result xml_document::load_buffer_impl(void* contents, size_t size, unsigned int options, xml_encoding encoding, bool is_mutable, bool own)$/;"	f	class:pugi::xml_document
+load_buffer_inplace	src/pugixml.cpp	/^	PUGI__FN xml_parse_result xml_document::load_buffer_inplace(void* contents, size_t size, unsigned int options, xml_encoding encoding)$/;"	f	class:pugi::xml_document
+load_buffer_inplace_own	src/pugixml.cpp	/^	PUGI__FN xml_parse_result xml_document::load_buffer_inplace_own(void* contents, size_t size, unsigned int options, xml_encoding encoding)$/;"	f	class:pugi::xml_document
+load_file	src/pugixml.cpp	/^	PUGI__FN xml_parse_result xml_document::load_file(const char* path_, unsigned int options, xml_encoding encoding)$/;"	f	class:pugi::xml_document
+load_file	src/pugixml.cpp	/^	PUGI__FN xml_parse_result xml_document::load_file(const wchar_t* path_, unsigned int options, xml_encoding encoding)$/;"	f	class:pugi::xml_document
+load_file_impl	src/pugixml.cpp	/^	PUGI__FN xml_parse_result load_file_impl(xml_document& doc, FILE* file, unsigned int options, xml_encoding encoding)$/;"	f
+load_stream_data_noseek	src/pugixml.cpp	/^	template <typename T> PUGI__FN xml_parse_status load_stream_data_noseek(std::basic_istream<T>& stream, void** out_buffer, size_t* out_size)$/;"	f
+load_stream_data_seek	src/pugixml.cpp	/^	template <typename T> PUGI__FN xml_parse_status load_stream_data_seek(std::basic_istream<T>& stream, void** out_buffer, size_t* out_size)$/;"	f
+load_stream_impl	src/pugixml.cpp	/^	template <typename T> PUGI__FN xml_parse_result load_stream_impl(xml_document& doc, std::basic_istream<T>& stream, unsigned int options, xml_encoding encoding)$/;"	f
+local_name	src/pugixml.cpp	/^	PUGI__FN const char_t* local_name(const xpath_node& node)$/;"	f
+low	src/pugixml.cpp	/^		static value_type low(value_type result, uint32_t ch)$/;"	f	struct:latin1_writer
+low	src/pugixml.cpp	/^		static value_type low(value_type result, uint32_t ch)$/;"	f	struct:utf16_writer
+low	src/pugixml.cpp	/^		static value_type low(value_type result, uint32_t ch)$/;"	f	struct:utf32_writer
+low	src/pugixml.cpp	/^		static value_type low(value_type result, uint32_t ch)$/;"	f	struct:utf8_counter
+low	src/pugixml.cpp	/^		static value_type low(value_type result, uint32_t ch)$/;"	f	struct:utf8_writer
+low	src/pugixml.cpp	/^		static value_type low(value_type result, uint32_t)$/;"	f	struct:utf16_counter
+low	src/pugixml.cpp	/^		static value_type low(value_type result, uint32_t)$/;"	f	struct:utf32_counter
+main	input/teste.c	/^int main()$/;"	f
+main	input/teste2.c	/^int main()$/;"	f
+main	src/ast2xml.cpp	/^int main (int argc, char *argv[]) {$/;"	f
+make_parse_result	src/pugixml.cpp	/^	inline xml_parse_result make_parse_result(xml_parse_status status, ptrdiff_t offset = 0)$/;"	f
+mapToString	src/shmtreenode.cpp	/^SHMString SHMTreeNode::mapToString () const {$/;"	f	class:SHMTreeNode
+median	src/pugixml.cpp	/^	template <typename I, typename Pred> void median(I first, I middle, I last, const Pred& pred)$/;"	f
+median3	src/pugixml.cpp	/^	template <typename I, typename Pred> void median3(I first, I middle, I last, const Pred& pred)$/;"	f
+memory	src/pugixml.cpp	/^		void* memory;$/;"	m	struct:xml_memory_page	file:
+min_element	src/pugixml.cpp	/^	template <typename I, typename Pred> I min_element(I begin, I end, const Pred& pred)$/;"	f
+n	src/pugixml.cpp	/^		xpath_node n;$/;"	m	struct:xpath_context	file:
+name	src/pugixml.cpp	/^		char_t name[1];$/;"	m	struct:xpath_variable_boolean	file:
+name	src/pugixml.cpp	/^		char_t name[1];$/;"	m	struct:xpath_variable_node_set	file:
+name	src/pugixml.cpp	/^		char_t name[1];$/;"	m	struct:xpath_variable_number	file:
+name	src/pugixml.cpp	/^		char_t name[1];$/;"	m	struct:xpath_variable_string	file:
+name	src/pugixml.cpp	/^		char_t*					name;					\/\/\/< Pointer to element name.$/;"	m	struct:pugi::xml_node_struct	file:
+name	src/pugixml.cpp	/^		char_t* name;	\/\/\/< Pointer to attribute name.$/;"	m	struct:pugi::xml_attribute_struct	file:
+name	src/pugixml.cpp	/^	PUGI__FN const char_t* xml_attribute::name() const$/;"	f	class:pugi::xml_attribute
+name	src/pugixml.cpp	/^	PUGI__FN const char_t* xml_node::name() const$/;"	f	class:pugi::xml_node
+name	src/pugixml.cpp	/^	PUGI__FN const char_t* xpath_variable::name() const$/;"	f	class:pugi::xpath_variable
+namespace_uri	src/pugixml.cpp	/^	PUGI__FN const char_t* namespace_uri(const xml_attribute& attr, const xml_node& parent)$/;"	f
+namespace_uri	src/pugixml.cpp	/^	PUGI__FN const char_t* namespace_uri(const xml_node& node)$/;"	f
+namespace_uri	src/pugixml.cpp	/^	PUGI__FN const char_t* namespace_uri(const xpath_node& node)$/;"	f
+namespace_uri_predicate	src/pugixml.cpp	/^		namespace_uri_predicate(const char_t* name)$/;"	f	struct:namespace_uri_predicate
+namespace_uri_predicate	src/pugixml.cpp	/^	struct namespace_uri_predicate$/;"	s	file:
+narrow_stream	src/pugixml.hpp	/^		std::basic_ostream<char, std::char_traits<char> >* narrow_stream;$/;"	m	class:pugi::xml_writer_stream
+need_endian_swap_utf	src/pugixml.cpp	/^	PUGI__FN bool need_endian_swap_utf(xml_encoding le, xml_encoding re)$/;"	f
+new_xpath_variable	src/pugixml.cpp	/^	PUGI__FN xpath_variable* new_xpath_variable(xpath_value_type type, const char_t* name)$/;"	f
+new_xpath_variable	src/pugixml.cpp	/^	template <typename T> PUGI__FN T* new_xpath_variable(const char_t* name)$/;"	f
+next	src/pugixml.cpp	/^		void next()$/;"	f	class:xpath_lexer
+next	src/pugixml.cpp	/^		xml_memory_page* next;$/;"	m	struct:xml_memory_page	file:
+next	src/pugixml.cpp	/^		xml_stream_chunk* next;$/;"	m	struct:xml_stream_chunk	file:
+next	src/pugixml.cpp	/^		xpath_memory_block* next;$/;"	m	struct:xpath_memory_block	file:
+next_attribute	src/pugixml.cpp	/^		xml_attribute_struct* next_attribute;	\/\/\/< Next attribute$/;"	m	struct:pugi::xml_attribute_struct	file:
+next_attribute	src/pugixml.cpp	/^	PUGI__FN xml_attribute xml_attribute::next_attribute() const$/;"	f	class:pugi::xml_attribute
+next_sibling	src/pugixml.cpp	/^		xml_node_struct*		next_sibling;			\/\/\/< Right brother$/;"	m	struct:pugi::xml_node_struct	file:
+next_sibling	src/pugixml.cpp	/^	PUGI__FN xml_node xml_node::next_sibling() const$/;"	f	class:pugi::xml_node
+next_sibling	src/pugixml.cpp	/^	PUGI__FN xml_node xml_node::next_sibling(const char_t* name_) const$/;"	f	class:pugi::xml_node
+node	src/pugixml.cpp	/^	PUGI__FN xml_node xpath_node::node() const$/;"	f	class:pugi::xpath_node
+nodeAddress	src/shmtreenode.cpp	/^SHMString SHMTreeNode::nodeAddress() const {$/;"	f	class:SHMTreeNode
+nodeType	src/shmtreenode.cpp	/^SHMString SHMTreeNode::nodeType() const {$/;"	f	class:SHMTreeNode
+node_cdata	src/pugixml.hpp	/^		node_cdata,			\/\/ Character data, i.e. '<![CDATA[text]]>'$/;"	e	enum:pugi::xml_node_type
+node_comment	src/pugixml.hpp	/^		node_comment,		\/\/ Comment tag, i.e. '<!-- text -->'$/;"	e	enum:pugi::xml_node_type
+node_declaration	src/pugixml.hpp	/^		node_declaration,	\/\/ Document declaration, i.e. '<?xml version="1.0"?>'$/;"	e	enum:pugi::xml_node_type
+node_doctype	src/pugixml.hpp	/^		node_doctype		\/\/ Document type declaration, i.e. '<!DOCTYPE doc>'$/;"	e	enum:pugi::xml_node_type
+node_document	src/pugixml.hpp	/^		node_document,		\/\/ A document tree's absolute root$/;"	e	enum:pugi::xml_node_type
+node_element	src/pugixml.hpp	/^		node_element,		\/\/ Element tag, i.e. '<node\/>'$/;"	e	enum:pugi::xml_node_type
+node_height	src/pugixml.cpp	/^	PUGI__FN unsigned int node_height(xml_node n)$/;"	f
+node_is_ancestor	src/pugixml.cpp	/^	PUGI__FN bool node_is_ancestor(xml_node parent, xml_node node)$/;"	f
+node_is_before	src/pugixml.cpp	/^	PUGI__FN bool node_is_before(xml_node ln, unsigned int lh, xml_node rn, unsigned int rh)$/;"	f
+node_null	src/pugixml.hpp	/^		node_null,			\/\/ Empty (null) node handle$/;"	e	enum:pugi::xml_node_type
+node_output	src/pugixml.cpp	/^	PUGI__FN void node_output(xml_buffered_writer& writer, const xml_node& node, const char_t* indent, unsigned int flags, unsigned int depth)$/;"	f
+node_output_attributes	src/pugixml.cpp	/^	PUGI__FN void node_output_attributes(xml_buffered_writer& writer, const xml_node& node, unsigned int flags)$/;"	f
+node_pcdata	src/pugixml.hpp	/^		node_pcdata,		\/\/ Plain character data, i.e. 'text'$/;"	e	enum:pugi::xml_node_type
+node_pi	src/pugixml.hpp	/^		node_pi,			\/\/ Processing instruction, i.e. '<?name?>'$/;"	e	enum:pugi::xml_node_type
+nodetest	src/pugixml.cpp	/^			const char_t* nodetest;$/;"	m	union:xpath_ast_node::__anon5	file:
+nodetest_all	src/pugixml.cpp	/^		nodetest_all,$/;"	e	enum:nodetest_t	file:
+nodetest_all_in_namespace	src/pugixml.cpp	/^		nodetest_all_in_namespace$/;"	e	enum:nodetest_t	file:
+nodetest_name	src/pugixml.cpp	/^		nodetest_name,$/;"	e	enum:nodetest_t	file:
+nodetest_none	src/pugixml.cpp	/^		nodetest_none,$/;"	e	enum:nodetest_t	file:
+nodetest_pi	src/pugixml.cpp	/^		nodetest_pi,$/;"	e	enum:nodetest_t	file:
+nodetest_t	src/pugixml.cpp	/^	enum nodetest_t$/;"	g	file:
+nodetest_type_comment	src/pugixml.cpp	/^		nodetest_type_comment,$/;"	e	enum:nodetest_t	file:
+nodetest_type_node	src/pugixml.cpp	/^		nodetest_type_node,$/;"	e	enum:nodetest_t	file:
+nodetest_type_pi	src/pugixml.cpp	/^		nodetest_type_pi,$/;"	e	enum:nodetest_t	file:
+nodetest_type_text	src/pugixml.cpp	/^		nodetest_type_text,$/;"	e	enum:nodetest_t	file:
+normalize_space	src/pugixml.cpp	/^	PUGI__FN void normalize_space(char_t* buffer)$/;"	f
+not_equal_to	src/pugixml.cpp	/^	struct not_equal_to$/;"	s	file:
+number	src/pugixml.cpp	/^			double number;$/;"	m	union:xpath_ast_node::__anon5	file:
+offset	src/pugixml.hpp	/^		ptrdiff_t offset;$/;"	m	struct:pugi::xml_parse_result
+offset	src/pugixml.hpp	/^		ptrdiff_t offset;$/;"	m	struct:pugi::xpath_parse_result
+offset_debug	src/pugixml.cpp	/^	PUGI__FN ptrdiff_t xml_node::offset_debug() const$/;"	f	class:pugi::xml_node
+open_file_wide	src/pugixml.cpp	/^	PUGI__FN FILE* open_file_wide(const wchar_t* path, const wchar_t* mode)$/;"	f
+operator !	src/pugixml.cpp	/^	PUGI__FN bool xml_attribute::operator!() const$/;"	f	class:pugi::xml_attribute
+operator !	src/pugixml.cpp	/^	PUGI__FN bool xml_node::operator!() const$/;"	f	class:pugi::xml_node
+operator !	src/pugixml.cpp	/^	PUGI__FN bool xml_text::operator!() const$/;"	f	class:pugi::xml_text
+operator !	src/pugixml.cpp	/^	PUGI__FN bool xpath_node::operator!() const$/;"	f	class:pugi::xpath_node
+operator !	src/pugixml.cpp	/^	PUGI__FN bool xpath_query::operator!() const$/;"	f	class:pugi::xpath_query
+operator !=	src/pugixml.cpp	/^		bool operator!=(const xpath_string& o) const$/;"	f	class:xpath_string
+operator !=	src/pugixml.cpp	/^	PUGI__FN bool xml_attribute::operator!=(const xml_attribute& r) const$/;"	f	class:pugi::xml_attribute
+operator !=	src/pugixml.cpp	/^	PUGI__FN bool xml_attribute_iterator::operator!=(const xml_attribute_iterator& rhs) const$/;"	f	class:pugi::xml_attribute_iterator
+operator !=	src/pugixml.cpp	/^	PUGI__FN bool xml_named_node_iterator::operator!=(const xml_named_node_iterator& rhs) const$/;"	f	class:pugi::xml_named_node_iterator
+operator !=	src/pugixml.cpp	/^	PUGI__FN bool xml_node::operator!=(const xml_node& r) const$/;"	f	class:pugi::xml_node
+operator !=	src/pugixml.cpp	/^	PUGI__FN bool xml_node_iterator::operator!=(const xml_node_iterator& rhs) const$/;"	f	class:pugi::xml_node_iterator
+operator !=	src/pugixml.cpp	/^	PUGI__FN bool xpath_node::operator!=(const xpath_node& n) const$/;"	f	class:pugi::xpath_node
+operator &&	src/pugixml.cpp	/^	PUGI__FN bool operator&&(const xml_attribute& lhs, bool rhs)$/;"	f	namespace:pugi
+operator &&	src/pugixml.cpp	/^	PUGI__FN bool operator&&(const xml_node& lhs, bool rhs)$/;"	f	namespace:pugi
+operator &&	src/pugixml.cpp	/^	PUGI__FN bool operator&&(const xml_text& lhs, bool rhs)$/;"	f	namespace:pugi
+operator &&	src/pugixml.cpp	/^	PUGI__FN bool operator&&(const xpath_node& lhs, bool rhs)$/;"	f	namespace:pugi
+operator ()	src/pugixml.cpp	/^		bool operator()(const xml_attribute& a) const$/;"	f	struct:namespace_uri_predicate
+operator ()	src/pugixml.cpp	/^		bool operator()(const xpath_node& lhs, const xpath_node& rhs) const$/;"	f	struct:document_order_comparator
+operator ()	src/pugixml.cpp	/^		bool operator()(const xpath_node& lhs, const xpath_node& rhs) const$/;"	f	struct:duplicate_comparator
+operator ()	src/pugixml.cpp	/^		template <typename T> bool operator()(const T& lhs, const T& rhs) const$/;"	f	struct:equal_to
+operator ()	src/pugixml.cpp	/^		template <typename T> bool operator()(const T& lhs, const T& rhs) const$/;"	f	struct:less
+operator ()	src/pugixml.cpp	/^		template <typename T> bool operator()(const T& lhs, const T& rhs) const$/;"	f	struct:less_equal
+operator ()	src/pugixml.cpp	/^		template <typename T> bool operator()(const T& lhs, const T& rhs) const$/;"	f	struct:not_equal_to
+operator *	src/pugixml.cpp	/^	PUGI__FN xml_attribute& xml_attribute_iterator::operator*() const$/;"	f	class:pugi::xml_attribute_iterator
+operator *	src/pugixml.cpp	/^	PUGI__FN xml_node& xml_named_node_iterator::operator*() const$/;"	f	class:pugi::xml_named_node_iterator
+operator *	src/pugixml.cpp	/^	PUGI__FN xml_node& xml_node_iterator::operator*() const$/;"	f	class:pugi::xml_node_iterator
+operator ++	src/pugixml.cpp	/^	PUGI__FN const xml_attribute_iterator& xml_attribute_iterator::operator++()$/;"	f	class:pugi::xml_attribute_iterator
+operator ++	src/pugixml.cpp	/^	PUGI__FN const xml_named_node_iterator& xml_named_node_iterator::operator++()$/;"	f	class:pugi::xml_named_node_iterator
+operator ++	src/pugixml.cpp	/^	PUGI__FN const xml_node_iterator& xml_node_iterator::operator++()$/;"	f	class:pugi::xml_node_iterator
+operator ++	src/pugixml.cpp	/^	PUGI__FN xml_attribute_iterator xml_attribute_iterator::operator++(int)$/;"	f	class:pugi::xml_attribute_iterator
+operator ++	src/pugixml.cpp	/^	PUGI__FN xml_named_node_iterator xml_named_node_iterator::operator++(int)$/;"	f	class:pugi::xml_named_node_iterator
+operator ++	src/pugixml.cpp	/^	PUGI__FN xml_node_iterator xml_node_iterator::operator++(int)$/;"	f	class:pugi::xml_node_iterator
+operator --	src/pugixml.cpp	/^	PUGI__FN const xml_attribute_iterator& xml_attribute_iterator::operator--()$/;"	f	class:pugi::xml_attribute_iterator
+operator --	src/pugixml.cpp	/^	PUGI__FN const xml_node_iterator& xml_node_iterator::operator--()$/;"	f	class:pugi::xml_node_iterator
+operator --	src/pugixml.cpp	/^	PUGI__FN xml_attribute_iterator xml_attribute_iterator::operator--(int)$/;"	f	class:pugi::xml_attribute_iterator
+operator --	src/pugixml.cpp	/^	PUGI__FN xml_node_iterator xml_node_iterator::operator--(int)$/;"	f	class:pugi::xml_node_iterator
+operator ->	src/pugixml.cpp	/^	PUGI__FN xml_attribute* xml_attribute_iterator::operator->() const$/;"	f	class:pugi::xml_attribute_iterator
+operator ->	src/pugixml.cpp	/^	PUGI__FN xml_node* xml_named_node_iterator::operator->() const$/;"	f	class:pugi::xml_named_node_iterator
+operator ->	src/pugixml.cpp	/^	PUGI__FN xml_node* xml_node_iterator::operator->() const$/;"	f	class:pugi::xml_node_iterator
+operator <	src/pugixml.cpp	/^	PUGI__FN bool xml_attribute::operator<(const xml_attribute& r) const$/;"	f	class:pugi::xml_attribute
+operator <	src/pugixml.cpp	/^	PUGI__FN bool xml_node::operator<(const xml_node& r) const$/;"	f	class:pugi::xml_node
+operator <=	src/pugixml.cpp	/^	PUGI__FN bool xml_attribute::operator<=(const xml_attribute& r) const$/;"	f	class:pugi::xml_attribute
+operator <=	src/pugixml.cpp	/^	PUGI__FN bool xml_node::operator<=(const xml_node& r) const$/;"	f	class:pugi::xml_node
+operator =	src/pugixml.cpp	/^	PUGI__FN xml_attribute& xml_attribute::operator=(bool rhs)$/;"	f	class:pugi::xml_attribute
+operator =	src/pugixml.cpp	/^	PUGI__FN xml_attribute& xml_attribute::operator=(const char_t* rhs)$/;"	f	class:pugi::xml_attribute
+operator =	src/pugixml.cpp	/^	PUGI__FN xml_attribute& xml_attribute::operator=(double rhs)$/;"	f	class:pugi::xml_attribute
+operator =	src/pugixml.cpp	/^	PUGI__FN xml_attribute& xml_attribute::operator=(int rhs)$/;"	f	class:pugi::xml_attribute
+operator =	src/pugixml.cpp	/^	PUGI__FN xml_attribute& xml_attribute::operator=(unsigned int rhs)$/;"	f	class:pugi::xml_attribute
+operator =	src/pugixml.cpp	/^	PUGI__FN xml_text& xml_text::operator=(bool rhs)$/;"	f	class:pugi::xml_text
+operator =	src/pugixml.cpp	/^	PUGI__FN xml_text& xml_text::operator=(const char_t* rhs)$/;"	f	class:pugi::xml_text
+operator =	src/pugixml.cpp	/^	PUGI__FN xml_text& xml_text::operator=(double rhs)$/;"	f	class:pugi::xml_text
+operator =	src/pugixml.cpp	/^	PUGI__FN xml_text& xml_text::operator=(int rhs)$/;"	f	class:pugi::xml_text
+operator =	src/pugixml.cpp	/^	PUGI__FN xml_text& xml_text::operator=(unsigned int rhs)$/;"	f	class:pugi::xml_text
+operator =	src/pugixml.cpp	/^	PUGI__FN xpath_node_set& xpath_node_set::operator=(const xpath_node_set& ns)$/;"	f	class:pugi::xpath_node_set
+operator ==	src/pugixml.cpp	/^		bool operator==(const char_t* other) const$/;"	f	struct:xpath_lexer_string
+operator ==	src/pugixml.cpp	/^		bool operator==(const xpath_string& o) const$/;"	f	class:xpath_string
+operator ==	src/pugixml.cpp	/^	PUGI__FN bool xml_attribute::operator==(const xml_attribute& r) const$/;"	f	class:pugi::xml_attribute
+operator ==	src/pugixml.cpp	/^	PUGI__FN bool xml_attribute_iterator::operator==(const xml_attribute_iterator& rhs) const$/;"	f	class:pugi::xml_attribute_iterator
+operator ==	src/pugixml.cpp	/^	PUGI__FN bool xml_named_node_iterator::operator==(const xml_named_node_iterator& rhs) const$/;"	f	class:pugi::xml_named_node_iterator
+operator ==	src/pugixml.cpp	/^	PUGI__FN bool xml_node::operator==(const xml_node& r) const$/;"	f	class:pugi::xml_node
+operator ==	src/pugixml.cpp	/^	PUGI__FN bool xml_node_iterator::operator==(const xml_node_iterator& rhs) const$/;"	f	class:pugi::xml_node_iterator
+operator ==	src/pugixml.cpp	/^	PUGI__FN bool xpath_node::operator==(const xpath_node& n) const$/;"	f	class:pugi::xpath_node
+operator >	src/pugixml.cpp	/^	PUGI__FN bool xml_attribute::operator>(const xml_attribute& r) const$/;"	f	class:pugi::xml_attribute
+operator >	src/pugixml.cpp	/^	PUGI__FN bool xml_node::operator>(const xml_node& r) const$/;"	f	class:pugi::xml_node
+operator >=	src/pugixml.cpp	/^	PUGI__FN bool xml_attribute::operator>=(const xml_attribute& r) const$/;"	f	class:pugi::xml_attribute
+operator >=	src/pugixml.cpp	/^	PUGI__FN bool xml_node::operator>=(const xml_node& r) const$/;"	f	class:pugi::xml_node
+operator []	src/pugixml.cpp	/^	PUGI__FN const xpath_node& xpath_node_set::operator[](size_t index) const$/;"	f	class:pugi::xpath_node_set
+operator bool	src/pugixml.cpp	/^	PUGI__FN xml_parse_result::operator bool() const$/;"	f	class:pugi::xml_parse_result
+operator bool	src/pugixml.cpp	/^	PUGI__FN xpath_parse_result::operator bool() const$/;"	f	class:pugi::xpath_parse_result
+operator xml_attribute::unspecified_bool_type	src/pugixml.cpp	/^	PUGI__FN xml_attribute::operator xml_attribute::unspecified_bool_type() const$/;"	f	class:pugi::xml_attribute
+operator xml_node::unspecified_bool_type	src/pugixml.cpp	/^	PUGI__FN xml_node::operator xml_node::unspecified_bool_type() const$/;"	f	class:pugi::xml_node
+operator xml_text::unspecified_bool_type	src/pugixml.cpp	/^	PUGI__FN xml_text::operator xml_text::unspecified_bool_type() const$/;"	f	class:pugi::xml_text
+operator xpath_node::unspecified_bool_type	src/pugixml.cpp	/^	PUGI__FN xpath_node::operator xpath_node::unspecified_bool_type() const$/;"	f	class:pugi::xpath_node
+operator xpath_query::unspecified_bool_type	src/pugixml.cpp	/^	PUGI__FN xpath_query::operator xpath_query::unspecified_bool_type() const$/;"	f	class:pugi::xpath_query
+operator ||	src/pugixml.cpp	/^	PUGI__FN bool operator||(const xml_attribute& lhs, bool rhs)$/;"	f	namespace:pugi
+operator ||	src/pugixml.cpp	/^	PUGI__FN bool operator||(const xml_node& lhs, bool rhs)$/;"	f	namespace:pugi
+operator ||	src/pugixml.cpp	/^	PUGI__FN bool operator||(const xml_text& lhs, bool rhs)$/;"	f	namespace:pugi
+operator ||	src/pugixml.cpp	/^	PUGI__FN bool operator||(const xpath_node& lhs, bool rhs)$/;"	f	namespace:pugi
+opt_false	src/pugixml.cpp	/^	struct opt_false$/;"	s	file:
+opt_true	src/pugixml.cpp	/^	struct opt_true$/;"	s	file:
+page_offset	src/pugixml.cpp	/^		uint16_t page_offset; \/\/ offset from page->data$/;"	m	struct:xml_memory_string_header	file:
+parent	src/pugixml.cpp	/^		xml_node_struct*		parent;					\/\/\/< Pointer to parent$/;"	m	struct:pugi::xml_node_struct	file:
+parent	src/pugixml.cpp	/^	PUGI__FN xml_node xml_node::parent() const$/;"	f	class:pugi::xml_node
+parent	src/pugixml.cpp	/^	PUGI__FN xml_node xpath_node::parent() const$/;"	f	class:pugi::xpath_node
+parse	src/pugixml.cpp	/^		char_t* parse(char_t* s, xml_node_struct* xmldoc, unsigned int optmsk, char_t endch)$/;"	f	struct:xml_parser
+parse	src/pugixml.cpp	/^		static char_t* parse(char_t* s)$/;"	f	struct:strconv_pcdata_impl
+parse	src/pugixml.cpp	/^		static xml_parse_result parse(char_t* buffer, size_t length, xml_node_struct* root, unsigned int optmsk)$/;"	f	struct:xml_parser
+parse	src/pugixml.cpp	/^		static xpath_ast_node* parse(const char_t* query, xpath_variable_set* variables, xpath_allocator* alloc, xpath_parse_result* result)$/;"	f	struct:xpath_parser
+parse	src/pugixml.cpp	/^		xpath_ast_node* parse()$/;"	f	struct:xpath_parser
+parse_additive_expression	src/pugixml.cpp	/^		xpath_ast_node* parse_additive_expression()$/;"	f	struct:xpath_parser
+parse_and_expression	src/pugixml.cpp	/^		xpath_ast_node* parse_and_expression()$/;"	f	struct:xpath_parser
+parse_axis_name	src/pugixml.cpp	/^		axis_t parse_axis_name(const xpath_lexer_string& name, bool& specified)$/;"	f	struct:xpath_parser
+parse_cdata	src/pugixml.hpp	/^	const unsigned int parse_cdata = 0x0004;$/;"	m	namespace:pugi
+parse_comments	src/pugixml.hpp	/^	const unsigned int parse_comments = 0x0002;$/;"	m	namespace:pugi
+parse_declaration	src/pugixml.hpp	/^	const unsigned int parse_declaration = 0x0100;$/;"	m	namespace:pugi
+parse_default	src/pugixml.hpp	/^	const unsigned int parse_default = parse_cdata | parse_escapes | parse_wconv_attribute | parse_eol;$/;"	m	namespace:pugi
+parse_doctype	src/pugixml.hpp	/^	const unsigned int parse_doctype = 0x0200;$/;"	m	namespace:pugi
+parse_doctype_group	src/pugixml.cpp	/^		char_t* parse_doctype_group(char_t* s, char_t endch, bool toplevel)$/;"	f	struct:xml_parser
+parse_doctype_ignore	src/pugixml.cpp	/^		char_t* parse_doctype_ignore(char_t* s)$/;"	f	struct:xml_parser
+parse_doctype_primitive	src/pugixml.cpp	/^		char_t* parse_doctype_primitive(char_t* s)$/;"	f	struct:xml_parser
+parse_eol	src/pugixml.cpp	/^		static char_t* parse_eol(char_t* s, char_t end_quote)$/;"	f	struct:strconv_attribute_impl
+parse_eol	src/pugixml.hpp	/^	const unsigned int parse_eol = 0x0020;$/;"	m	namespace:pugi
+parse_equality_expression	src/pugixml.cpp	/^		xpath_ast_node* parse_equality_expression()$/;"	f	struct:xpath_parser
+parse_escapes	src/pugixml.hpp	/^	const unsigned int parse_escapes = 0x0010;$/;"	m	namespace:pugi
+parse_exclamation	src/pugixml.cpp	/^		char_t* parse_exclamation(char_t* s, xml_node_struct* cursor, unsigned int optmsk, char_t endch)$/;"	f	struct:xml_parser
+parse_expression	src/pugixml.cpp	/^		xpath_ast_node* parse_expression()$/;"	f	struct:xpath_parser
+parse_filter_expression	src/pugixml.cpp	/^		xpath_ast_node* parse_filter_expression()$/;"	f	struct:xpath_parser
+parse_full	src/pugixml.hpp	/^	const unsigned int parse_full = parse_default | parse_pi | parse_comments | parse_declaration | parse_doctype;$/;"	m	namespace:pugi
+parse_function	src/pugixml.cpp	/^		xpath_ast_node* parse_function(const xpath_lexer_string& name, size_t argc, xpath_ast_node* args[2])$/;"	f	struct:xpath_parser
+parse_function_helper	src/pugixml.cpp	/^		xpath_ast_node* parse_function_helper(ast_type_t type0, ast_type_t type1, size_t argc, xpath_ast_node* args[2])$/;"	f	struct:xpath_parser
+parse_location_path	src/pugixml.cpp	/^		xpath_ast_node* parse_location_path()$/;"	f	struct:xpath_parser
+parse_minimal	src/pugixml.hpp	/^	const unsigned int parse_minimal = 0x0000;$/;"	m	namespace:pugi
+parse_multiplicative_expression	src/pugixml.cpp	/^		xpath_ast_node* parse_multiplicative_expression()$/;"	f	struct:xpath_parser
+parse_node_test_type	src/pugixml.cpp	/^		nodetest_t parse_node_test_type(const xpath_lexer_string& name)$/;"	f	struct:xpath_parser
+parse_or_expression	src/pugixml.cpp	/^		xpath_ast_node* parse_or_expression()$/;"	f	struct:xpath_parser
+parse_path_expression	src/pugixml.cpp	/^		xpath_ast_node* parse_path_expression()$/;"	f	struct:xpath_parser
+parse_pi	src/pugixml.hpp	/^	const unsigned int parse_pi = 0x0001;$/;"	m	namespace:pugi
+parse_primary_expression	src/pugixml.cpp	/^		xpath_ast_node* parse_primary_expression()$/;"	f	struct:xpath_parser
+parse_question	src/pugixml.cpp	/^		char_t* parse_question(char_t* s, xml_node_struct*& ref_cursor, unsigned int optmsk, char_t endch)$/;"	f	struct:xml_parser
+parse_relational_expression	src/pugixml.cpp	/^		xpath_ast_node* parse_relational_expression()$/;"	f	struct:xpath_parser
+parse_relative_location_path	src/pugixml.cpp	/^		xpath_ast_node* parse_relative_location_path(xpath_ast_node* set)$/;"	f	struct:xpath_parser
+parse_simple	src/pugixml.cpp	/^		static char_t* parse_simple(char_t* s, char_t end_quote)$/;"	f	struct:strconv_attribute_impl
+parse_step	src/pugixml.cpp	/^		xpath_ast_node* parse_step(xpath_ast_node* set)$/;"	f	struct:xpath_parser
+parse_unary_expression	src/pugixml.cpp	/^		xpath_ast_node* parse_unary_expression()$/;"	f	struct:xpath_parser
+parse_union_expression	src/pugixml.cpp	/^		xpath_ast_node* parse_union_expression()$/;"	f	struct:xpath_parser
+parse_wconv	src/pugixml.cpp	/^		static char_t* parse_wconv(char_t* s, char_t end_quote)$/;"	f	struct:strconv_attribute_impl
+parse_wconv_attribute	src/pugixml.hpp	/^	const unsigned int parse_wconv_attribute = 0x0040;$/;"	m	namespace:pugi
+parse_wnorm	src/pugixml.cpp	/^		static char_t* parse_wnorm(char_t* s, char_t end_quote)$/;"	f	struct:strconv_attribute_impl
+parse_wnorm_attribute	src/pugixml.hpp	/^	const unsigned int parse_wnorm_attribute = 0x0080;$/;"	m	namespace:pugi
+parse_ws_pcdata	src/pugixml.hpp	/^	const unsigned int parse_ws_pcdata = 0x0008;$/;"	m	namespace:pugi
+parse_ws_pcdata_single	src/pugixml.hpp	/^	const unsigned int parse_ws_pcdata_single = 0x0400;$/;"	m	namespace:pugi
+partition	src/pugixml.cpp	/^	template <typename I, typename Pred> void partition(I begin, I middle, I end, const Pred& pred, I* out_eqbeg, I* out_eqend)$/;"	f
+path	src/pugixml.cpp	/^	PUGI__FN string_t xml_node::path(char_t delimiter) const$/;"	f	class:pugi::xml_node
+pointer	src/pugixml.hpp	/^		typedef xml_attribute* pointer;$/;"	t	class:pugi::xml_attribute_iterator
+pointer	src/pugixml.hpp	/^		typedef xml_node* pointer;$/;"	t	class:pugi::xml_named_node_iterator
+pointer	src/pugixml.hpp	/^		typedef xml_node* pointer;$/;"	t	class:pugi::xml_node_iterator
+position	src/pugixml.cpp	/^		size_t position, size;$/;"	m	struct:xpath_context	file:
+prefix	src/pugixml.cpp	/^		const char_t* prefix;$/;"	m	struct:namespace_uri_predicate	file:
+prefix_length	src/pugixml.cpp	/^		size_t prefix_length;$/;"	m	struct:namespace_uri_predicate	file:
+prepend_attribute	src/pugixml.cpp	/^	PUGI__FN xml_attribute xml_node::prepend_attribute(const char_t* name_)$/;"	f	class:pugi::xml_node
+prepend_child	src/pugixml.cpp	/^	PUGI__FN xml_node xml_node::prepend_child(const char_t* name_)$/;"	f	class:pugi::xml_node
+prepend_child	src/pugixml.cpp	/^	PUGI__FN xml_node xml_node::prepend_child(xml_node_type type_)$/;"	f	class:pugi::xml_node
+prepend_copy	src/pugixml.cpp	/^	PUGI__FN xml_attribute xml_node::prepend_copy(const xml_attribute& proto)$/;"	f	class:pugi::xml_node
+prepend_copy	src/pugixml.cpp	/^	PUGI__FN xml_node xml_node::prepend_copy(const xml_node& proto)$/;"	f	class:pugi::xml_node
+prev	src/pugixml.cpp	/^		xml_memory_page* prev;$/;"	m	struct:xml_memory_page	file:
+prev_attribute_c	src/pugixml.cpp	/^		xml_attribute_struct* prev_attribute_c;	\/\/\/< Previous attribute (cyclic list)$/;"	m	struct:pugi::xml_attribute_struct	file:
+prev_sibling_c	src/pugixml.cpp	/^		xml_node_struct*		prev_sibling_c;			\/\/\/< Left brother (cyclic list)$/;"	m	struct:pugi::xml_node_struct	file:
+previous_attribute	src/pugixml.cpp	/^	PUGI__FN xml_attribute xml_attribute::previous_attribute() const$/;"	f	class:pugi::xml_attribute
+previous_sibling	src/pugixml.cpp	/^	PUGI__FN xml_node xml_node::previous_sibling() const$/;"	f	class:pugi::xml_node
+previous_sibling	src/pugixml.cpp	/^	PUGI__FN xml_node xml_node::previous_sibling(const char_t* name_) const$/;"	f	class:pugi::xml_node
+print	src/pugixml.cpp	/^	PUGI__FN void xml_node::print(std::basic_ostream<char, std::char_traits<char> >& stream, const char_t* indent, unsigned int flags, xml_encoding encoding, unsigned int depth) const$/;"	f	class:pugi::xml_node
+print	src/pugixml.cpp	/^	PUGI__FN void xml_node::print(std::basic_ostream<wchar_t, std::char_traits<wchar_t> >& stream, const char_t* indent, unsigned int flags, unsigned int depth) const$/;"	f	class:pugi::xml_node
+print	src/pugixml.cpp	/^	PUGI__FN void xml_node::print(xml_writer& writer, const char_t* indent, unsigned int flags, xml_encoding encoding, unsigned int depth) const$/;"	f	class:pugi::xml_node
+pugi	src/pugixml.cpp	/^namespace pugi$/;"	n	file:
+pugi	src/pugixml.hpp	/^namespace pugi$/;"	n
+push	src/pugixml.cpp	/^		void push(char_t*& s, size_t count)$/;"	f	struct:gap
+push_back	src/pugixml.cpp	/^		void push_back(const xpath_node& node, xpath_allocator* alloc)$/;"	f	class:xpath_node_set_raw
+qualified_name	src/pugixml.cpp	/^	PUGI__FN const char_t* qualified_name(const xpath_node& node)$/;"	f
+reallocate	src/pugixml.cpp	/^		void* reallocate(void* ptr, size_t old_size, size_t new_size)$/;"	f	class:xpath_allocator
+recursive_copy_skip	src/pugixml.cpp	/^	PUGI__FN void recursive_copy_skip(xml_node& dest, const xml_node& source, const xml_node& skip)$/;"	f
+reference	src/pugixml.hpp	/^		typedef xml_attribute& reference;$/;"	t	class:pugi::xml_attribute_iterator
+reference	src/pugixml.hpp	/^		typedef xml_node& reference;$/;"	t	class:pugi::xml_named_node_iterator
+reference	src/pugixml.hpp	/^		typedef xml_node& reference;$/;"	t	class:pugi::xml_node_iterator
+release	src/pugixml.cpp	/^		void release()$/;"	f	class:xpath_allocator
+release	src/pugixml.cpp	/^		void* release()$/;"	f	struct:buffer_holder
+remove_attribute	src/pugixml.cpp	/^	PUGI__FN bool xml_node::remove_attribute(const char_t* name_)$/;"	f	class:pugi::xml_node
+remove_attribute	src/pugixml.cpp	/^	PUGI__FN bool xml_node::remove_attribute(const xml_attribute& a)$/;"	f	class:pugi::xml_node
+remove_child	src/pugixml.cpp	/^	PUGI__FN bool xml_node::remove_child(const char_t* name_)$/;"	f	class:pugi::xml_node
+remove_child	src/pugixml.cpp	/^	PUGI__FN bool xml_node::remove_child(const xml_node& n)$/;"	f	class:pugi::xml_node
+remove_duplicates	src/pugixml.cpp	/^		void remove_duplicates()$/;"	f	class:xpath_node_set_raw
+replaceSubstring	src/shmbasic.h	/^	static SHMString replaceSubstring(SHMString subject, const SHMString& search, const SHMString& replace) {$/;"	f	class:SHMBasic
+reset	src/pugixml.cpp	/^	PUGI__FN void xml_document::reset()$/;"	f	class:pugi::xml_document
+reset	src/pugixml.cpp	/^	PUGI__FN void xml_document::reset(const xml_document& proto)$/;"	f	class:pugi::xml_document
+result	src/pugixml.cpp	/^		xpath_allocator result;$/;"	m	struct:xpath_stack_data	file:
+result	src/pugixml.cpp	/^		xpath_allocator* result;$/;"	m	struct:xpath_stack	file:
+result	src/pugixml.cpp	/^	PUGI__FN const xpath_parse_result& xpath_exception::result() const$/;"	f	class:pugi::xpath_exception
+result	src/pugixml.cpp	/^	PUGI__FN const xpath_parse_result& xpath_query::result() const$/;"	f	class:pugi::xpath_query
+rettype	src/pugixml.cpp	/^		xpath_value_type rettype() const$/;"	f	class:xpath_ast_node
+return_type	src/pugixml.cpp	/^	PUGI__FN xpath_value_type xpath_query::return_type() const$/;"	f	class:pugi::xpath_query
+reverse	src/pugixml.cpp	/^	template <typename I> void reverse(I begin, I end)$/;"	f
+revert	src/pugixml.cpp	/^		void revert(const xpath_allocator& state)$/;"	f	class:xpath_allocator
+root	src/pugixml.cpp	/^		xpath_ast_node* root;$/;"	m	struct:xpath_query_impl	file:
+root	src/pugixml.cpp	/^	PUGI__FN xml_node xml_node::root() const$/;"	f	class:pugi::xml_node
+round_nearest	src/pugixml.cpp	/^	PUGI__FN double round_nearest(double value)$/;"	f
+round_nearest_nzero	src/pugixml.cpp	/^	PUGI__FN double round_nearest_nzero(double value)$/;"	f
+save	src/pugixml.cpp	/^	PUGI__FN void xml_document::save(std::basic_ostream<char, std::char_traits<char> >& stream, const char_t* indent, unsigned int flags, xml_encoding encoding) const$/;"	f	class:pugi::xml_document
+save	src/pugixml.cpp	/^	PUGI__FN void xml_document::save(std::basic_ostream<wchar_t, std::char_traits<wchar_t> >& stream, const char_t* indent, unsigned int flags) const$/;"	f	class:pugi::xml_document
+save	src/pugixml.cpp	/^	PUGI__FN void xml_document::save(xml_writer& writer, const char_t* indent, unsigned int flags, xml_encoding encoding) const$/;"	f	class:pugi::xml_document
+save_file	src/pugixml.cpp	/^	PUGI__FN bool xml_document::save_file(const char* path_, const char_t* indent, unsigned int flags, xml_encoding encoding) const$/;"	f	class:pugi::xml_document
+save_file	src/pugixml.cpp	/^	PUGI__FN bool xml_document::save_file(const wchar_t* path_, const char_t* indent, unsigned int flags, xml_encoding encoding) const$/;"	f	class:pugi::xml_document
+save_file_impl	src/pugixml.cpp	/^	PUGI__FN bool save_file_impl(const xml_document& doc, FILE* file, const char_t* indent, unsigned int flags, xml_encoding encoding)$/;"	f
+scratch	src/pugixml.cpp	/^		} scratch;$/;"	m	class:xml_buffered_writer	typeref:union:xml_buffered_writer::__anon4	file:
+select_nodes	src/pugixml.cpp	/^	PUGI__FN xpath_node_set xml_node::select_nodes(const char_t* query, xpath_variable_set* variables) const$/;"	f	class:pugi::xml_node
+select_nodes	src/pugixml.cpp	/^	PUGI__FN xpath_node_set xml_node::select_nodes(const xpath_query& query) const$/;"	f	class:pugi::xml_node
+select_single_node	src/pugixml.cpp	/^	PUGI__FN xpath_node xml_node::select_single_node(const char_t* query, xpath_variable_set* variables) const$/;"	f	class:pugi::xml_node
+select_single_node	src/pugixml.cpp	/^	PUGI__FN xpath_node xml_node::select_single_node(const xpath_query& query) const$/;"	f	class:pugi::xml_node
+set	src/pugixml.cpp	/^	PUGI__FN bool xml_text::set(bool rhs)$/;"	f	class:pugi::xml_text
+set	src/pugixml.cpp	/^	PUGI__FN bool xml_text::set(const char_t* rhs)$/;"	f	class:pugi::xml_text
+set	src/pugixml.cpp	/^	PUGI__FN bool xml_text::set(double rhs)$/;"	f	class:pugi::xml_text
+set	src/pugixml.cpp	/^	PUGI__FN bool xml_text::set(int rhs)$/;"	f	class:pugi::xml_text
+set	src/pugixml.cpp	/^	PUGI__FN bool xml_text::set(unsigned int rhs)$/;"	f	class:pugi::xml_text
+set	src/pugixml.cpp	/^	PUGI__FN bool xpath_variable::set(bool value)$/;"	f	class:pugi::xpath_variable
+set	src/pugixml.cpp	/^	PUGI__FN bool xpath_variable::set(const char_t* value)$/;"	f	class:pugi::xpath_variable
+set	src/pugixml.cpp	/^	PUGI__FN bool xpath_variable::set(const xpath_node_set& value)$/;"	f	class:pugi::xpath_variable
+set	src/pugixml.cpp	/^	PUGI__FN bool xpath_variable::set(double value)$/;"	f	class:pugi::xpath_variable
+set	src/pugixml.cpp	/^	PUGI__FN bool xpath_variable_set::set(const char_t* name, bool value)$/;"	f	class:pugi::xpath_variable_set
+set	src/pugixml.cpp	/^	PUGI__FN bool xpath_variable_set::set(const char_t* name, const char_t* value)$/;"	f	class:pugi::xpath_variable_set
+set	src/pugixml.cpp	/^	PUGI__FN bool xpath_variable_set::set(const char_t* name, const xpath_node_set& value)$/;"	f	class:pugi::xpath_variable_set
+set	src/pugixml.cpp	/^	PUGI__FN bool xpath_variable_set::set(const char_t* name, double value)$/;"	f	class:pugi::xpath_variable_set
+setLineContents	src/shmtreenode.cpp	/^void SHMTreeNode::setLineContents(SHMString string) {$/;"	f	class:SHMTreeNode
+setLineEnd	src/shmtreenode.cpp	/^void SHMTreeNode::setLineEnd(int line) {$/;"	f	class:SHMTreeNode
+setLineSingle	src/shmtreenode.cpp	/^void SHMTreeNode::setLineSingle(int line) {$/;"	f	class:SHMTreeNode
+setLineStart	src/shmtreenode.cpp	/^void SHMTreeNode::setLineStart(int line) {$/;"	f	class:SHMTreeNode
+setNodeAddress	src/shmtreenode.cpp	/^void SHMTreeNode::setNodeAddress(SHMString string) {$/;"	f	class:SHMTreeNode
+setNodeLineNumbers	src/shmparser.cpp	/^void SHMParser::setNodeLineNumbers(SHMTreeNode &node) {$/;"	f	class:SHMParser
+setNodePropertiesFromContents	src/shmparser.cpp	/^void SHMParser::setNodePropertiesFromContents(SHMTreeNode &node) {$/;"	f	class:SHMParser
+setNodeType	src/shmtreenode.cpp	/^void SHMTreeNode::setNodeType(SHMString string) {$/;"	f	class:SHMTreeNode
+set_memory_management_functions	src/pugixml.cpp	/^	PUGI__FN void PUGIXML_FUNCTION set_memory_management_functions(allocation_function allocate, deallocation_function deallocate)$/;"	f	namespace:pugi
+set_name	src/pugixml.cpp	/^	PUGI__FN bool xml_attribute::set_name(const char_t* rhs)$/;"	f	class:pugi::xml_attribute
+set_name	src/pugixml.cpp	/^	PUGI__FN bool xml_node::set_name(const char_t* rhs)$/;"	f	class:pugi::xml_node
+set_next	src/pugixml.cpp	/^		void set_next(xpath_ast_node* value)$/;"	f	class:xpath_ast_node
+set_right	src/pugixml.cpp	/^		void set_right(xpath_ast_node* value)$/;"	f	class:xpath_ast_node
+set_type	src/pugixml.cpp	/^		void set_type(xpath_node_set::type_t value)$/;"	f	class:xpath_node_set_raw
+set_value	src/pugixml.cpp	/^	PUGI__FN bool xml_attribute::set_value(bool rhs)$/;"	f	class:pugi::xml_attribute
+set_value	src/pugixml.cpp	/^	PUGI__FN bool xml_attribute::set_value(const char_t* rhs)$/;"	f	class:pugi::xml_attribute
+set_value	src/pugixml.cpp	/^	PUGI__FN bool xml_attribute::set_value(double rhs)$/;"	f	class:pugi::xml_attribute
+set_value	src/pugixml.cpp	/^	PUGI__FN bool xml_attribute::set_value(int rhs)$/;"	f	class:pugi::xml_attribute
+set_value	src/pugixml.cpp	/^	PUGI__FN bool xml_attribute::set_value(unsigned int rhs)$/;"	f	class:pugi::xml_attribute
+set_value	src/pugixml.cpp	/^	PUGI__FN bool xml_node::set_value(const char_t* rhs)$/;"	f	class:pugi::xml_node
+set_value_buffer	src/pugixml.cpp	/^	PUGI__FN bool set_value_buffer(char_t*& dest, uintptr_t& header, uintptr_t header_mask, char (&buf)[128])$/;"	f
+set_value_convert	src/pugixml.cpp	/^	PUGI__FN bool set_value_convert(char_t*& dest, uintptr_t& header, uintptr_t header_mask, bool value)$/;"	f
+set_value_convert	src/pugixml.cpp	/^	PUGI__FN bool set_value_convert(char_t*& dest, uintptr_t& header, uintptr_t header_mask, double value)$/;"	f
+set_value_convert	src/pugixml.cpp	/^	PUGI__FN bool set_value_convert(char_t*& dest, uintptr_t& header, uintptr_t header_mask, int value)$/;"	f
+set_value_convert	src/pugixml.cpp	/^	PUGI__FN bool set_value_convert(char_t*& dest, uintptr_t& header, uintptr_t header_mask, unsigned int value)$/;"	f
+size	src/pugixml.cpp	/^		size_t position, size;$/;"	m	struct:xpath_context	file:
+size	src/pugixml.cpp	/^		size_t size() const$/;"	f	class:xpath_node_set_raw
+size	src/pugixml.cpp	/^		size_t size;$/;"	m	struct:gap	file:
+size	src/pugixml.cpp	/^		size_t size;$/;"	m	struct:xml_stream_chunk	file:
+size	src/pugixml.cpp	/^	PUGI__FN size_t xpath_node_set::size() const$/;"	f	class:pugi::xpath_node_set
+sort	src/pugixml.cpp	/^	PUGI__FN void xpath_node_set::sort(bool reverse)$/;"	f	class:pugi::xpath_node_set
+sort	src/pugixml.cpp	/^	template <typename I, typename Pred> void sort(I begin, I end, const Pred& pred)$/;"	f
+sort_do	src/pugixml.cpp	/^		void sort_do()$/;"	f	class:xpath_node_set_raw
+splitNewlines	src/shmparser.cpp	/^SHMList<SHMString> SHMParser::splitNewlines(SHMString contents) {$/;"	f	class:SHMParser
+stack	src/pugixml.cpp	/^		xpath_stack stack;$/;"	m	struct:xpath_stack_data	file:
+starts_with	src/pugixml.cpp	/^	PUGI__FN bool starts_with(const char_t* string, const char_t* pattern)$/;"	f
+state	src/pugixml.cpp	/^		const char_t* state() const$/;"	f	class:xpath_lexer
+status	src/pugixml.hpp	/^		xml_parse_status status;$/;"	m	struct:pugi::xml_parse_result
+status_bad_attribute	src/pugixml.hpp	/^		status_bad_attribute,		\/\/ Parsing error occurred while parsing element attribute$/;"	e	enum:pugi::xml_parse_status
+status_bad_cdata	src/pugixml.hpp	/^		status_bad_cdata,			\/\/ Parsing error occurred while parsing CDATA section$/;"	e	enum:pugi::xml_parse_status
+status_bad_comment	src/pugixml.hpp	/^		status_bad_comment,			\/\/ Parsing error occurred while parsing comment$/;"	e	enum:pugi::xml_parse_status
+status_bad_doctype	src/pugixml.hpp	/^		status_bad_doctype,			\/\/ Parsing error occurred while parsing document type declaration$/;"	e	enum:pugi::xml_parse_status
+status_bad_end_element	src/pugixml.hpp	/^		status_bad_end_element,		\/\/ Parsing error occurred while parsing end element tag$/;"	e	enum:pugi::xml_parse_status
+status_bad_pcdata	src/pugixml.hpp	/^		status_bad_pcdata,			\/\/ Parsing error occurred while parsing PCDATA section$/;"	e	enum:pugi::xml_parse_status
+status_bad_pi	src/pugixml.hpp	/^		status_bad_pi,				\/\/ Parsing error occurred while parsing document declaration\/processing instruction$/;"	e	enum:pugi::xml_parse_status
+status_bad_start_element	src/pugixml.hpp	/^		status_bad_start_element,	\/\/ Parsing error occurred while parsing start element tag$/;"	e	enum:pugi::xml_parse_status
+status_end_element_mismatch	src/pugixml.hpp	/^		status_end_element_mismatch \/\/ There was a mismatch of start-end tags (closing tag had incorrect name, some tag was not closed or there was an excessive closing tag)$/;"	e	enum:pugi::xml_parse_status
+status_file_not_found	src/pugixml.hpp	/^		status_file_not_found,		\/\/ File was not found during load_file()$/;"	e	enum:pugi::xml_parse_status
+status_internal_error	src/pugixml.hpp	/^		status_internal_error,		\/\/ Internal error occurred$/;"	e	enum:pugi::xml_parse_status
+status_io_error	src/pugixml.hpp	/^		status_io_error,			\/\/ Error reading from file\/stream$/;"	e	enum:pugi::xml_parse_status
+status_ok	src/pugixml.hpp	/^		status_ok = 0,				\/\/ No error$/;"	e	enum:pugi::xml_parse_status
+status_out_of_memory	src/pugixml.hpp	/^		status_out_of_memory,		\/\/ Could not allocate memory$/;"	e	enum:pugi::xml_parse_status
+status_unrecognized_tag	src/pugixml.hpp	/^		status_unrecognized_tag,	\/\/ Parser could not determine tag type$/;"	e	enum:pugi::xml_parse_status
+std	src/pugixml.cpp	/^namespace std$/;"	n	file:
+std	src/pugixml.hpp	/^namespace std$/;"	n
+step_do	src/pugixml.cpp	/^		template <class T> xpath_node_set_raw step_do(const xpath_context& c, const xpath_stack& stack, T v)$/;"	f	class:xpath_ast_node	file:
+step_fill	src/pugixml.cpp	/^		template <class T> void step_fill(xpath_node_set_raw& ns, const xml_attribute& a, const xml_node& p, xpath_allocator* alloc, T v)$/;"	f	class:xpath_ast_node	file:
+step_fill	src/pugixml.cpp	/^		template <class T> void step_fill(xpath_node_set_raw& ns, const xml_node& n, xpath_allocator* alloc, T)$/;"	f	class:xpath_ast_node	file:
+step_push	src/pugixml.cpp	/^		void step_push(xpath_node_set_raw& ns, const xml_attribute& a, const xml_node& parent, xpath_allocator* alloc)$/;"	f	class:xpath_ast_node	file:
+step_push	src/pugixml.cpp	/^		void step_push(xpath_node_set_raw& ns, const xml_node& n, xpath_allocator* alloc)$/;"	f	class:xpath_ast_node	file:
+strconv_attribute_impl	src/pugixml.cpp	/^	template <typename opt_escape> struct strconv_attribute_impl$/;"	s	file:
+strconv_attribute_t	src/pugixml.cpp	/^	typedef char_t* (*strconv_attribute_t)(char_t*, char_t);$/;"	t	file:
+strconv_cdata	src/pugixml.cpp	/^	PUGI__FN char_t* strconv_cdata(char_t* s, char_t endch)$/;"	f
+strconv_comment	src/pugixml.cpp	/^	PUGI__FN char_t* strconv_comment(char_t* s, char_t endch)$/;"	f
+strconv_escape	src/pugixml.cpp	/^	PUGI__FN char_t* strconv_escape(char_t* s, gap& g)$/;"	f
+strconv_pcdata_impl	src/pugixml.cpp	/^	template <typename opt_eol, typename opt_escape> struct strconv_pcdata_impl$/;"	s	file:
+strconv_pcdata_t	src/pugixml.cpp	/^	typedef char_t* (*strconv_pcdata_t)(char_t*);$/;"	t	file:
+strcpy_insitu	src/pugixml.cpp	/^	PUGI__FN bool strcpy_insitu(char_t*& dest, uintptr_t& header, uintptr_t header_mask, const char_t* source)$/;"	f
+strcpy_insitu_allow	src/pugixml.cpp	/^	inline bool strcpy_insitu_allow(size_t length, uintptr_t allocated, char_t* target)$/;"	f
+strequal	src/pugixml.cpp	/^	PUGI__FN bool strequal(const char_t* src, const char_t* dst)$/;"	f
+strequalrange	src/pugixml.cpp	/^	PUGI__FN bool strequalrange(const char_t* lhs, const char_t* rhs, size_t count)$/;"	f
+string	src/pugixml.cpp	/^			const char_t* string;$/;"	m	union:xpath_ast_node::__anon5	file:
+string_t	src/pugixml.hpp	/^	typedef std::basic_string<PUGIXML_CHAR, std::char_traits<PUGIXML_CHAR>, std::allocator<PUGIXML_CHAR> > string_t;$/;"	t	namespace:pugi
+string_value	src/pugixml.cpp	/^	PUGI__FN xpath_string string_value(const xpath_node& na, xpath_allocator* alloc)$/;"	f
+strlength	src/pugixml.cpp	/^	PUGI__FN size_t strlength(const char_t* s)$/;"	f
+swap	src/pugixml.cpp	/^	template <typename T> void swap(T& lhs, T& rhs)$/;"	f
+temp	src/pugixml.cpp	/^		xpath_allocator temp;$/;"	m	struct:xpath_stack_data	file:
+temp	src/pugixml.cpp	/^		xpath_allocator* temp;$/;"	m	struct:xpath_stack	file:
+text	src/pugixml.cpp	/^	PUGI__FN xml_text xml_node::text() const$/;"	f	class:pugi::xml_node
+text_output	src/pugixml.cpp	/^	PUGI__FN void text_output(xml_buffered_writer& writer, const char_t* s, chartypex_t type, unsigned int flags)$/;"	f
+text_output_cdata	src/pugixml.cpp	/^	PUGI__FN void text_output_cdata(xml_buffered_writer& writer, const char_t* s)$/;"	f
+text_output_escaped	src/pugixml.cpp	/^	PUGI__FN void text_output_escaped(xml_buffered_writer& writer, const char_t* s, chartypex_t type)$/;"	f
+throw_error	src/pugixml.cpp	/^		void throw_error(const char* message)$/;"	f	struct:xpath_parser
+throw_error_oom	src/pugixml.cpp	/^		void throw_error_oom()$/;"	f	struct:xpath_parser
+toString	src/shmbasic.h	/^	static SHMString toString(int f) {$/;"	f	class:SHMBasic
+toString	src/shmtreenode.cpp	/^SHMString SHMTreeNode::toString() const {$/;"	f	class:SHMTreeNode
+toXML	src/shmtreenode.cpp	/^SHMString SHMTreeNode::toXML() const {$/;"	f	class:SHMTreeNode
+toXML	src/shmtreenode.cpp	/^void SHMTreeNode::toXML(SHMXMLNode &node) const {$/;"	f	class:SHMTreeNode
+tolower_ascii	src/pugixml.cpp	/^	PUGI__FN char_t tolower_ascii(char_t ch)$/;"	f
+translate	src/pugixml.cpp	/^	PUGI__FN void translate(char_t* buffer, const char_t* from, const char_t* to)$/;"	f
+traverse	src/pugixml.cpp	/^	PUGI__FN bool xml_node::traverse(xml_tree_walker& walker)$/;"	f	class:pugi::xml_node
+truncate	src/pugixml.cpp	/^		void truncate(xpath_node* pos)$/;"	f	class:xpath_node_set_raw
+truncate_zeros	src/pugixml.cpp	/^	PUGI__FN void truncate_zeros(char* begin, char* end)$/;"	f
+type	src/pugixml.cpp	/^		typedef uint16_t type;$/;"	t	struct:wchar_selector	file:
+type	src/pugixml.cpp	/^		typedef uint32_t type;$/;"	t	struct:wchar_selector	file:
+type	src/pugixml.cpp	/^		xpath_node_set::type_t type() const$/;"	f	class:xpath_node_set_raw
+type	src/pugixml.cpp	/^	PUGI__FN xml_node_type xml_node::type() const$/;"	f	class:pugi::xml_node
+type	src/pugixml.cpp	/^	PUGI__FN xpath_node_set::type_t xpath_node_set::type() const$/;"	f	class:pugi::xpath_node_set
+type	src/pugixml.cpp	/^	PUGI__FN xpath_value_type xpath_variable::type() const$/;"	f	class:pugi::xpath_variable
+type_sorted	src/pugixml.hpp	/^			type_sorted,			\/\/ Sorted by document order (ascending)$/;"	e	enum:pugi::xpath_node_set::type_t
+type_sorted_reverse	src/pugixml.hpp	/^			type_sorted_reverse		\/\/ Sorted by document order (descending)$/;"	e	enum:pugi::xpath_node_set::type_t
+type_t	src/pugixml.hpp	/^		enum type_t$/;"	g	class:pugi::xpath_node_set
+type_unsorted	src/pugixml.hpp	/^			type_unsorted,			\/\/ Not ordered$/;"	e	enum:pugi::xpath_node_set::type_t
+unique	src/pugixml.cpp	/^	template <typename I> I unique(I begin, I end)$/;"	f
+unspecified_bool_type	src/pugixml.hpp	/^		typedef void (*unspecified_bool_type)(xml_attribute***);$/;"	t	class:pugi::xml_attribute
+unspecified_bool_type	src/pugixml.hpp	/^		typedef void (*unspecified_bool_type)(xml_node***);$/;"	t	class:pugi::xml_node
+unspecified_bool_type	src/pugixml.hpp	/^		typedef void (*unspecified_bool_type)(xml_text***);$/;"	t	class:pugi::xml_text
+unspecified_bool_type	src/pugixml.hpp	/^		typedef void (*unspecified_bool_type)(xpath_node***);$/;"	t	class:pugi::xpath_node
+unspecified_bool_type	src/pugixml.hpp	/^		typedef void (*unspecified_bool_type)(xpath_query***);$/;"	t	class:pugi::xpath_query
+unspecified_bool_xml_attribute	src/pugixml.cpp	/^	PUGI__FN static void unspecified_bool_xml_attribute(xml_attribute***)$/;"	f	namespace:pugi
+unspecified_bool_xml_node	src/pugixml.cpp	/^	PUGI__FN static void unspecified_bool_xml_node(xml_node***)$/;"	f	namespace:pugi
+unspecified_bool_xml_text	src/pugixml.cpp	/^	PUGI__FN static void unspecified_bool_xml_text(xml_text***)$/;"	f	namespace:pugi
+unspecified_bool_xpath_node	src/pugixml.cpp	/^	PUGI__FN static void unspecified_bool_xpath_node(xpath_node***)$/;"	f	namespace:pugi
+unspecified_bool_xpath_query	src/pugixml.cpp	/^	PUGI__FN static void unspecified_bool_xpath_query(xpath_query***)$/;"	f	namespace:pugi
+uses_heap	src/pugixml.cpp	/^		bool uses_heap() const$/;"	f	class:xpath_string
+utf16_counter	src/pugixml.cpp	/^	struct utf16_counter$/;"	s	file:
+utf16_writer	src/pugixml.cpp	/^	struct utf16_writer$/;"	s	file:
+utf32_counter	src/pugixml.cpp	/^	struct utf32_counter$/;"	s	file:
+utf32_writer	src/pugixml.cpp	/^	struct utf32_writer$/;"	s	file:
+utf8_counter	src/pugixml.cpp	/^	struct utf8_counter$/;"	s	file:
+utf8_writer	src/pugixml.cpp	/^	struct utf8_writer$/;"	s	file:
+utf_decoder	src/pugixml.cpp	/^	template <typename Traits, typename opt_swap = opt_false> struct utf_decoder$/;"	s	file:
+value	src/pugixml.cpp	/^		bool value;$/;"	m	struct:xpath_variable_boolean	file:
+value	src/pugixml.cpp	/^		char_t*					value;					\/\/\/< Pointer to any associated string data.$/;"	m	struct:pugi::xml_node_struct	file:
+value	src/pugixml.cpp	/^		char_t*	value;	\/\/\/< Pointer to attribute value.$/;"	m	struct:pugi::xml_attribute_struct	file:
+value	src/pugixml.cpp	/^		char_t* value;$/;"	m	struct:xpath_variable_string	file:
+value	src/pugixml.cpp	/^		double value;$/;"	m	struct:xpath_variable_number	file:
+value	src/pugixml.cpp	/^		enum { value = 0 };$/;"	e	enum:opt_false::__anon1	file:
+value	src/pugixml.cpp	/^		enum { value = 1 };$/;"	e	enum:opt_true::__anon2	file:
+value	src/pugixml.cpp	/^		xpath_node_set value;$/;"	m	struct:xpath_variable_node_set	file:
+value	src/pugixml.cpp	/^	PUGI__FN const char_t* xml_attribute::value() const$/;"	f	class:pugi::xml_attribute
+value	src/pugixml.cpp	/^	PUGI__FN const char_t* xml_node::value() const$/;"	f	class:pugi::xml_node
+value_type	src/pugixml.cpp	/^		typedef size_t value_type;$/;"	t	struct:utf16_counter	file:
+value_type	src/pugixml.cpp	/^		typedef size_t value_type;$/;"	t	struct:utf32_counter	file:
+value_type	src/pugixml.cpp	/^		typedef size_t value_type;$/;"	t	struct:utf8_counter	file:
+value_type	src/pugixml.cpp	/^		typedef uint16_t* value_type;$/;"	t	struct:utf16_writer	file:
+value_type	src/pugixml.cpp	/^		typedef uint32_t* value_type;$/;"	t	struct:utf32_writer	file:
+value_type	src/pugixml.cpp	/^		typedef uint8_t* value_type;$/;"	t	struct:latin1_writer	file:
+value_type	src/pugixml.cpp	/^		typedef uint8_t* value_type;$/;"	t	struct:utf8_writer	file:
+value_type	src/pugixml.hpp	/^		typedef xml_attribute value_type;$/;"	t	class:pugi::xml_attribute_iterator
+value_type	src/pugixml.hpp	/^		typedef xml_node value_type;$/;"	t	class:pugi::xml_named_node_iterator
+value_type	src/pugixml.hpp	/^		typedef xml_node value_type;$/;"	t	class:pugi::xml_node_iterator
+variable	src/pugixml.cpp	/^			xpath_variable* variable;$/;"	m	union:xpath_ast_node::__anon5	file:
+wchar_counter	src/pugixml.cpp	/^	typedef wchar_selector<sizeof(wchar_t)>::counter wchar_counter;$/;"	t	file:
+wchar_selector	src/pugixml.cpp	/^	template <> struct wchar_selector<2>$/;"	s	file:
+wchar_selector	src/pugixml.cpp	/^	template <> struct wchar_selector<4>$/;"	s	file:
+wchar_writer	src/pugixml.cpp	/^	typedef wchar_selector<sizeof(wchar_t)>::writer wchar_writer;$/;"	t	file:
+what	src/pugixml.cpp	/^	PUGI__FN const char* xpath_exception::what() const throw()$/;"	f	class:pugi::xpath_exception
+wide_stream	src/pugixml.hpp	/^		std::basic_ostream<wchar_t, std::char_traits<wchar_t> >* wide_stream;$/;"	m	class:pugi::xml_writer_stream
+widen_ascii	src/pugixml.cpp	/^	PUGI__FN void widen_ascii(wchar_t* dest, const char* source)$/;"	f
+write	src/pugixml.cpp	/^		void write(char_t d0)$/;"	f	class:xml_buffered_writer
+write	src/pugixml.cpp	/^		void write(char_t d0, char_t d1)$/;"	f	class:xml_buffered_writer
+write	src/pugixml.cpp	/^		void write(char_t d0, char_t d1, char_t d2)$/;"	f	class:xml_buffered_writer
+write	src/pugixml.cpp	/^		void write(char_t d0, char_t d1, char_t d2, char_t d3)$/;"	f	class:xml_buffered_writer
+write	src/pugixml.cpp	/^		void write(char_t d0, char_t d1, char_t d2, char_t d3, char_t d4)$/;"	f	class:xml_buffered_writer
+write	src/pugixml.cpp	/^		void write(char_t d0, char_t d1, char_t d2, char_t d3, char_t d4, char_t d5)$/;"	f	class:xml_buffered_writer
+write	src/pugixml.cpp	/^		void write(const char_t* data)$/;"	f	class:xml_buffered_writer
+write	src/pugixml.cpp	/^		void write(const char_t* data, size_t length)$/;"	f	class:xml_buffered_writer
+write	src/pugixml.cpp	/^	PUGI__FN void xml_writer_file::write(const void* data, size_t size)$/;"	f	class:pugi::xml_writer_file
+write	src/pugixml.cpp	/^	PUGI__FN void xml_writer_stream::write(const void* data, size_t size)$/;"	f	class:pugi::xml_writer_stream
+writer	src/pugixml.cpp	/^		typedef utf16_writer writer;$/;"	t	struct:wchar_selector	file:
+writer	src/pugixml.cpp	/^		typedef utf32_writer writer;$/;"	t	struct:wchar_selector	file:
+writer	src/pugixml.cpp	/^		xml_writer& writer;$/;"	m	class:xml_buffered_writer	file:
+xml_allocator	src/pugixml.cpp	/^		xml_allocator(xml_memory_page* root): _root(root), _busy_size(root->busy_size)$/;"	f	struct:xml_allocator
+xml_allocator	src/pugixml.cpp	/^	struct xml_allocator$/;"	s	file:
+xml_attribute	src/pugixml.cpp	/^	PUGI__FN xml_attribute::xml_attribute(): _attr(0)$/;"	f	class:pugi::xml_attribute
+xml_attribute	src/pugixml.cpp	/^	PUGI__FN xml_attribute::xml_attribute(xml_attribute_struct* attr): _attr(attr)$/;"	f	class:pugi::xml_attribute
+xml_attribute	src/pugixml.hpp	/^	class PUGIXML_CLASS xml_attribute$/;"	c	namespace:pugi
+xml_attribute_iterator	src/pugixml.cpp	/^	PUGI__FN xml_attribute_iterator::xml_attribute_iterator()$/;"	f	class:pugi::xml_attribute_iterator
+xml_attribute_iterator	src/pugixml.cpp	/^	PUGI__FN xml_attribute_iterator::xml_attribute_iterator(const xml_attribute& attr, const xml_node& parent): _wrap(attr), _parent(parent)$/;"	f	class:pugi::xml_attribute_iterator
+xml_attribute_iterator	src/pugixml.cpp	/^	PUGI__FN xml_attribute_iterator::xml_attribute_iterator(xml_attribute_struct* ref, xml_node_struct* parent): _wrap(ref), _parent(parent)$/;"	f	class:pugi::xml_attribute_iterator
+xml_attribute_iterator	src/pugixml.hpp	/^	class PUGIXML_CLASS xml_attribute_iterator$/;"	c	namespace:pugi
+xml_attribute_struct	src/pugixml.cpp	/^		xml_attribute_struct(impl::xml_memory_page* page): header(reinterpret_cast<uintptr_t>(page)), name(0), value(0), prev_attribute_c(0), next_attribute(0)$/;"	f	struct:pugi::xml_attribute_struct
+xml_attribute_struct	src/pugixml.cpp	/^	struct xml_attribute_struct$/;"	s	namespace:pugi	file:
+xml_buffered_writer	src/pugixml.cpp	/^		xml_buffered_writer(xml_writer& writer_, xml_encoding user_encoding): writer(writer_), bufsize(0), encoding(get_write_encoding(user_encoding))$/;"	f	class:xml_buffered_writer
+xml_buffered_writer	src/pugixml.cpp	/^	class xml_buffered_writer$/;"	c	file:
+xml_document	src/pugixml.cpp	/^	PUGI__FN xml_document::xml_document(): _buffer(0)$/;"	f	class:pugi::xml_document
+xml_document	src/pugixml.hpp	/^	class PUGIXML_CLASS xml_document: public xml_node$/;"	c	namespace:pugi
+xml_document_struct	src/pugixml.cpp	/^		xml_document_struct(xml_memory_page* page): xml_node_struct(page, node_document), xml_allocator(page), buffer(0)$/;"	f	struct:xml_document_struct
+xml_document_struct	src/pugixml.cpp	/^	struct xml_document_struct: public xml_node_struct, public xml_allocator$/;"	s	file:
+xml_encoding	src/pugixml.hpp	/^	enum xml_encoding$/;"	g	namespace:pugi
+xml_memory	src/pugixml.cpp	/^	typedef xml_memory_management_function_storage<int> xml_memory;$/;"	t	file:
+xml_memory_management_function_storage	src/pugixml.cpp	/^	struct xml_memory_management_function_storage$/;"	s	file:
+xml_memory_page	src/pugixml.cpp	/^	struct xml_memory_page$/;"	s	file:
+xml_memory_page_alignment	src/pugixml.cpp	/^	static const uintptr_t xml_memory_page_alignment = 32;$/;"	v	file:
+xml_memory_page_name_allocated_mask	src/pugixml.cpp	/^	static const uintptr_t xml_memory_page_name_allocated_mask = 16;$/;"	v	file:
+xml_memory_page_pointer_mask	src/pugixml.cpp	/^	static const uintptr_t xml_memory_page_pointer_mask = ~(xml_memory_page_alignment - 1);$/;"	v	file:
+xml_memory_page_size	src/pugixml.cpp	/^	static const size_t xml_memory_page_size =$/;"	v	file:
+xml_memory_page_type_mask	src/pugixml.cpp	/^	static const uintptr_t xml_memory_page_type_mask = 7;$/;"	v	file:
+xml_memory_page_value_allocated_mask	src/pugixml.cpp	/^	static const uintptr_t xml_memory_page_value_allocated_mask = 8;$/;"	v	file:
+xml_memory_string_header	src/pugixml.cpp	/^	struct xml_memory_string_header$/;"	s	file:
+xml_named_node_iterator	src/pugixml.cpp	/^	PUGI__FN xml_named_node_iterator::xml_named_node_iterator(): _name(0)$/;"	f	class:pugi::xml_named_node_iterator
+xml_named_node_iterator	src/pugixml.cpp	/^	PUGI__FN xml_named_node_iterator::xml_named_node_iterator(const xml_node& node, const char_t* name): _node(node), _name(name)$/;"	f	class:pugi::xml_named_node_iterator
+xml_named_node_iterator	src/pugixml.hpp	/^	class xml_named_node_iterator$/;"	c	namespace:pugi
+xml_node	src/pugixml.cpp	/^	PUGI__FN xml_node::xml_node(): _root(0)$/;"	f	class:pugi::xml_node
+xml_node	src/pugixml.cpp	/^	PUGI__FN xml_node::xml_node(xml_node_struct* p): _root(p)$/;"	f	class:pugi::xml_node
+xml_node	src/pugixml.hpp	/^	class PUGIXML_CLASS xml_node$/;"	c	namespace:pugi
+xml_node_iterator	src/pugixml.cpp	/^	PUGI__FN xml_node_iterator::xml_node_iterator()$/;"	f	class:pugi::xml_node_iterator
+xml_node_iterator	src/pugixml.cpp	/^	PUGI__FN xml_node_iterator::xml_node_iterator(const xml_node& node): _wrap(node), _parent(node.parent())$/;"	f	class:pugi::xml_node_iterator
+xml_node_iterator	src/pugixml.cpp	/^	PUGI__FN xml_node_iterator::xml_node_iterator(xml_node_struct* ref, xml_node_struct* parent): _wrap(ref), _parent(parent)$/;"	f	class:pugi::xml_node_iterator
+xml_node_iterator	src/pugixml.hpp	/^	class PUGIXML_CLASS xml_node_iterator$/;"	c	namespace:pugi
+xml_node_struct	src/pugixml.cpp	/^		xml_node_struct(impl::xml_memory_page* page, xml_node_type type): header(reinterpret_cast<uintptr_t>(page) | (type - 1)), parent(0), name(0), value(0), first_child(0), prev_sibling_c(0), next_sibling(0), first_attribute(0)$/;"	f	struct:pugi::xml_node_struct
+xml_node_struct	src/pugixml.cpp	/^	struct xml_node_struct$/;"	s	namespace:pugi	file:
+xml_node_type	src/pugixml.hpp	/^	enum xml_node_type$/;"	g	namespace:pugi
+xml_object_range	src/pugixml.hpp	/^		xml_object_range(It b, It e): _begin(b), _end(e)$/;"	f	class:pugi::xml_object_range
+xml_object_range	src/pugixml.hpp	/^	template <typename It> class xml_object_range$/;"	c	namespace:pugi
+xml_parse_result	src/pugixml.cpp	/^	PUGI__FN xml_parse_result::xml_parse_result(): status(status_internal_error), offset(0), encoding(encoding_auto)$/;"	f	class:pugi::xml_parse_result
+xml_parse_result	src/pugixml.hpp	/^	struct PUGIXML_CLASS xml_parse_result$/;"	s	namespace:pugi
+xml_parse_status	src/pugixml.hpp	/^	enum xml_parse_status$/;"	g	namespace:pugi
+xml_parser	src/pugixml.cpp	/^		xml_parser(const xml_allocator& alloc_): alloc(alloc_), error_offset(0), error_status(status_ok)$/;"	f	struct:xml_parser
+xml_parser	src/pugixml.cpp	/^	struct xml_parser$/;"	s	file:
+xml_stream_chunk	src/pugixml.cpp	/^		xml_stream_chunk(): next(0), size(0)$/;"	f	struct:xml_stream_chunk
+xml_stream_chunk	src/pugixml.cpp	/^	template <typename T> struct xml_stream_chunk$/;"	s	file:
+xml_text	src/pugixml.cpp	/^	PUGI__FN xml_text::xml_text(): _root(0)$/;"	f	class:pugi::xml_text
+xml_text	src/pugixml.cpp	/^	PUGI__FN xml_text::xml_text(xml_node_struct* root): _root(root)$/;"	f	class:pugi::xml_text
+xml_text	src/pugixml.hpp	/^	class PUGIXML_CLASS xml_text$/;"	c	namespace:pugi
+xml_tree_walker	src/pugixml.cpp	/^	PUGI__FN xml_tree_walker::xml_tree_walker(): _depth(0)$/;"	f	class:pugi::xml_tree_walker
+xml_tree_walker	src/pugixml.hpp	/^	class PUGIXML_CLASS xml_tree_walker$/;"	c	namespace:pugi
+xml_writer	src/pugixml.hpp	/^	class PUGIXML_CLASS xml_writer$/;"	c	namespace:pugi
+xml_writer_file	src/pugixml.cpp	/^	PUGI__FN xml_writer_file::xml_writer_file(void* file_): file(file_)$/;"	f	class:pugi::xml_writer_file
+xml_writer_file	src/pugixml.hpp	/^	class PUGIXML_CLASS xml_writer_file: public xml_writer$/;"	c	namespace:pugi
+xml_writer_stream	src/pugixml.cpp	/^	PUGI__FN xml_writer_stream::xml_writer_stream(std::basic_ostream<char, std::char_traits<char> >& stream): narrow_stream(&stream), wide_stream(0)$/;"	f	class:pugi::xml_writer_stream
+xml_writer_stream	src/pugixml.cpp	/^	PUGI__FN xml_writer_stream::xml_writer_stream(std::basic_ostream<wchar_t, std::char_traits<wchar_t> >& stream): narrow_stream(0), wide_stream(&stream)$/;"	f	class:pugi::xml_writer_stream
+xml_writer_stream	src/pugixml.hpp	/^	class PUGIXML_CLASS xml_writer_stream: public xml_writer$/;"	c	namespace:pugi
+xpath_allocator	src/pugixml.cpp	/^		xpath_allocator(xpath_memory_block* root, size_t root_size = 0): _root(root), _root_size(root_size)$/;"	f	class:xpath_allocator
+xpath_allocator	src/pugixml.cpp	/^	class xpath_allocator$/;"	c	file:
+xpath_allocator_capture	src/pugixml.cpp	/^		xpath_allocator_capture(xpath_allocator* alloc): _target(alloc), _state(*alloc)$/;"	f	struct:xpath_allocator_capture
+xpath_allocator_capture	src/pugixml.cpp	/^	struct xpath_allocator_capture$/;"	s	file:
+xpath_ast_node	src/pugixml.cpp	/^		xpath_ast_node(ast_type_t type, xpath_ast_node* left, axis_t axis, nodetest_t test, const char_t* contents):$/;"	f	class:xpath_ast_node
+xpath_ast_node	src/pugixml.cpp	/^		xpath_ast_node(ast_type_t type, xpath_value_type rettype_, const char_t* value):$/;"	f	class:xpath_ast_node
+xpath_ast_node	src/pugixml.cpp	/^		xpath_ast_node(ast_type_t type, xpath_value_type rettype_, double value):$/;"	f	class:xpath_ast_node
+xpath_ast_node	src/pugixml.cpp	/^		xpath_ast_node(ast_type_t type, xpath_value_type rettype_, xpath_ast_node* left = 0, xpath_ast_node* right = 0):$/;"	f	class:xpath_ast_node
+xpath_ast_node	src/pugixml.cpp	/^		xpath_ast_node(ast_type_t type, xpath_value_type rettype_, xpath_variable* value):$/;"	f	class:xpath_ast_node
+xpath_ast_node	src/pugixml.cpp	/^	class xpath_ast_node$/;"	c	file:
+xpath_context	src/pugixml.cpp	/^		xpath_context(const xpath_node& n_, size_t position_, size_t size_): n(n_), position(position_), size(size_)$/;"	f	struct:xpath_context
+xpath_context	src/pugixml.cpp	/^	struct xpath_context$/;"	s	file:
+xpath_exception	src/pugixml.cpp	/^	PUGI__FN xpath_exception::xpath_exception(const xpath_parse_result& result_): _result(result_)$/;"	f	class:pugi::xpath_exception
+xpath_exception	src/pugixml.hpp	/^	class PUGIXML_CLASS xpath_exception: public std::exception$/;"	c	namespace:pugi
+xpath_first	src/pugixml.cpp	/^	PUGI__FN xpath_node xpath_first(const xpath_node* begin, const xpath_node* end, xpath_node_set::type_t type)$/;"	f
+xpath_lexer	src/pugixml.cpp	/^		explicit xpath_lexer(const char_t* query): _cur(query)$/;"	f	class:xpath_lexer
+xpath_lexer	src/pugixml.cpp	/^	class xpath_lexer$/;"	c	file:
+xpath_lexer_string	src/pugixml.cpp	/^		xpath_lexer_string(): begin(0), end(0)$/;"	f	struct:xpath_lexer_string
+xpath_lexer_string	src/pugixml.cpp	/^	struct xpath_lexer_string$/;"	s	file:
+xpath_memory_block	src/pugixml.cpp	/^	struct xpath_memory_block$/;"	s	file:
+xpath_node	src/pugixml.cpp	/^	PUGI__FN xpath_node::xpath_node()$/;"	f	class:pugi::xpath_node
+xpath_node	src/pugixml.cpp	/^	PUGI__FN xpath_node::xpath_node(const xml_attribute& attribute_, const xml_node& parent_): _node(attribute_ ? parent_ : xml_node()), _attribute(attribute_)$/;"	f	class:pugi::xpath_node
+xpath_node	src/pugixml.cpp	/^	PUGI__FN xpath_node::xpath_node(const xml_node& node_): _node(node_)$/;"	f	class:pugi::xpath_node
+xpath_node	src/pugixml.hpp	/^	class PUGIXML_CLASS xpath_node$/;"	c	namespace:pugi
+xpath_node_set	src/pugixml.cpp	/^	PUGI__FN xpath_node_set::xpath_node_set(): _type(type_unsorted), _begin(&_storage), _end(&_storage)$/;"	f	class:pugi::xpath_node_set
+xpath_node_set	src/pugixml.cpp	/^	PUGI__FN xpath_node_set::xpath_node_set(const xpath_node_set& ns): _type(ns._type), _begin(&_storage), _end(&_storage)$/;"	f	class:pugi::xpath_node_set
+xpath_node_set	src/pugixml.cpp	/^	PUGI__FN xpath_node_set::xpath_node_set(const_iterator begin_, const_iterator end_, type_t type_): _type(type_), _begin(&_storage), _end(&_storage)$/;"	f	class:pugi::xpath_node_set
+xpath_node_set	src/pugixml.hpp	/^	class PUGIXML_CLASS xpath_node_set$/;"	c	namespace:pugi
+xpath_node_set_raw	src/pugixml.cpp	/^		xpath_node_set_raw(): _type(xpath_node_set::type_unsorted), _begin(0), _end(0), _eos(0)$/;"	f	class:xpath_node_set_raw
+xpath_node_set_raw	src/pugixml.cpp	/^	class xpath_node_set_raw$/;"	c	file:
+xpath_parse_result	src/pugixml.cpp	/^	PUGI__FN xpath_parse_result::xpath_parse_result(): error("Internal error"), offset(0)$/;"	f	class:pugi::xpath_parse_result
+xpath_parse_result	src/pugixml.hpp	/^	struct PUGIXML_CLASS xpath_parse_result$/;"	s	namespace:pugi
+xpath_parser	src/pugixml.cpp	/^		xpath_parser(const char_t* query, xpath_variable_set* variables, xpath_allocator* alloc, xpath_parse_result* result): _alloc(alloc), _lexer(query), _query(query), _variables(variables), _result(result)$/;"	f	struct:xpath_parser
+xpath_parser	src/pugixml.cpp	/^	struct xpath_parser$/;"	s	file:
+xpath_query	src/pugixml.cpp	/^	PUGI__FN xpath_query::xpath_query(const char_t* query, xpath_variable_set* variables): _impl(0)$/;"	f	class:pugi::xpath_query
+xpath_query	src/pugixml.hpp	/^	class PUGIXML_CLASS xpath_query$/;"	c	namespace:pugi
+xpath_query_impl	src/pugixml.cpp	/^		xpath_query_impl(): root(0), alloc(&block)$/;"	f	struct:xpath_query_impl
+xpath_query_impl	src/pugixml.cpp	/^	struct xpath_query_impl$/;"	s	file:
+xpath_sort	src/pugixml.cpp	/^	PUGI__FN xpath_node_set::type_t xpath_sort(xpath_node* begin, xpath_node* end, xpath_node_set::type_t type, bool rev)$/;"	f
+xpath_stack	src/pugixml.cpp	/^	struct xpath_stack$/;"	s	file:
+xpath_stack_data	src/pugixml.cpp	/^		xpath_stack_data(): result(blocks + 0), temp(blocks + 1)$/;"	f	struct:xpath_stack_data
+xpath_stack_data	src/pugixml.cpp	/^	struct xpath_stack_data$/;"	s	file:
+xpath_string	src/pugixml.cpp	/^		explicit xpath_string(const char_t* str, bool use_heap): _buffer(str), _uses_heap(use_heap)$/;"	f	class:xpath_string
+xpath_string	src/pugixml.cpp	/^		explicit xpath_string(const char_t* str, xpath_allocator* alloc)$/;"	f	class:xpath_string
+xpath_string	src/pugixml.cpp	/^		xpath_string(): _buffer(PUGIXML_TEXT("")), _uses_heap(false)$/;"	f	class:xpath_string
+xpath_string	src/pugixml.cpp	/^		xpath_string(const char_t* begin, const char_t* end, xpath_allocator* alloc)$/;"	f	class:xpath_string
+xpath_string	src/pugixml.cpp	/^	class xpath_string$/;"	c	file:
+xpath_string_const	src/pugixml.cpp	/^	PUGI__FN xpath_string xpath_string_const(const char_t* str)$/;"	f
+xpath_type_boolean	src/pugixml.hpp	/^		xpath_type_boolean	  \/\/ Boolean$/;"	e	enum:pugi::xpath_value_type
+xpath_type_node_set	src/pugixml.hpp	/^		xpath_type_node_set,  \/\/ Node set (xpath_node_set)$/;"	e	enum:pugi::xpath_value_type
+xpath_type_none	src/pugixml.hpp	/^		xpath_type_none,	  \/\/ Unknown type (query failed to compile)$/;"	e	enum:pugi::xpath_value_type
+xpath_type_number	src/pugixml.hpp	/^		xpath_type_number,	  \/\/ Number$/;"	e	enum:pugi::xpath_value_type
+xpath_type_string	src/pugixml.hpp	/^		xpath_type_string,	  \/\/ String$/;"	e	enum:pugi::xpath_value_type
+xpath_value_type	src/pugixml.hpp	/^	enum xpath_value_type$/;"	g	namespace:pugi
+xpath_variable	src/pugixml.cpp	/^	PUGI__FN xpath_variable::xpath_variable()$/;"	f	class:pugi::xpath_variable
+xpath_variable	src/pugixml.hpp	/^	class PUGIXML_CLASS xpath_variable$/;"	c	namespace:pugi
+xpath_variable_boolean	src/pugixml.cpp	/^		xpath_variable_boolean(): value(false)$/;"	f	struct:xpath_variable_boolean
+xpath_variable_boolean	src/pugixml.cpp	/^	struct xpath_variable_boolean: xpath_variable$/;"	s	file:
+xpath_variable_node_set	src/pugixml.cpp	/^	struct xpath_variable_node_set: xpath_variable$/;"	s	file:
+xpath_variable_number	src/pugixml.cpp	/^		xpath_variable_number(): value(0)$/;"	f	struct:xpath_variable_number
+xpath_variable_number	src/pugixml.cpp	/^	struct xpath_variable_number: xpath_variable$/;"	s	file:
+xpath_variable_set	src/pugixml.cpp	/^	PUGI__FN xpath_variable_set::xpath_variable_set()$/;"	f	class:pugi::xpath_variable_set
+xpath_variable_set	src/pugixml.hpp	/^	class PUGIXML_CLASS xpath_variable_set$/;"	c	namespace:pugi
+xpath_variable_string	src/pugixml.cpp	/^		xpath_variable_string(): value(0)$/;"	f	struct:xpath_variable_string
+xpath_variable_string	src/pugixml.cpp	/^	struct xpath_variable_string: xpath_variable$/;"	s	file:
+~SHMTreeNode	src/shmtreenode.cpp	/^SHMTreeNode::~SHMTreeNode() {$/;"	f	class:SHMTreeNode
+~buffer_holder	src/pugixml.cpp	/^		~buffer_holder()$/;"	f	struct:buffer_holder
+~xml_buffered_writer	src/pugixml.cpp	/^		~xml_buffered_writer()$/;"	f	class:xml_buffered_writer
+~xml_document	src/pugixml.cpp	/^	PUGI__FN xml_document::~xml_document()$/;"	f	class:pugi::xml_document
+~xml_tree_walker	src/pugixml.cpp	/^	PUGI__FN xml_tree_walker::~xml_tree_walker()$/;"	f	class:pugi::xml_tree_walker
+~xml_writer	src/pugixml.hpp	/^		virtual ~xml_writer() {}$/;"	f	class:pugi::xml_writer
+~xpath_allocator_capture	src/pugixml.cpp	/^		~xpath_allocator_capture()$/;"	f	struct:xpath_allocator_capture
+~xpath_node_set	src/pugixml.cpp	/^	PUGI__FN xpath_node_set::~xpath_node_set()$/;"	f	class:pugi::xpath_node_set
+~xpath_query	src/pugixml.cpp	/^	PUGI__FN xpath_query::~xpath_query()$/;"	f	class:pugi::xpath_query
+~xpath_stack_data	src/pugixml.cpp	/^		~xpath_stack_data()$/;"	f	struct:xpath_stack_data
+~xpath_variable_set	src/pugixml.cpp	/^	PUGI__FN xpath_variable_set::~xpath_variable_set()$/;"	f	class:pugi::xpath_variable_set
+~xpath_variable_string	src/pugixml.cpp	/^		~xpath_variable_string()$/;"	f	struct:xpath_variable_string

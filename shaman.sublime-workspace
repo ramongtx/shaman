@@ -1,0 +1,420 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"clea",
+				"clean-xml"
+			],
+			[
+				"clean",
+				"clean-xml"
+			],
+			[
+				"AST",
+				"ASTEXT"
+			],
+			[
+				"AS",
+				"ASTEXT"
+			],
+			[
+				"file",
+				"fileAddress	SHMString"
+			],
+			[
+				"to",
+				"toXML() const	SHMString"
+			],
+			[
+				"SHMX",
+				"SHMXMLNode	typedef"
+			],
+			[
+				"fi",
+				"first_child() const	pugi::xml_node"
+			],
+			[
+				"_no",
+				"_nodeTypeName	SHMString"
+			],
+			[
+				"_lin",
+				"_lineEnd	int"
+			],
+			[
+				"line",
+				"lineEnd"
+			],
+			[
+				"lo",
+				"loadXML(SHMXMLNode &node)	void"
+			],
+			[
+				"child",
+				"childNode	SHMTreeNode"
+			],
+			[
+				"SHM",
+				"SHMTreeNode	class"
+			],
+			[
+				"as",
+				"as_int() const	int"
+			],
+			[
+				"SHMXML",
+				"SHMXMLNode	typedef"
+			],
+			[
+				"find",
+				"find_node(Predicate pred) const	pugi::xml_node"
+			],
+			[
+				"c",
+				"c_str() const	const _CharT *"
+			],
+			[
+				"_node",
+				"_nodeType	SHMString"
+			],
+			[
+				"node",
+				"nodeType"
+			],
+			[
+				"lin",
+				"lineEnd"
+			],
+			[
+				"app",
+				"append_attribute(const char_t *name)	pugi::xml_attribute"
+			],
+			[
+				"toXML",
+				"toXML(SHMXMLNode &node) const	SHMString"
+			],
+			[
+				"attri",
+				"append_attribute(const char_t *name)	pugi::xml_attribute"
+			],
+			[
+				"t",
+				"text() const	pugi::xml_text"
+			],
+			[
+				"sub",
+				"substr	SHMString"
+			],
+			[
+				"SHMS",
+				"SHMSupport	class"
+			],
+			[
+				"set",
+				"setLineEnd(int line)	void"
+			],
+			[
+				"nex",
+				"nextSon	SHMTreeNode"
+			],
+			[
+				"SHMR",
+				"SHMRegex	typedef"
+			],
+			[
+				"mat",
+				"match_str	SHMString"
+			],
+			[
+				"SHMRe",
+				"SHMRegexMatch	typedef"
+			],
+			[
+				"map",
+				"mapToString() const	SHMString"
+			],
+			[
+				"era",
+				"erase(const key_type &__x)	size_type"
+			],
+			[
+				"SH",
+				"SHMTreeNode	class"
+			],
+			[
+				"print",
+				"print(std::basic_ostream<char, std::char_traits<char> > &os) const	void"
+			],
+			[
+				"ne",
+				"nextSon	SHMTreeNode"
+			],
+			[
+				"addCh",
+				"appendChild(SHMTreeNode &child)	void"
+			],
+			[
+				"inde",
+				"indexFirstAlnum(SHMString line)	int"
+			],
+			[
+				"g",
+				"splitNewlines(SHMString contents)	std::list<SHMString>"
+			],
+			[
+				"firs",
+				"first_child() const	pugi::xml_node"
+			],
+			[
+				"setLin",
+				"setLineStart(int line)	void"
+			],
+			[
+				"remo",
+				"remove_attribute(const char_t *name)	bool"
+			],
+			[
+				"xm",
+				"xml_node	class"
+			],
+			[
+				"INP",
+				"INPEXT"
+			],
+			[
+				"CLA",
+				"CLANGFLAGS"
+			],
+			[
+				"docu",
+				"xml_document	class"
+			],
+			[
+				"S",
+				"SRCFOLDER"
+			],
+			[
+				"SHS",
+				"SHMString	typedef"
+			],
+			[
+				"in",
+				"include"
+			],
+			[
+				"C",
+				"CFLAGS"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/ast2xml.cpp",
+			"settings":
+			{
+				"buffer_size": 529,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/Makefile/Make.sublime-build",
+	"command_palette":
+	{
+		"height": 47.0,
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"Ins",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/Ramon/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/Ramon/Library/Application Support/Sublime Text 2/Packages/CTags/CTags.sublime-settings",
+		"/Users/Ramon/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/Ramon/Documents/Repositories/shaman/shamanCPP/src/pugixml.cpp",
+		"/Users/Ramon/Documents/Repositories/shaman/shamanCPP/Makefile",
+		"/Users/Ramon/Documents/Repositories/shaman/shamanCPP/shamanCPP.sublime-project",
+		"/Users/Ramon/Documents/Repositories/shaman/shamanCPP/src/shmparser.h",
+		"/Users/Ramon/Documents/Repositories/shaman/src/shaman.cpp",
+		"/Users/Ramon/Documents/Repositories/shaman/Makefile"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"operator==",
+			"(\"\");\n",
+			"!= ",
+			"\",\n",
+			"	\n",
+			"children",
+			"xml_node",
+			"pugi::xml_node ",
+			"CLANGFLAGS",
+			"path",
+			"command"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/ast2xml.cpp",
+					"settings":
+					{
+						"buffer_size": 529,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								92,
+								92
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.clang":
+	{
+		"height": 100.0
+	},
+	"output.exec":
+	{
+		"height": 184.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"shaman.c",
+				"src/shaman.cpp"
+			],
+			[
+				"",
+				"src/shmparser.h"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 235.0,
+	"status_bar_visible": true
+}
