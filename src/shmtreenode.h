@@ -32,10 +32,7 @@ public:
 
 	SHMList<SHMTreeNode> children() const;
 
-	SHMString toString() const;
-	SHMString mapToString() const;
-
-	SHMString toXML() const;
+	SHMString toXMLString() const;
 	void toXML(SHMXMLNode &node) const;
 
 	void loadXML(const SHMString &contents);

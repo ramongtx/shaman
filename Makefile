@@ -65,7 +65,7 @@ clean-xml:
 	@echo " $(RM) -r $(XMLS)"; $(RM) -r $(XMLS)
 
 $(INPDIR)/%.$(XMLEXT): $(INPDIR)/%.$(ASTEXT)
-	@echo "$(TARGET) $< $@ ";  $(TARGET) $< $@
+	@echo "$(TARGET) $< >$@ ";  $(TARGET) $< >$@
 
 
 .PHONY: clean
