@@ -34,7 +34,8 @@ int SHMParser::generateTree(SHMList<SHMString> list, int pos, SHMTreeNode& root)
 	if (pos > list.size()) return -1;
 	int depth = indexFirstAlnum(list[pos]);
 	root.setLineContents(list[pos].substr(depth));
-	setNodePropertiesFromContents(root);
+	setNodeFamily(root);
+	setNodeType(root);
 	setNodeLineNumbers(root);
 	int i = pos+1;
 	while (i<list.size()) {
@@ -52,13 +53,33 @@ int SHMParser::generateTree(SHMList<SHMString> list, int pos, SHMTreeNode& root)
 	return i;
 }
 
-void SHMParser::setNodePropertiesFromContents(SHMTreeNode &node) {
+void SHMParser::setNodeFamily(SHMTreeNode &node) {
 	SHMStringStream stream (node.lineContents());
 	SHMString word;
 	stream >> word;
-	node.setNodeType(word);
+	node.setNodeFamily(word);
 	stream >> word;
 	node.setNodeAddress(word);
+}
+
+void SHMParser::setNodeType(SHMTreeNode &node) {
+	static SHMRegex reg1("\'([^\']+)\'");
+	SHMString str = node.lineContents();
+
+	SHMRegexIterator it(str.begin(), str.end(), reg1);
+	SHMRegexIterator it_end;
+
+
+	node.setNodeType("none");
+
+	if (it != it_end) {
+		SHMRegexMatch match = *it;
+		if (match.size() > 1) {
+		    SHMRegexSubMatch sub_match = match[1];
+			SHMString str = sub_match.str();
+			node.setNodeType(str);
+		}
+	}
 }
 
 void SHMParser::setNodeLineNumbers(SHMTreeNode &node) {
@@ -75,27 +96,18 @@ void SHMParser::setNodeLineNumbers(SHMTreeNode &node) {
 		return;
 	}
 
-
-	static SHMRegex reg2("line:([0-9]).");
+	SHMList <int> lineNumbers;
+	static SHMRegex reg2("line:([0-9].)");
 	SHMString str2 = "";
 	SHMRegexIterator it2(str.begin(), str.end(), reg2);
 	while (it2 != it_end) {
 		SHMRegexMatch match = *it2;  
-		SHMString substr = match.str();  
-		str2.append(substr);
-		str2.append(" ");                                    
+		SHMString substr = match.str();                                 
 		++it2;
-	}
-	str = str2;
-
-	static SHMRegex reg3("[0-9].");
-	SHMList <int> lineNumbers;
-	SHMRegexIterator it3(str.begin(), str.end(), reg3);
-	while (it3 != it_end) {
-		SHMRegexMatch match = *it3;  
-		SHMString substr = match.str();                                      
-		lineNumbers.push_back(SHMBasic::atoi(substr));
-		++it3;
+		if (match.size() > 1) {
+		    SHMRegexSubMatch sub_match = match[1];                
+			lineNumbers.push_back(SHMBasic::atoi(sub_match.str()));
+		}
 	}
 
 	if (lineNumbers.size() > 0) {

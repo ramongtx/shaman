@@ -11,7 +11,7 @@ CFLAGS := -g # -Wall
 LIB := -lstdc++
 INC := -I include
 
-run: clean-xml print-xml
+run: clean-xml xml
 
 $(TARGET): $(OBJECTS)
 	@echo " Linking..."

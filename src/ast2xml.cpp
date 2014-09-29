@@ -17,6 +17,10 @@ int main (int argc, char *argv[]) {
 		SHMOutputFileStream file(destination);
 		file << root.toXML().c_str();
 		file.close();
+
+		SHMTreeNode newRoot;
+		newRoot.loadXML(root.toXML());
+		if (newRoot == root) printf("Igual\n");
 	}
 	return 0;
 }

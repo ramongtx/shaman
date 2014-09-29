@@ -21,6 +21,7 @@ typedef std::regex SHMRegex;
 typedef std::sregex_iterator SHMRegexIterator;
 typedef std::smatch SHMRegexMatch;
 typedef std::string SHMString;
+typedef std::ssub_match SHMRegexSubMatch;
 
 #include "pugixml.hpp"
 typedef pugi::xml_document SHMXMLDocument;
