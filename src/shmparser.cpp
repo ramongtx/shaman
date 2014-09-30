@@ -37,6 +37,7 @@ int SHMParser::generateTree(SHMList<SHMString> list, int pos, SHMTreeNode& root)
 	setNodeFamily(root);
 	setNodeType(root);
 	setNodeLineNumbers(root);
+	setNodeAttributes(root);
 	int i = pos+1;
 	while (i<list.size()) {
 		int nextDepth = indexFirstAlnum(list[i]);
@@ -102,12 +103,11 @@ void SHMParser::setNodeLineNumbers(SHMTreeNode &node) {
 	SHMRegexIterator it2(str.begin(), str.end(), reg2);
 	while (it2 != it_end) {
 		SHMRegexMatch match = *it2;  
-		SHMString substr = match.str();                                 
-		++it2;
 		if (match.size() > 1) {
 		    SHMRegexSubMatch sub_match = match[1];                
 			lineNumbers.push_back(SHMBasic::atoi(sub_match.str()));
 		}
+		++it2;
 	}
 
 	if (lineNumbers.size() > 0) {
@@ -119,4 +119,45 @@ void SHMParser::setNodeLineNumbers(SHMTreeNode &node) {
 
 	return;
 
+}
+
+void SHMParser::setNodeAttributes(SHMTreeNode& node) {
+		static SHMRegex reg1("[0-9]+> (.*)");
+	SHMString str = node.lineContents();
+
+	SHMRegexIterator it(str.begin(), str.end(), reg1);
+	SHMRegexIterator it_end;
+
+	if (it != it_end) {
+		SHMRegexMatch match = *it;
+		if (match.size() > 1) {
+		    SHMRegexSubMatch sub_match = match[1];                
+			str = sub_match.str().c_str();
+		}
+	} else {
+		return;
+	}
+
+	normalizeAttributes(str, node.nodeFamily());
+
+	node.setNodeAttributes(str);
+}
+
+void SHMParser::normalizeAttributes(SHMString& rawAttr, const SHMString &nodeFamily) {
+	if (nodeFamily == "DeclRefExpr") {
+		SHMRegex reg(" 0x[0-9a-fA-F]* '[^']+'");
+		rawAttr = regex_replace(rawAttr, reg, "");
+	} else if (nodeFamily == "VarDecl") {
+		int i = 0;
+		while (isblank(rawAttr[i])) i++;
+		while (!isblank(rawAttr[i])) i++;
+		while (isblank(rawAttr[i])) i++;
+		rawAttr = rawAttr.substr(i);
+	} else if (nodeFamily == "FunctionDecl") {
+		int i = 0;
+		while (isblank(rawAttr[i])) i++;
+		while (!isblank(rawAttr[i])) i++;
+		while (isblank(rawAttr[i])) i++;
+		rawAttr = rawAttr.substr(i);
+	}
 }

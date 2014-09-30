@@ -10,6 +10,9 @@ public:
 	static void setNodeFamily(SHMTreeNode &node);
 	static void setNodeType(SHMTreeNode &node);
 	static void setNodeLineNumbers(SHMTreeNode &node);
+	static void setNodeAttributes(SHMTreeNode &node);
+
+	static void normalizeAttributes(SHMString &rawAttr, const SHMString &nodeFamily);
 
 
 protected:

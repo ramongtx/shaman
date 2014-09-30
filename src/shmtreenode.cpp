@@ -3,6 +3,7 @@
 SHMTreeNode::SHMTreeNode() {
 	_lineEnd = 0;
 	_lineStart = 0;
+	_parent = NULL;
 	_joker = false;
 }
 
@@ -10,14 +11,39 @@ SHMTreeNode::SHMTreeNode(SHMXMLNode& node) {
 	_lineEnd = 0;
 	_lineStart = 0;
 	_joker = false;
+	_parent = NULL;
 	loadXML(node);
 }
 
 SHMTreeNode::SHMTreeNode(SHMString& xmlString) {
 	_lineEnd = 0;
 	_lineStart = 0;
+	_parent = NULL;
 	_joker = false;
 	loadXML(xmlString);
+}
+
+SHMTreeNode SHMTreeNode::copy(const SHMTreeNode &obj) {
+	SHMString str = obj.toXMLString();
+	SHMTreeNode treeNode(str);
+	return treeNode;
+}
+
+
+void SHMTreeNode::setParent(SHMTreeNode *parent) {
+	_parent = parent;
+}
+
+SHMTreeNode * SHMTreeNode::parent() {
+	return _parent;
+}
+
+SHMTreeNode *SHMTreeNode::root() {
+	SHMTreeNode *root = this;
+	while (root->parent()) {
+		root = root->parent();
+	}
+	return root;
 }
 
 void SHMTreeNode::setLineContents(SHMString string) {
@@ -81,20 +107,21 @@ void SHMTreeNode::setJoker(bool joker) {
 	_joker = joker;
 }
 
+void SHMTreeNode::setNodeAttributes(SHMString string) {
+	_nodeAttributes = string;
+}
+
+SHMString SHMTreeNode::nodeAttributes() const {
+	return _nodeAttributes;
+}
+
 void SHMTreeNode::appendChild(SHMTreeNode& child) {
+	child.setParent(this);
 	_children.push_back(child);
 }
 
 SHMList<SHMTreeNode> SHMTreeNode::children() const {
 	return _children;
-}
-
-void SHMTreeNode::addAttribute(const SHMString &name, const SHMString &string) {
-	_propertyMap[name] = string;
-}
-
-void SHMTreeNode::addAttribute(const SHMString &name, int value) {
-	_propertyMap.erase(name);
 }
 
 SHMString SHMTreeNode::toXMLString() const {
@@ -120,10 +147,7 @@ void SHMTreeNode::toXML(SHMXMLNode &node) const {
 		node.append_attribute("lineEnd") = _lineEnd;
 		node.append_attribute("nodeType") = _nodeType.c_str();
 		node.append_attribute("nodeFamily") = _nodeFamily.c_str();
-
-		for(SHMMap<SHMString, SHMString>::const_iterator it = _propertyMap.begin(); it != _propertyMap.end(); ++it) {
-			node.append_attribute(SHMString(it->first).c_str()) = SHMString(it->second).c_str();
-		}
+		node.append_attribute("nodeAttributes") = _nodeAttributes.c_str();
 
 		for(SHMList<SHMTreeNode>::const_iterator it = _children.begin(); it != _children.end(); ++it) {
 			SHMXMLNode newChild = node.append_child();
@@ -146,6 +170,8 @@ void SHMTreeNode::loadXML(const SHMXMLNode &node) {
 	static SHMString _nodeTypeName = "nodeType";
 	static SHMString _nodeFamilyName = "nodeFamily";
 	static SHMString _jokerName = "joker";
+	static SHMString _attributesName = "attributes";
+
 	for (SHMXMLAttribute attr = node.first_attribute(); attr; attr = attr.next_attribute()) {
 		SHMString name = attr.name();
 
@@ -154,6 +180,7 @@ void SHMTreeNode::loadXML(const SHMXMLNode &node) {
 		else if (!name.compare(_nodeTypeName)) setNodeType(attr.value());
 		else if (!name.compare(_nodeFamilyName)) setNodeFamily(attr.value());
 		else if (!name.compare(_jokerName)) setJoker(attr.as_bool());
+		else if (!name.compare(_attributesName)) setNodeAttributes(attr.value());
 	}
 
 	if (!joker()) {
@@ -170,6 +197,8 @@ bool SHMTreeNode::operator==(const SHMTreeNode& rhs) const {
 
 	if (rhs.nodeFamily() != nodeFamily()) return false;
 	if (rhs.nodeType() != nodeType()) return false;
+	if (rhs.nodeAttributes() != nodeAttributes()) return false;
+
 	if (rhs.children().size() != children().size()) return false;
 	for(int i = 0; i<children().size(); i++){
 		if (rhs.children().at(i) != children().at(i)) return false;
