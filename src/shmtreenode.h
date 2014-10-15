@@ -9,7 +9,6 @@ public:
 
 	SHMTreeNode copy(const SHMTreeNode &obj);
 
-
 	void setLineContents(SHMString string);
 
 	void setLineSingle(int line);

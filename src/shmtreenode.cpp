@@ -207,5 +207,5 @@ bool SHMTreeNode::operator==(const SHMTreeNode& rhs) const {
 }
 
 bool SHMTreeNode::operator<(const SHMTreeNode& rhs) const {
-	return false;
+	return nodeType()<rhs.nodeType();
 }

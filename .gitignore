@@ -30,4 +30,4 @@
 
 input/*.ast
 input/*.xml
-bin/*
+bin/ast2xml

@@ -4,8 +4,52 @@
 		"selected_items":
 		[
 			[
+				"ra",
+				"rawAttr	SHMString&"
+			],
+			[
+				"SHM",
+				"SHMRegex	typedef"
+			],
+			[
+				"no",
+				"nodeFamily() const	SHMString"
+			],
+			[
+				"SH",
+				"SHMString	typedef"
+			],
+			[
+				"se",
+				"setNodeAttributes(SHMString string)	void"
+			],
+			[
+				"node",
+				"nodeAttributes() const	SHMString"
+			],
+			[
+				"_node",
+				"_nodeAttributes	SHMString"
+			],
+			[
+				"sub",
+				"sub_match	SHMRegexSubMatch"
+			],
+			[
+				"setNode",
+				"setNodeAttributes(SHMTreeNode &node)	void"
+			],
+			[
 				"c",
-				"c_str() const	const char *"
+				"c_str"
+			],
+			[
+				"load",
+				"loadXML(const SHMString &contents)	void"
+			],
+			[
+				"li",
+				"lineStart() const	int"
 			],
 			[
 				"app",
@@ -24,24 +68,8 @@
 				"_jokerName	SHMString"
 			],
 			[
-				"load",
-				"loadXML(const SHMString &contents)	void"
-			],
-			[
-				"node",
-				"nodeFamily() const	SHMString"
-			],
-			[
 				"SHMRg",
 				"SHMRegexSubMatch	typedef"
-			],
-			[
-				"setNode",
-				"setNodeType(SHMTreeNode &node)	void"
-			],
-			[
-				"sub",
-				"sub_match	std::ssub_match"
 			],
 			[
 				"clea",
@@ -96,20 +124,12 @@
 				"childNode	SHMTreeNode"
 			],
 			[
-				"SHM",
-				"SHMTreeNode	class"
-			],
-			[
 				"SHMXML",
 				"SHMXMLNode	typedef"
 			],
 			[
 				"find",
 				"find_node(Predicate pred) const	pugi::xml_node"
-			],
-			[
-				"_node",
-				"_nodeType	SHMString"
 			],
 			[
 				"lin",
@@ -158,10 +178,6 @@
 			[
 				"era",
 				"erase(const key_type &__x)	size_type"
-			],
-			[
-				"SH",
-				"SHMTreeNode	class"
 			],
 			[
 				"print",
@@ -259,7 +275,7 @@
 			"file": "src/shmparser.cpp",
 			"settings":
 			{
-				"buffer_size": 2859,
+				"buffer_size": 3909,
 				"line_ending": "Unix"
 			}
 		},
@@ -267,7 +283,7 @@
 			"file": "src/shmparser.h",
 			"settings":
 			{
-				"buffer_size": 463,
+				"buffer_size": 598,
 				"line_ending": "Unix"
 			}
 		},
@@ -275,7 +291,7 @@
 			"file": "src/shmtreenode.h",
 			"settings":
 			{
-				"buffer_size": 1618,
+				"buffer_size": 1689,
 				"line_ending": "Unix"
 			}
 		},
@@ -283,7 +299,7 @@
 			"file": "src/shmtreenode.cpp",
 			"settings":
 			{
-				"buffer_size": 4255,
+				"buffer_size": 4740,
 				"line_ending": "Unix"
 			}
 		},
@@ -379,7 +395,7 @@
 			"command"
 		],
 		"highlight": true,
-		"in_selection": false,
+		"in_selection": true,
 		"preserve_case": false,
 		"regex": false,
 		"replace_history":
@@ -387,7 +403,7 @@
 			"",
 			"SHMTreeNode&"
 		],
-		"reverse": true,
+		"reverse": false,
 		"show_context": true,
 		"use_buffer2": true,
 		"whole_word": false,
@@ -396,6 +412,7 @@
 	"groups":
 	[
 		{
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -410,8 +427,8 @@
 						"selection":
 						[
 							[
-								394,
-								394
+								369,
+								369
 							]
 						],
 						"settings":
@@ -463,8 +480,8 @@
 						"selection":
 						[
 							[
-								111,
-								111
+								191,
+								191
 							]
 						],
 						"settings":
@@ -482,15 +499,15 @@
 					"file": "src/shmparser.cpp",
 					"settings":
 					{
-						"buffer_size": 2859,
+						"buffer_size": 3909,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1436,
-								1436
+								3750,
+								3750
 							]
 						],
 						"settings":
@@ -499,7 +516,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1245.0,
+						"translation.y": 1830.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -509,15 +526,15 @@
 					"file": "src/shmparser.h",
 					"settings":
 					{
-						"buffer_size": 463,
+						"buffer_size": 598,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								373,
-								373
+								520,
+								520
 							]
 						],
 						"settings":
@@ -535,15 +552,15 @@
 					"file": "src/shmtreenode.h",
 					"settings":
 					{
-						"buffer_size": 1618,
+						"buffer_size": 1689,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								728,
-								728
+								771,
+								771
 							]
 						],
 						"settings":
@@ -552,7 +569,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 220.0,
+						"translation.y": 157.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -562,15 +579,15 @@
 					"file": "src/shmtreenode.cpp",
 					"settings":
 					{
-						"buffer_size": 4255,
+						"buffer_size": 4740,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2077,
-								2077
+								4473,
+								4473
 							]
 						],
 						"settings":
@@ -579,7 +596,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2030.0,
+						"translation.y": 2580.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -596,8 +613,8 @@
 						"selection":
 						[
 							[
-								593,
-								609
+								368,
+								368
 							]
 						],
 						"settings":
