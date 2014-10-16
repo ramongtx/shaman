@@ -3,6 +3,7 @@ CC := g++ # This is the main compiler
 SRCDIR := src
 BUILDDIR := bin
 TARGET := bin/ast2xml
+SCRIPT := bin/all2xml.sh
  
 SRCEXT := cpp
 SOURCES := $(shell find $(SRCDIR) -type f -name *.$(SRCEXT))
@@ -10,8 +11,6 @@ OBJECTS := $(patsubst $(SRCDIR)/%,$(BUILDDIR)/%,$(SOURCES:.$(SRCEXT)=.o))
 CFLAGS := -g # -Wall
 LIB := -lstdc++
 INC := -I include
-
-run: clean-xml xml
 
 $(TARGET): $(OBJECTS)
 	@echo " Linking..."
@@ -21,11 +20,11 @@ $(BUILDDIR)/%.o: $(SRCDIR)/%.$(SRCEXT)
 	@mkdir -p $(BUILDDIR)
 	@echo " $(CC) $(CFLAGS) $(INC) -c -o $@ $<"; $(CC) $(CFLAGS) $(INC) -c -o $@ $<
 
-clean-all: clean clean-ast clean-xml
+clean: clean-build clean-ast clean-xml
 
-clean:
+clean-build:
 	@echo " Cleaning build..."; 
-	@echo " $(RM) -r $(BUILDDIR) $(TARGET)"; $(RM) -r $(BUILDDIR) $(TARGET)
+	@echo " $(RM) $(TARGET)"; $(RM) $(TARGET)
 
 # Tests
 tester:
@@ -35,14 +34,17 @@ tester:
 ticket:
 	$(CC) $(CFLAGS) spikes/ticket.cpp $(INC) $(LIB) -o bin/ticket
 
+run: clean-xml xml
+	@chmod +x $(SCRIPT);
+	$(SCRIPT)
 
 INPDIR := input
 INPEXT := c
-ASTEXT := ast
+ASTEXT := $(INPEXT).ast
 XMLEXT := $(INPEXT).xml
 INPUTS := $(shell find $(INPDIR) -type f -name *.$(INPEXT))
-ASTS := $(patsubst $(INPDIR)/%,$(INPDIR)/%,$(INPUTS:.$(INPEXT)=.$(ASTEXT)))
-XMLS := $(patsubst $(INPDIR)/%,$(INPDIR)/%,$(INPUTS:.$(INPEXT)=.$(XMLEXT)))
+ASTS := $(shell find $(INPDIR) -type f -name *.$(ASTEXT))
+XMLS := $(shell find $(INPDIR) -type f -name *.$(XMLEXT))
 CLANG := clang
 CLANGFLAGS = -cc1 -ast-dump
 
