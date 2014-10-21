@@ -15,7 +15,7 @@ SHMTreeNode::SHMTreeNode(SHMXMLNode& node) {
 	loadXML(node);
 }
 
-SHMTreeNode::SHMTreeNode(SHMString& xmlString) {
+SHMTreeNode::SHMTreeNode(const SHMString& xmlString) {
 	_lineEnd = 0;
 	_lineStart = 0;
 	_parent = NULL;

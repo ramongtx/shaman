@@ -5,7 +5,7 @@ class SHMTreeNode {
 public:
 	SHMTreeNode();
 	SHMTreeNode(SHMXMLNode& node);
-	SHMTreeNode(SHMString& xmlString);
+	SHMTreeNode(const SHMString& xmlString);
 
 	SHMTreeNode copy(const SHMTreeNode &obj);
 

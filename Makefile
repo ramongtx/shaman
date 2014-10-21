@@ -2,19 +2,31 @@ CC := g++ # This is the main compiler
 # CC := clang --analyze # and comment out the linker last line for sanity
 SRCDIR := src
 BUILDDIR := bin
-TARGET := bin/ast2xml
+TARGET1 := bin/ast2xml
+TARGET2 := bin/xml2index
+TARGET := $(TARGET1) $(TARGET2)
 SCRIPT := bin/all2xml.sh
  
 SRCEXT := cpp
-SOURCES := $(shell find $(SRCDIR) -type f -name *.$(SRCEXT))
-OBJECTS := $(patsubst $(SRCDIR)/%,$(BUILDDIR)/%,$(SOURCES:.$(SRCEXT)=.o))
+SOURCES1 := $(SRCDIR)/pugixml.cpp $(SRCDIR)/shmtreenode.cpp  $(SRCDIR)/shmparser.cpp $(SRCDIR)/ast2xml.cpp
+SOURCES2 := $(SRCDIR)/pugixml.cpp $(SRCDIR)/shmtreenode.cpp  $(SRCDIR)/shmindex.cpp $(SRCDIR)/xml2index.cpp
+
+OBJECTS1 := $(patsubst $(SRCDIR)/%,$(BUILDDIR)/%,$(SOURCES1:.$(SRCEXT)=.o))
+OBJECTS2 := $(patsubst $(SRCDIR)/%,$(BUILDDIR)/%,$(SOURCES2:.$(SRCEXT)=.o))
+
 CFLAGS := -g # -Wall
 LIB := -lstdc++
 INC := -I include
 
-$(TARGET): $(OBJECTS)
+all: $(TARGET)
+
+$(TARGET1): $(OBJECTS1)
 	@echo " Linking..."
-	@echo " $(CC) $^ -o $(TARGET) $(LIB)"; $(CC) $^ -o $(TARGET) $(LIB)
+	@echo " $(CC) $^ -o $(TARGET) $(LIB)"; $(CC) $^ -o $(TARGET1) $(LIB)
+
+$(TARGET2): $(OBJECTS2)
+	@echo " Linking..."
+	@echo " $(CC) $^ -o $(TARGET) $(LIB)"; $(CC) $^ -o $(TARGET2) $(LIB)
 
 $(BUILDDIR)/%.o: $(SRCDIR)/%.$(SRCEXT)
 	@mkdir -p $(BUILDDIR)
@@ -64,7 +76,7 @@ print-xml: xml
 
 clean-xml:
 	@echo " Cleaning XMLS..."; 
-	@echo " $(RM) -r $(XMLS)"; $(RM) -r $(XMLS)
+	@echo " $(RM) -r $(XMLS) *.$(XMLEXT)"; $(RM) -r $(XMLS) *.$(XMLEXT)
 
 $(INPDIR)/%.$(XMLEXT): $(INPDIR)/%.$(ASTEXT)
 	@echo "$(TARGET) $< >$@ ";  $(TARGET) $< >$@
