@@ -30,22 +30,28 @@ int SHMParser::indexFirstAlnum(SHMString line) {
 	return -1;
 }
 
-int SHMParser::generateTree(SHMList<SHMString> list, int pos, SHMTreeNode& root) {
+int SHMParser::generateTree(SHMList<SHMString> list, int pos, SHMTreeNode& root, bool first) {
 	if (pos > list.size()) return -1;
-	int depth = indexFirstAlnum(list[pos]);
-	root.setLineContents(list[pos].substr(depth));
-	setNodeFamily(root);
-	setNodeType(root);
-	setNodeLineNumbers(root);
-	setNodeAttributes(root);
-	int i = pos+1;
+	int depth = 0;
+	int i = 0;
+	if (first) {
+		root.setNodeType("fileRoot");
+	} else {
+		depth = indexFirstAlnum(list[pos]);
+		root.setLineContents(list[pos].substr(depth));
+		setNodeFamily(root);
+		setNodeType(root);
+		setNodeLineNumbers(root);
+		setNodeAttributes(root);
+		i = pos+1;
+	}
 	while (i<list.size()) {
 		int nextDepth = indexFirstAlnum(list[i]);
 		if (nextDepth > depth) {
 			SHMTreeNode nextSon;
 			nextSon.setLineStart(root.lineStart());
 			nextSon.setLineEnd(root.lineEnd());
-			i = generateTree(list, i,nextSon);
+			i = generateTree(list, i,nextSon,false);
 			root.appendChild(nextSon);
 		} else {
 			break;
@@ -76,7 +82,7 @@ void SHMParser::setNodeType(SHMTreeNode &node) {
 	if (it != it_end) {
 		SHMRegexMatch match = *it;
 		if (match.size() > 1) {
-		    SHMRegexSubMatch sub_match = match[1];
+			SHMRegexSubMatch sub_match = match[1];
 			SHMString str = sub_match.str();
 			node.setNodeType(str);
 		}
@@ -104,7 +110,7 @@ void SHMParser::setNodeLineNumbers(SHMTreeNode &node) {
 	while (it2 != it_end) {
 		SHMRegexMatch match = *it2;  
 		if (match.size() > 1) {
-		    SHMRegexSubMatch sub_match = match[1];                
+			SHMRegexSubMatch sub_match = match[1];                
 			lineNumbers.push_back(SHMBasic::atoi(sub_match.str()));
 		}
 		++it2;
@@ -122,7 +128,7 @@ void SHMParser::setNodeLineNumbers(SHMTreeNode &node) {
 }
 
 void SHMParser::setNodeAttributes(SHMTreeNode& node) {
-		static SHMRegex reg1("[0-9]+> (.*)");
+	static SHMRegex reg1("[0-9]+> (.*)");
 	SHMString str = node.lineContents();
 
 	SHMRegexIterator it(str.begin(), str.end(), reg1);
@@ -131,7 +137,7 @@ void SHMParser::setNodeAttributes(SHMTreeNode& node) {
 	if (it != it_end) {
 		SHMRegexMatch match = *it;
 		if (match.size() > 1) {
-		    SHMRegexSubMatch sub_match = match[1];                
+			SHMRegexSubMatch sub_match = match[1];                
 			str = sub_match.str().c_str();
 		}
 	} else {

@@ -89,6 +89,7 @@ SHMString SHMIndex::run() {
 		for (int i=0; i<indexList.size(); i++) {
 			resultString += compareToGood(indexList.at(i));
 		}
+		resultString += "\n";
 	}
 
 	return resultString;
@@ -100,7 +101,7 @@ SHMString SHMIndex::compareToGood(int a) {
 	for (int i=0; i<goodList.size(); i++) {
 		res += compare(a, goodList.at(i));
 	}
-	return res+"\n";
+	return res;
 }
 
 SHMString SHMIndex::compare(int a, int b) {
