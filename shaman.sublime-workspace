@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"c",
+				"c_str() const	const char *"
+			],
+			[
+				"append",
+				"append_attribute(const char_t *name)	pugi::xml_attribute"
+			],
+			[
+				"to",
+				"toXML(SHMXMLNode &node) const	void"
+			],
+			[
+				"TAR",
+				"TARGET2"
+			],
+			[
+				"node",
+				"nodeType"
+			],
+			[
 				"ra",
 				"rawAttr	SHMString&"
 			],
@@ -24,10 +44,6 @@
 				"setNodeAttributes(SHMString string)	void"
 			],
 			[
-				"node",
-				"nodeAttributes() const	SHMString"
-			],
-			[
 				"_node",
 				"_nodeAttributes	SHMString"
 			],
@@ -38,10 +54,6 @@
 			[
 				"setNode",
 				"setNodeAttributes(SHMTreeNode &node)	void"
-			],
-			[
-				"c",
-				"c_str"
 			],
 			[
 				"load",
@@ -90,10 +102,6 @@
 			[
 				"file",
 				"fileAddress	SHMString"
-			],
-			[
-				"to",
-				"toXML() const	SHMString"
 			],
 			[
 				"SHMX",
@@ -251,7 +259,15 @@
 			"file": "src/ast2xml.cpp",
 			"settings":
 			{
-				"buffer_size": 428,
+				"buffer_size": 643,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/xml2index.cpp",
+			"settings":
+			{
+				"buffer_size": 239,
 				"line_ending": "Unix"
 			}
 		},
@@ -259,7 +275,7 @@
 			"file": "Makefile",
 			"settings":
 			{
-				"buffer_size": 1865,
+				"buffer_size": 2325,
 				"line_ending": "Unix"
 			}
 		},
@@ -280,6 +296,23 @@
 			}
 		},
 		{
+			"file": "src/shmindex.h",
+			"settings":
+			{
+				"buffer_size": 302,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/shmindex.cpp",
+			"settings":
+			{
+				"buffer_size": 899,
+				"line_ending": "Unix",
+				"name": "#include \"shmindex.h\""
+			}
+		},
+		{
 			"file": "src/shmparser.h",
 			"settings":
 			{
@@ -291,7 +324,7 @@
 			"file": "src/shmtreenode.h",
 			"settings":
 			{
-				"buffer_size": 1689,
+				"buffer_size": 1694,
 				"line_ending": "Unix"
 			}
 		},
@@ -299,7 +332,7 @@
 			"file": "src/shmtreenode.cpp",
 			"settings":
 			{
-				"buffer_size": 4740,
+				"buffer_size": 4766,
 				"line_ending": "Unix"
 			}
 		},
@@ -310,14 +343,42 @@
 				"buffer_size": 1262,
 				"line_ending": "Unix"
 			}
+		},
+		{
+			"file": "bin/all2xml.sh",
+			"settings":
+			{
+				"buffer_size": 776,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "input/teste2.c.ast",
+			"settings":
+			{
+				"buffer_size": 3838,
+				"line_ending": "Unix"
+			}
 		}
 	],
 	"build_system": "Packages/Makefile/Make.sublime-build",
 	"command_palette":
 	{
-		"height": 47.0,
+		"height": 392.0,
 		"selected_items":
 		[
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"bros",
+				"Preferences: Browse Packages"
+			],
+			[
+				"pack",
+				"Preferences: Browse Packages"
+			],
 			[
 				"install",
 				"Package Control: Install Package"
@@ -348,8 +409,9 @@
 	},
 	"file_history":
 	[
-		"/Users/Ramon/Library/Application Support/Sublime Text 2/Packages/Default/Default (OSX).sublime-keymap",
 		"/Users/Ramon/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/Ramon/Documents/Repositories/shaman/input/teste2.c.ast2",
+		"/Users/Ramon/Library/Application Support/Sublime Text 2/Packages/Default/Default (OSX).sublime-keymap",
 		"/Users/Ramon/Library/Application Support/Sublime Text 2/Packages/User/make.sublime-build",
 		"/Users/Ramon/Library/Application Support/Sublime Text 2/Packages/CTags/CTags.sublime-settings",
 		"/Users/Ramon/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
@@ -395,7 +457,7 @@
 			"command"
 		],
 		"highlight": true,
-		"in_selection": true,
+		"in_selection": false,
 		"preserve_case": false,
 		"regex": false,
 		"replace_history":
@@ -412,7 +474,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 9,
 			"sheets":
 			[
 				{
@@ -420,15 +482,15 @@
 					"file": "src/ast2xml.cpp",
 					"settings":
 					{
-						"buffer_size": 428,
+						"buffer_size": 643,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								369,
-								369
+								643,
+								0
 							]
 						],
 						"settings":
@@ -444,18 +506,45 @@
 				},
 				{
 					"buffer": 1,
-					"file": "Makefile",
+					"file": "src/xml2index.cpp",
 					"settings":
 					{
-						"buffer_size": 1865,
+						"buffer_size": 239,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1847,
-								1847
+								215,
+								215
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Makefile",
+					"settings":
+					{
+						"buffer_size": 2325,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								926,
+								926
 							]
 						],
 						"settings":
@@ -463,13 +552,13 @@
 							"syntax": "Packages/Makefile/Makefile.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 549.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 3,
 					"file": "input/teste.c",
 					"settings":
 					{
@@ -495,7 +584,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 4,
 					"file": "src/shmparser.cpp",
 					"settings":
 					{
@@ -506,8 +595,8 @@
 						"selection":
 						[
 							[
-								3750,
-								3750
+								265,
+								121
 							]
 						],
 						"settings":
@@ -516,25 +605,25 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1830.0,
+						"translation.y": 1500.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "src/shmparser.h",
+					"buffer": 5,
+					"file": "src/shmindex.h",
 					"settings":
 					{
-						"buffer_size": 598,
+						"buffer_size": 302,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								520,
-								520
+								145,
+								145
 							]
 						],
 						"settings":
@@ -548,61 +637,115 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "src/shmtreenode.h",
-					"settings":
-					{
-						"buffer_size": 1689,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								771,
-								771
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 157.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
 					"buffer": 6,
-					"file": "src/shmtreenode.cpp",
+					"file": "src/shmindex.cpp",
 					"settings":
 					{
-						"buffer_size": 4740,
+						"buffer_size": 899,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4473,
-								4473
+								745,
+								745
 							]
 						],
 						"settings":
 						{
+							"auto_name": "#include \"shmindex.h\"",
 							"syntax": "Packages/C++/C++.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2580.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 7,
+					"file": "src/shmparser.h",
+					"settings":
+					{
+						"buffer_size": 598,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								242,
+								242
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "src/shmtreenode.h",
+					"settings":
+					{
+						"buffer_size": 1694,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								956,
+								924
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 300.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "src/shmtreenode.cpp",
+					"settings":
+					{
+						"buffer_size": 4766,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								123,
+								123
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
 					"file": "src/shmbasic.h",
 					"settings":
 					{
@@ -621,6 +764,60 @@
 						{
 							"syntax": "Packages/C++/C++.tmLanguage",
 							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "bin/all2xml.sh",
+					"settings":
+					{
+						"buffer_size": 776,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								548,
+								548
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "input/teste2.c.ast",
+					"settings":
+					{
+						"buffer_size": 3838,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2826,
+								2826
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,

@@ -6,14 +6,18 @@ hash clang 2>/dev/null || { echo >&2 "I require clang but it's not installed. Ab
 
 xmls=""
 FOLDER="*"
-[ $# -eq 1 ] && FOLDER=$1
+## [ $# -eq 1 ] && FOLDER=$1
 for file in $(find ${FOLDER} -name "*.c");
 do
 	name=$(basename "$file")
+	dirname=$(dirname "$file")
+	checkFile="$dirname/check__codes__"
 	compoundName=$(echo $file | tr "/" "-")
-	clang -cc1 -ast-dump $file | sed -n '/'"$name"'/,$p' | $SCRIPT_DIR/ast2xml > $compoundName.xml
+	clang -cc1 -ast-dump $file | sed -n '/'"$name"'/,$p' | $SCRIPT_DIR/ast2xml > $compoundName.xml 2>&1
+	## clang -cc1 -ast-dump $file | $SCRIPT_DIR/ast2xml > $compoundName.xml
 	echo "$file > $compoundName.xml"
 	xmls+=" $compoundName.xml"
+	xmls+=" $checkFile"
 done
 
 echo "xml2index $xmls"
