@@ -3,8 +3,6 @@
 
 SHMIndex::SHMIndex() {
 	_goodRes = "";
-	SHMList<int> list;
-	_checkMap["Ramon"] = list;
 }
 
 SHMIndex::~SHMIndex() {
@@ -49,6 +47,7 @@ void SHMIndex::addCheckFile(const SHMString &checkFile) {
 		(std::istreambuf_iterator<char>()    ) );
 	content = SHMBasic::replaceSubstring(content, "\n", "");
 	_checkFileList.push_back(content);
+
 	int pos = _checkFileList.size()-1;
 	if (_checkMap.find(content) == _checkMap.end()) {
 		SHMList<int> list;
@@ -63,26 +62,15 @@ void SHMIndex::addCheckFile(const SHMString &checkFile) {
 
 SHMString SHMIndex::checkResults() {
 	SHMList<int> alreadyVisited;
-	SHMString res = "";
-	for (int i=0; i<_checkFileList.size(); i++) {
-		int count = 1;
-		if(std::find(alreadyVisited.begin(), alreadyVisited.end(), i) == alreadyVisited.end()) {
-			bool good = (res == goodResult());
-			res += _checkFileList.at(i);
-			for (int j=(i+1); j<_checkFileList.size(); j++) {
-				if (_checkFileList.at(j) == _checkFileList.at(i)) {
-					count++;
-					alreadyVisited.push_back(j);
-				}
-			}
-			if (good) res+= " GOOD ";
-			res += " " + SHMBasic::toString(count) + "\n";
-		}
+	SHMString res = ""+ SHMBasic::toString(_checkFileList.size())+ "\n";
+	for (auto it = _checkMap.begin(); it != _checkMap.end(); it++) {
+		res += it->first + " ";
+		res += SHMBasic::toString((it->second).size()) + "\n";
 	}
 	return res;
 }
 
-SHMString SHMIndex::goodResult() {
+SHMString SHMIndex::goodResultCheck() {
 	if (_goodRes.length() > 0) return _goodRes;
 	for (int i=0; i<_checkFileList.at(0).length(); i++) {
 		_goodRes += "0";
@@ -90,8 +78,41 @@ SHMString SHMIndex::goodResult() {
 	return _goodRes;
 }
 
-void SHMIndex::run() {
 
+
+SHMString SHMIndex::run() {
+	SHMString resultString;
+	for (auto it = _checkMap.begin(); it != _checkMap.end(); it++) {
+		if ((it->first) == goodResultCheck()) continue;
+		resultString += it->first + "\n";
+		SHMList<int> indexList = it->second;
+		for (int i=0; i<indexList.size(); i++) {
+			resultString += compareToGood(indexList.at(i));
+		}
+	}
+
+	return resultString;
 }
 
+SHMString SHMIndex::compareToGood(int a) {
+	SHMString res = "";
+	SHMList<int> goodList = _checkMap[goodResultCheck()];
+	for (int i=0; i<goodList.size(); i++) {
+		res += compare(a, goodList.at(i));
+	}
+	return res+"\n";
+}
 
+SHMString SHMIndex::compare(int a, int b) {
+	SHMTreeNode nodeA = _nodeList[a];
+	SHMTreeNode nodeB = _nodeList[b];
+
+	SHMString res = "";
+	bool equal = (nodeA == nodeB);
+	// res += SHMBasic::toString(equal);
+
+	if (equal) {
+		res += "(" + _fileNameList[a] + " - " + _fileNameList[b] + ")\n";
+	}
+	return res;
+}

@@ -14,7 +14,7 @@ SOURCES2 := $(SRCDIR)/pugixml.cpp $(SRCDIR)/shmtreenode.cpp  $(SRCDIR)/shmindex.
 OBJECTS1 := $(patsubst $(SRCDIR)/%,$(BUILDDIR)/%,$(SOURCES1:.$(SRCEXT)=.o))
 OBJECTS2 := $(patsubst $(SRCDIR)/%,$(BUILDDIR)/%,$(SOURCES2:.$(SRCEXT)=.o))
 
-CFLAGS := -g # -Wall
+CFLAGS := -g -Wno-c++11-extensions # -Wall
 LIB := -lstdc++
 INC := -I include
 
@@ -36,7 +36,7 @@ clean: clean-build clean-ast clean-xml
 
 clean-build:
 	@echo " Cleaning build..."; 
-	@echo " $(RM) $(TARGET)"; $(RM) $(TARGET)
+	@echo " $(RM) $(TARGET) $(OBJECTS1) $(OBJECTS2)"; $(RM) $(TARGET) $(OBJECTS1) $(OBJECTS2)
 
 # Tests
 tester:

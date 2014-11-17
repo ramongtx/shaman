@@ -17,9 +17,13 @@ public:
 
 	SHMString checkResults();
 
-	SHMString goodResult();
+	SHMString goodResultCheck();
 
-	void run();
+	SHMString run();
+
+	SHMString compareToGood(int a);
+
+	SHMString compare(int a, int b);
 
 private:
 	SHMList<SHMTreeNode> _nodeList;

@@ -12,6 +12,7 @@ int main (int argc, char *argv[]) {
 	
 	printf ("%s\n",index.toXMLString().c_str());
 	fprintf(stderr,"%s\n",index.checkResults().c_str());
+	fprintf(stderr,"%s\n",index.run().c_str());
 
 	return 0;
 }
