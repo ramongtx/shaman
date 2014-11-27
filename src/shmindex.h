@@ -4,33 +4,44 @@
 class SHMIndex {
 
 public:
+
 	SHMIndex();
+
 	~SHMIndex();
 
-	void addNode(const SHMString &fileName, const SHMString &xmlString);
+	void addNode(const SHMString &fileName, const SHMString &outputFile);
 
-	void addNode(const SHMString &fileName);
-
-	void addCheckFile(const SHMString &checkFile);
+	void setSeedNode(const SHMString &fileName, const SHMString &outputFile);
 
 	SHMString toXMLString() const;
 
 	SHMString checkResults();
 
-	SHMString goodResultCheck();
+	SHMString goodOutput();
 
 	SHMString run();
 
-	SHMString compareToGood(int a);
+	SHMString printCompareToGood(int a);
 
-	SHMString compare(int a, int b);
+	SHMString printCompare(int a, int b);
+
+	int compare(SHMTreeNode* &root, SHMTreeNode* &rhs, SHMTreeNode* &diff, SHMTreeNode* current = NULL);
+
+protected:
+
+	void addOutputFile(const SHMString &outputFile);
+
+	SHMString getOutputContents(const SHMString &outputFile);
 
 private:
-	SHMList<SHMTreeNode> _nodeList;
-	SHMList<SHMString> _fileNameList;
-	SHMList<SHMString> _checkFileList;
-	SHMString _goodRes;
-	SHMList<int> _badCodes;
-	SHMMap <SHMString, SHMList<int> > _checkMap;
 
+	SHMList<SHMTreeNode*> _nodeList;
+	SHMList<SHMString> _fileNameList;
+	SHMList<SHMString> _outputList;
+
+	SHMMap <SHMString, SHMList<int> > _outputMap;
+
+	SHMTreeNode* _seedNode;
+	SHMString _seedFileName;
+	SHMString _seedOutput;
 };

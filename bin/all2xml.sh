@@ -11,13 +11,15 @@ for file in $(find ${FOLDER} -name "*.c");
 do
 	name=$(basename "$file")
 	dirname=$(dirname "$file")
-	checkFile="$dirname/check__codes__"
+	outputFile="$dirname/check__codes__"
 	compoundName=$(echo $file | tr "/" "-")
-	clang -cc1 -ast-dump $file | sed -n '/'"$name"'/,$p' | $SCRIPT_DIR/ast2xml > $compoundName.xml 2>&1
+	if [ ! -f $compoundName.xml ]; then
+		clang -cc1 -ast-dump $file | sed -n '/'"$name"'/,$p' | $SCRIPT_DIR/ast2xml > $compoundName.xml 2>&1
+	fi
 	## clang -cc1 -ast-dump $file | $SCRIPT_DIR/ast2xml > $compoundName.xml
 	echo "$file > $compoundName.xml"
 	xmls+=" $compoundName.xml"
-	xmls+=" $checkFile"
+	xmls+=" $outputFile"
 done
 
 echo "xml2index $xmls"

@@ -4,7 +4,6 @@
 class SHMTreeNode {
 public:
 	SHMTreeNode();
-	SHMTreeNode(SHMXMLNode& node);
 	SHMTreeNode(const SHMString& xmlString);
 
 	SHMTreeNode copy(const SHMTreeNode &obj);
@@ -21,7 +20,7 @@ public:
 	void setNodeAttributes(SHMString string);
 	void setJoker(bool joker);
 
-	void appendChild(SHMTreeNode& child);
+	void appendChild(SHMTreeNode* &child);
 
 	SHMString lineContents() const;
 
@@ -34,11 +33,8 @@ public:
 	SHMString nodeAttributes() const;
 	bool joker() const;
 
-	void setParent(SHMTreeNode *parent);
-	SHMTreeNode *parent();
-	SHMTreeNode *root();
-
-	SHMList<SHMTreeNode> children() const;
+	SHMList<SHMTreeNode*> children() const;
+	void deleteChildren();
 
 	SHMString toXMLString() const;
 	void toXML(SHMXMLNode &node) const;
@@ -54,11 +50,9 @@ public:
 	inline bool operator>=(const SHMTreeNode& rhs) const {return !operator< (rhs);}
 
 private:
-	SHMList<SHMTreeNode> _children;
+	SHMList<SHMTreeNode*> _children;
 	SHMString _lineContents, _nodeAddress, _nodeType, _nodeFamily, _nodeAttributes;
 	int _lineStart, _lineEnd;
 	bool _joker;
-
-	SHMTreeNode* _parent;
 
 };

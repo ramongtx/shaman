@@ -18,7 +18,7 @@ CFLAGS := -g -Wno-c++11-extensions # -Wall
 LIB := -lstdc++
 INC := -I include
 
-all: $(TARGET)
+all: clean $(TARGET)
 
 $(TARGET1): $(OBJECTS1)
 	@echo " Linking..."

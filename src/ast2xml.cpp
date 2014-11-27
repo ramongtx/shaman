@@ -23,10 +23,12 @@ int main (int argc, char *argv[]) {
 		list = SHMParser::splitNewlines(contents);
 	}
 
-	SHMTreeNode root;
+	SHMTreeNode *root = new SHMTreeNode();
 	SHMParser::generateTree(list,0,root);
 
-	printf ("%s\n",root.toXMLString().c_str());
+	printf ("%s\n",root->toXMLString().c_str());
 
+	root->deleteChildren();
+	delete root;
 	return 0;
 }

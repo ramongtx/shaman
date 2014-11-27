@@ -5,9 +5,8 @@ int main (int argc, char *argv[]) {
 
 	for (int i = 1; i<argc ; i+=2) {
 		SHMString fileAddress = argv[i];
-		SHMString checkFile = argv[i+1];
-		index.addNode(fileAddress);
-		index.addCheckFile(checkFile);
+		SHMString outputFile = argv[i+1];
+		index.addNode(fileAddress,outputFile);
 	}
 	
 	printf ("%s\n",index.toXMLString().c_str());

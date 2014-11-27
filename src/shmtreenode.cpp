@@ -3,22 +3,12 @@
 SHMTreeNode::SHMTreeNode() {
 	_lineEnd = 0;
 	_lineStart = 0;
-	_parent = NULL;
 	_joker = false;
-}
-
-SHMTreeNode::SHMTreeNode(SHMXMLNode& node) {
-	_lineEnd = 0;
-	_lineStart = 0;
-	_joker = false;
-	_parent = NULL;
-	loadXML(node);
 }
 
 SHMTreeNode::SHMTreeNode(const SHMString& xmlString) {
 	_lineEnd = 0;
 	_lineStart = 0;
-	_parent = NULL;
 	_joker = false;
 	loadXML(xmlString);
 }
@@ -27,23 +17,6 @@ SHMTreeNode SHMTreeNode::copy(const SHMTreeNode &obj) {
 	SHMString str = obj.toXMLString();
 	SHMTreeNode treeNode(str);
 	return treeNode;
-}
-
-
-void SHMTreeNode::setParent(SHMTreeNode *parent) {
-	_parent = parent;
-}
-
-SHMTreeNode * SHMTreeNode::parent() {
-	return _parent;
-}
-
-SHMTreeNode *SHMTreeNode::root() {
-	SHMTreeNode *root = this;
-	while (root->parent()) {
-		root = root->parent();
-	}
-	return root;
 }
 
 void SHMTreeNode::setLineContents(SHMString string) {
@@ -115,12 +88,18 @@ SHMString SHMTreeNode::nodeAttributes() const {
 	return _nodeAttributes;
 }
 
-void SHMTreeNode::appendChild(SHMTreeNode& child) {
-	child.setParent(this);
+void SHMTreeNode::appendChild(SHMTreeNode* &child) {
 	_children.push_back(child);
 }
 
-SHMList<SHMTreeNode> SHMTreeNode::children() const {
+void SHMTreeNode::deleteChildren() {
+	for(SHMList<SHMTreeNode*>::iterator it = _children.begin(); it != _children.end(); ++it) {
+			(*it)->deleteChildren();
+			delete (*it);
+	}
+}
+
+SHMList<SHMTreeNode*> SHMTreeNode::children() const {
 	return _children;
 }
 
@@ -149,9 +128,9 @@ void SHMTreeNode::toXML(SHMXMLNode &node) const {
 		node.append_attribute("nodeFamily") = _nodeFamily.c_str();
 		node.append_attribute("nodeAttributes") = _nodeAttributes.c_str();
 
-		for(SHMList<SHMTreeNode>::const_iterator it = _children.begin(); it != _children.end(); ++it) {
+		for(SHMList<SHMTreeNode*>::const_iterator it = _children.begin(); it != _children.end(); ++it) {
 			SHMXMLNode newChild = node.append_child();
-			(*it).toXML(newChild);
+			(*it)->toXML(newChild);
 		}
 	}
 }
@@ -185,8 +164,8 @@ void SHMTreeNode::loadXML(const SHMXMLNode &node) {
 
 	if (!joker()) {
 		for (SHMXMLNode child = node.first_child(); child; child = child.next_sibling()) {
-			SHMTreeNode childNode;
-			childNode.loadXML(child);
+			SHMTreeNode *childNode = new SHMTreeNode();
+			childNode->loadXML(child);
 			appendChild(childNode);
 		}
 	}
@@ -195,13 +174,13 @@ void SHMTreeNode::loadXML(const SHMXMLNode &node) {
 bool SHMTreeNode::operator==(const SHMTreeNode& rhs) const {
 	if (joker() || rhs.joker()) return true;
 
-	if (rhs.nodeFamily() != nodeFamily()) return false;
-	if (rhs.nodeType() != nodeType()) return false;
-	if (rhs.nodeAttributes() != nodeAttributes()) return false;
+	// if (rhs.nodeFamily() != nodeFamily()) return false;
+	// if (rhs.nodeType() != nodeType()) return false;
+	// if (rhs.nodeAttributes() != nodeAttributes()) return false;
 
 	if (rhs.children().size() != children().size()) return false;
 	for(int i = 0; i<children().size(); i++){
-		if (rhs.children().at(i) != children().at(i)) return false;
+		if ((*rhs.children().at(i)) != (*children().at(i))) return false;
 	}
 	return true;
 }

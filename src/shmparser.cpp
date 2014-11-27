@@ -30,15 +30,16 @@ int SHMParser::indexFirstAlnum(SHMString line) {
 	return -1;
 }
 
-int SHMParser::generateTree(SHMList<SHMString> list, int pos, SHMTreeNode& root, bool first) {
+int SHMParser::generateTree(SHMList<SHMString> list, int pos, SHMTreeNode* &root, bool first) {
 	if (pos > list.size()) return -1;
+	if (!root) return -1;
 	int depth = 0;
 	int i = 0;
 	if (first) {
-		root.setNodeType("fileRoot");
+		root->setNodeType("fileRoot");
 	} else {
 		depth = indexFirstAlnum(list[pos]);
-		root.setLineContents(list[pos].substr(depth));
+		root->setLineContents(list[pos].substr(depth));
 		setNodeFamily(root);
 		setNodeType(root);
 		setNodeLineNumbers(root);
@@ -48,11 +49,11 @@ int SHMParser::generateTree(SHMList<SHMString> list, int pos, SHMTreeNode& root,
 	while (i<list.size()) {
 		int nextDepth = indexFirstAlnum(list[i]);
 		if (nextDepth > depth) {
-			SHMTreeNode nextSon;
-			nextSon.setLineStart(root.lineStart());
-			nextSon.setLineEnd(root.lineEnd());
+			SHMTreeNode *nextSon = new SHMTreeNode();
+			nextSon->setLineStart(root->lineStart());
+			nextSon->setLineEnd(root->lineEnd());
 			i = generateTree(list, i,nextSon,false);
-			root.appendChild(nextSon);
+			root->appendChild(nextSon);
 		} else {
 			break;
 		}
@@ -60,38 +61,38 @@ int SHMParser::generateTree(SHMList<SHMString> list, int pos, SHMTreeNode& root,
 	return i;
 }
 
-void SHMParser::setNodeFamily(SHMTreeNode &node) {
-	SHMStringStream stream (node.lineContents());
+void SHMParser::setNodeFamily(SHMTreeNode* &node) {
+	SHMStringStream stream (node->lineContents());
 	SHMString word;
 	stream >> word;
-	node.setNodeFamily(word);
+	node->setNodeFamily(word);
 	stream >> word;
-	node.setNodeAddress(word);
+	node->setNodeAddress(word);
 }
 
-void SHMParser::setNodeType(SHMTreeNode &node) {
+void SHMParser::setNodeType(SHMTreeNode* &node) {
 	static SHMRegex reg1("\'([^\']+)\'");
-	SHMString str = node.lineContents();
+	SHMString str = node->lineContents();
 
 	SHMRegexIterator it(str.begin(), str.end(), reg1);
 	SHMRegexIterator it_end;
 
 
-	node.setNodeType("none");
+	node->setNodeType("none");
 
 	if (it != it_end) {
 		SHMRegexMatch match = *it;
 		if (match.size() > 1) {
 			SHMRegexSubMatch sub_match = match[1];
 			SHMString str = sub_match.str();
-			node.setNodeType(str);
+			node->setNodeType(str);
 		}
 	}
 }
 
-void SHMParser::setNodeLineNumbers(SHMTreeNode &node) {
+void SHMParser::setNodeLineNumbers(SHMTreeNode* &node) {
 	static SHMRegex reg1("<[^>]*>");
-	SHMString str = node.lineContents();
+	SHMString str = node->lineContents();
 
 	SHMRegexIterator it(str.begin(), str.end(), reg1);
 	SHMRegexIterator it_end;
@@ -117,9 +118,9 @@ void SHMParser::setNodeLineNumbers(SHMTreeNode &node) {
 	}
 
 	if (lineNumbers.size() > 0) {
-		node.setLineSingle(lineNumbers.at(0));
+		node->setLineSingle(lineNumbers.at(0));
 		if (lineNumbers.size() > 1) {
-			node.setLineEnd(lineNumbers.at(1));
+			node->setLineEnd(lineNumbers.at(1));
 		}
 	}
 
@@ -127,9 +128,9 @@ void SHMParser::setNodeLineNumbers(SHMTreeNode &node) {
 
 }
 
-void SHMParser::setNodeAttributes(SHMTreeNode& node) {
+void SHMParser::setNodeAttributes(SHMTreeNode*& node) {
 	static SHMRegex reg1("[0-9]+> (.*)");
-	SHMString str = node.lineContents();
+	SHMString str = node->lineContents();
 
 	SHMRegexIterator it(str.begin(), str.end(), reg1);
 	SHMRegexIterator it_end;
@@ -144,9 +145,9 @@ void SHMParser::setNodeAttributes(SHMTreeNode& node) {
 		return;
 	}
 
-	normalizeAttributes(str, node.nodeFamily());
+	normalizeAttributes(str, node->nodeFamily());
 
-	node.setNodeAttributes(str);
+	node->setNodeAttributes(str);
 }
 
 void SHMParser::normalizeAttributes(SHMString& rawAttr, const SHMString &nodeFamily) {
@@ -156,13 +157,13 @@ void SHMParser::normalizeAttributes(SHMString& rawAttr, const SHMString &nodeFam
 	} else if (nodeFamily == "VarDecl") {
 		int i = 0;
 		while (isblank(rawAttr[i])) i++;
-		while (!isblank(rawAttr[i])) i++;
+		while (!isblank(rawAttr[i])) i++; // Delete one word and blanks
 		while (isblank(rawAttr[i])) i++;
 		rawAttr = rawAttr.substr(i);
 	} else if (nodeFamily == "FunctionDecl") {
 		int i = 0;
 		while (isblank(rawAttr[i])) i++;
-		while (!isblank(rawAttr[i])) i++;
+		while (!isblank(rawAttr[i])) i++; // Delete one word and blanks
 		while (isblank(rawAttr[i])) i++;
 		rawAttr = rawAttr.substr(i);
 	}
