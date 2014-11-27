@@ -21,11 +21,19 @@ public:
 
 	SHMString run();
 
-	SHMString printCompareToGood(int a);
+	void cleanNodes();
 
-	SHMString printCompare(int a, int b);
+	void cleanNodeForFamily(SHMTreeNode* &root, const SHMString &family);
+
+	int compareToGood(int a, int &bestMatch, SHMTreeNode* &diff);
+
+	int compare(int a, int b, SHMTreeNode* &diff);
 
 	int compare(SHMTreeNode* &root, SHMTreeNode* &rhs, SHMTreeNode* &diff, SHMTreeNode* current = NULL);
+
+	SHMTreeNode * findContext(SHMTreeNode *&root, SHMTreeNode *&context);
+
+	SHMString printCompare(int index, int bestMatch, int comp, SHMTreeNode* diff);
 
 protected:
 

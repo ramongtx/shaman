@@ -92,6 +92,14 @@ void SHMTreeNode::appendChild(SHMTreeNode* &child) {
 	_children.push_back(child);
 }
 
+void SHMTreeNode::eraseChild(int i) {
+	SHMTreeNode* node = _children.at(i);
+	node->deleteChildren();
+	delete node;
+	_children.erase(_children.begin() + i);
+}
+
+
 void SHMTreeNode::deleteChildren() {
 	for(SHMList<SHMTreeNode*>::iterator it = _children.begin(); it != _children.end(); ++it) {
 			(*it)->deleteChildren();

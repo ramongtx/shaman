@@ -21,7 +21,9 @@ void SHMIndex::addNode(const SHMString &fileName, const SHMString &outputFile) {
 	SHMString content( (std::istreambuf_iterator<char>(ifs) ),
 		(std::istreambuf_iterator<char>()    ) );
 	_fileNameList.push_back(fileName);
-	_nodeList.push_back(new SHMTreeNode(content));
+	SHMTreeNode *node = new SHMTreeNode(content);
+	cleanNodeForFamily(node, "VarDecl");
+	_nodeList.push_back(node);
 	addOutputFile(outputFile);
 }
 
@@ -98,42 +100,76 @@ SHMString SHMIndex::goodOutput() {
 SHMString SHMIndex::run() {
 	SHMString resultString;
 	for (auto it = _outputMap.begin(); it != _outputMap.end(); it++) {
-		// if ((it->first) == goodOutput()) continue;
-		resultString += it->first + "\n";
+		if ((it->first) == goodOutput()) continue;
+
 		SHMList<int> indexList = it->second;
 		for (int i=0; i<indexList.size(); i++) {
-			resultString += printCompareToGood(indexList.at(i));
+			SHMTreeNode *diff;
+			int bestMatch;
+			int comp = compareToGood(indexList.at(i), bestMatch, diff);
+			bool equal = (comp > 3);
+			if (equal) {
+				resultString += printCompare(indexList.at(i), bestMatch, comp, diff) + "\n";
+			}
 		}
-		resultString += "\n";
 	}
 
 	return resultString;
 }
 
-SHMString SHMIndex::printCompareToGood(int a) {
-	SHMString res = "";
+SHMString SHMIndex::printCompare(int index, int bestMatch, int comp, SHMTreeNode* diff) {
+	SHMString badFile = _fileNameList[index];
+	SHMTreeNode *badNode = _nodeList[index];
+	SHMString badOutput = _outputList[index];
+	SHMString goodFile = _fileNameList[bestMatch];
+	SHMTreeNode *goodNode = _nodeList[bestMatch];
+
+	diff->setJoker(true);
+	SHMTreeNode* goodDiff = findContext(goodNode, badNode);
+	diff->setJoker(false);
+
+	SHMString badLines = "?";
+	if (diff) badLines = SHMBasic::toString(diff->lineStart()) + "~" + SHMBasic::toString(diff->lineEnd());
+
+	SHMString goodLines = "?";
+	if (goodDiff) goodLines = SHMBasic::toString(goodDiff->lineStart()) + "~" + SHMBasic::toString(goodDiff->lineEnd());
+
+	SHMString badFamily = "?";
+	if (diff) badFamily = diff->nodeFamily();
+
+	SHMString goodFamily = "?";
+	if (goodDiff) goodFamily = goodDiff->nodeFamily();
+
+	SHMString resultString = SHMBasic::toString(comp) + " = " + badFile + " > " + goodFile;
+	resultString += "\t{" + badOutput + "}"; 
+	resultString += "\t(" + badLines + " > " + goodLines + ")";
+	resultString += "\t[" + badFamily + " > " + goodFamily + "]\n";
+
+	return resultString;
+}
+
+int SHMIndex::compareToGood(int a, int &bestMatch, SHMTreeNode* &diff) {
+	int res = 0;
+	bestMatch = a;
 	SHMList<int> goodList = _outputMap[goodOutput()];
 	for (int i=0; i<goodList.size(); i++) {
-		res += printCompare(a, goodList.at(i));
+		SHMTreeNode *childDiff;
+		int childRes = compare(a, goodList.at(i), childDiff);
+		if (childRes > res) {
+			res = childRes;
+			diff = childDiff;
+			bestMatch = goodList.at(i);
+		}
 	}
 	return res;
 }
 
-SHMString SHMIndex::printCompare(int a, int b) {
+
+int SHMIndex::compare(int a, int b, SHMTreeNode* &diff) {
 	SHMTreeNode* nodeA = _nodeList[a];
 	SHMTreeNode* nodeB = _nodeList[b];
-	SHMTreeNode* diffNode = NULL;
-
-	SHMString res = "";
-	if (a == b) return res;
-	int comp = compare(nodeA, nodeB, diffNode);
-	// res += SHMBasic::toString(equal);
-	bool equal = (comp > 1);
-	if (equal) {
-		res += "(" + _fileNameList[a] + " - " + _fileNameList[b] + ") " + SHMBasic::toString(comp) + "\n";
-		res += "\t"+ SHMBasic::toString(diffNode->lineStart()) + "~" + SHMBasic::toString(diffNode->lineEnd()) + "\n";
-	}
-	return res;
+	int comp = compare(nodeA, nodeB, diff);
+	return comp;
 }
 
 int SHMIndex::compare(SHMTreeNode* &root, SHMTreeNode* &rhs, SHMTreeNode* &diff, SHMTreeNode* current) {
@@ -160,4 +196,35 @@ int SHMIndex::compare(SHMTreeNode* &root, SHMTreeNode* &rhs, SHMTreeNode* &diff,
 	}
 	return 0;
 
+}
+
+SHMTreeNode * SHMIndex::findContext(SHMTreeNode *&root, SHMTreeNode *&context) {
+	if (context->joker()) return root;
+	if (root->children().size() != context->children().size()) return NULL;
+
+	SHMTreeNode *res = NULL;
+	for(int i = 0; i<root->children().size(); i++){
+		res = findContext(root->children().at(i), context->children().at(i));
+		if (res) break;
+	}
+	return res;
+}
+
+void SHMIndex::cleanNodes() {
+	for (int i=0; i<_nodeList.size(); i++) {
+		cleanNodeForFamily(_nodeList.at(i),"VarDecl");
+	}
+}
+
+void SHMIndex::cleanNodeForFamily(SHMTreeNode* &root, const SHMString &family) {
+	int i=0;
+	while (i<root->children().size()) {
+		SHMTreeNode* child = root->children().at(i);
+		if (child->nodeFamily() == family) {
+			root->eraseChild(i);
+		} else {
+			cleanNodeForFamily(child,family);
+			i++;
+		}
+	}
 }

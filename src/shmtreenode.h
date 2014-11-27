@@ -21,6 +21,7 @@ public:
 	void setJoker(bool joker);
 
 	void appendChild(SHMTreeNode* &child);
+	void eraseChild(int i);
 
 	SHMString lineContents() const;
 
