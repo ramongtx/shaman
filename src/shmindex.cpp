@@ -5,10 +5,10 @@ SHMIndex::SHMIndex() {
 }
 
 SHMIndex::~SHMIndex() {
-	if (_seedNode) {
-		_seedNode->deleteChildren();
-		delete _seedNode;
-	}
+	// if (_seedNode) {
+	// 	_seedNode->deleteChildren();
+	// 	delete _seedNode;
+	// }
 	for (int i=0; i<_nodeList.size(); i++) {
 		_nodeList.at(i)->deleteChildren();
 		delete _nodeList.at(i);
@@ -25,6 +25,10 @@ void SHMIndex::addNode(const SHMString &fileName, const SHMString &outputFile) {
 	cleanNodeForFamily(node, "VarDecl");
 	_nodeList.push_back(node);
 	addOutputFile(outputFile);
+
+	if (!_seedNode && (_outputList.at(_outputList.size()-1))==goodOutput()) {
+		_seedNode = node;
+	}
 }
 
 void SHMIndex::setSeedNode(const SHMString &fileName, const SHMString &outputFile) {
@@ -97,8 +101,38 @@ SHMString SHMIndex::goodOutput() {
 	return _seedOutput;
 }
 
+SHMTreeNode* SHMIndex::translate(SHMTreeNode* node) {
+	for (auto it = _translateIndex.begin(); it != _translateIndex.end(); it++) {
+		if (*(it->similar) == (*node)) return (it->seed);
+	}
+	return node;
+}
+
+bool SHMIndex::isEqualTranslated  (SHMTreeNode *a, SHMTreeNode* b) {
+	return (isEqual(translate(a),translate(b)));
+}
+
+bool SHMIndex::isEqual (SHMTreeNode* a, SHMTreeNode* b) {
+	if (a->joker() || b->joker()) return true;
+
+	if (a->nodeFamily() != b->nodeFamily()) return false;
+	// if (rhs.nodeType() != nodeType()) return false;
+	// if (rhs.nodeAttributes() != nodeAttributes()) return false;
+
+	if (a->children().size() != b->children().size()) return false;
+	for(int i = 0; i<a->children().size(); i++){
+		bool eqTrans = (isEqualTranslated(a->children().at(i),b->children().at(i)));
+		bool eqNotTrans = (isEqual(a->children().at(i),b->children().at(i)));
+		if (!(eqTrans || eqNotTrans)) return false;
+	}
+	return true;
+}
+
+
 SHMString SHMIndex::run() {
 	SHMString resultString;
+	// generateTranslations();
+	resultString+= "[[["+SHMBasic::toString(_translateIndex.size())+"]]]\n";
 	for (auto it = _outputMap.begin(); it != _outputMap.end(); it++) {
 		if ((it->first) == goodOutput()) continue;
 
@@ -143,7 +177,7 @@ SHMString SHMIndex::printCompare(int index, int bestMatch, int comp, SHMTreeNode
 	SHMString resultString = SHMBasic::toString(comp) + " = " + badFile + " > " + goodFile;
 	resultString += "\t{" + badOutput + "}"; 
 	resultString += "\t(" + badLines + " > " + goodLines + ")";
-	resultString += "\t[" + badFamily + " > " + goodFamily + "]\n";
+	resultString += "\t[" + badFamily + " > " + goodFamily + "]";
 
 	return resultString;
 }
@@ -188,6 +222,7 @@ int SHMIndex::compare(SHMTreeNode* &root, SHMTreeNode* &rhs, SHMTreeNode* &diff,
 	else {
 		current->setJoker(true);
 		bool equal = ((*root) == (*rhs));
+		// bool equal = isEqualTranslated(root, rhs);
 		current->setJoker(false);
 		if (equal) {
 			diff = current;
@@ -197,6 +232,35 @@ int SHMIndex::compare(SHMTreeNode* &root, SHMTreeNode* &rhs, SHMTreeNode* &diff,
 	return 0;
 
 }
+
+void SHMIndex::generateTranslations() {
+	SHMList<int> goodList = _outputMap[goodOutput()];
+	for (int i=0; i<goodList.size(); i++) {
+		SHMTreeNode* other = _nodeList.at(goodList.at(i));
+		if (_seedNode == other) continue;
+		generateTranslations(_seedNode, other);
+	}
+}
+
+void SHMIndex::generateTranslations(SHMTreeNode* seed, SHMTreeNode* other) {
+	SHMTreeNode *res = NULL;
+	for(int i = 0; i<seed->children().size(); i++){
+		SHMTreeNode *seedChild = seed->children().at(i);
+
+		generateTranslations(seedChild,other);
+
+		seedChild->setJoker(true);
+		if ((*_seedNode) == (*other)) {
+			res = findContext(other, _seedNode);
+			SHMTreePair pair;
+			pair.seed = seedChild;
+			pair.similar = res;
+			_translateIndex.push_back(pair);
+		}
+		seedChild->setJoker(false);
+	}
+}
+
 
 SHMTreeNode * SHMIndex::findContext(SHMTreeNode *&root, SHMTreeNode *&context) {
 	if (context->joker()) return root;

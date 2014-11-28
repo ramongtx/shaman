@@ -182,7 +182,7 @@ void SHMTreeNode::loadXML(const SHMXMLNode &node) {
 bool SHMTreeNode::operator==(const SHMTreeNode& rhs) const {
 	if (joker() || rhs.joker()) return true;
 
-	// if (rhs.nodeFamily() != nodeFamily()) return false;
+	if (rhs.nodeFamily() != nodeFamily()) return false;
 	// if (rhs.nodeType() != nodeType()) return false;
 	// if (rhs.nodeAttributes() != nodeAttributes()) return false;
 
