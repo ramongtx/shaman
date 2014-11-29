@@ -3,13 +3,13 @@ CC := g++ # This is the main compiler
 SRCDIR := src
 BUILDDIR := bin
 TARGET1 := bin/ast2xml
-TARGET2 := bin/xml2index
+TARGET2 := bin/shaman
 TARGET := $(TARGET1) $(TARGET2)
-SCRIPT := bin/all2xml.sh
+SCRIPT := bin/shamanAll.sh
  
 SRCEXT := cpp
 SOURCES1 := $(SRCDIR)/pugixml.cpp $(SRCDIR)/shmtreenode.cpp  $(SRCDIR)/shmparser.cpp $(SRCDIR)/ast2xml.cpp
-SOURCES2 := $(SRCDIR)/pugixml.cpp $(SRCDIR)/shmtreenode.cpp  $(SRCDIR)/shmindex.cpp $(SRCDIR)/xml2index.cpp
+SOURCES2 := $(SRCDIR)/pugixml.cpp $(SRCDIR)/shmtreenode.cpp  $(SRCDIR)/shmindex.cpp $(SRCDIR)/shaman.cpp
 
 OBJECTS1 := $(patsubst $(SRCDIR)/%,$(BUILDDIR)/%,$(SOURCES1:.$(SRCEXT)=.o))
 OBJECTS2 := $(patsubst $(SRCDIR)/%,$(BUILDDIR)/%,$(SOURCES2:.$(SRCEXT)=.o))

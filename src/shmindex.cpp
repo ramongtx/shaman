@@ -116,14 +116,13 @@ bool SHMIndex::isEqual (SHMTreeNode* a, SHMTreeNode* b) {
 	if (a->joker() || b->joker()) return true;
 
 	if (a->nodeFamily() != b->nodeFamily()) return false;
-	// if (rhs.nodeType() != nodeType()) return false;
-	// if (rhs.nodeAttributes() != nodeAttributes()) return false;
+	// if (a->nodeType() != b->nodeType()) return false;
+	// if (a->nodeAttributes() != b->nodeAttributes()) return false;
 
 	if (a->children().size() != b->children().size()) return false;
 	for(int i = 0; i<a->children().size(); i++){
-		bool eqTrans = (isEqualTranslated(a->children().at(i),b->children().at(i)));
-		bool eqNotTrans = (isEqual(a->children().at(i),b->children().at(i)));
-		if (!(eqTrans || eqNotTrans)) return false;
+		if (!isEqualTranslated(a->children().at(i),b->children().at(i))) return false;
+		// if (!isEqual(a->children().at(i),b->children().at(i))) return false;
 	}
 	return true;
 }
@@ -221,8 +220,8 @@ int SHMIndex::compare(SHMTreeNode* &root, SHMTreeNode* &rhs, SHMTreeNode* &diff,
 	if (res) return res+1;
 	else {
 		current->setJoker(true);
-		bool equal = ((*root) == (*rhs));
-		// bool equal = isEqualTranslated(root, rhs);
+		// bool equal = ((*root) == (*rhs));
+		bool equal = isEqualTranslated(root, rhs);
 		current->setJoker(false);
 		if (equal) {
 			diff = current;
@@ -236,6 +235,9 @@ int SHMIndex::compare(SHMTreeNode* &root, SHMTreeNode* &rhs, SHMTreeNode* &diff,
 void SHMIndex::generateTranslations() {
 	SHMList<int> goodList = _outputMap[goodOutput()];
 	for (int i=0; i<goodList.size(); i++) {
+		if (_nodeList.size() <= goodList.at(i)) {
+			fprintf(stderr,"PROBLEM\n");
+		}
 		SHMTreeNode* other = _nodeList.at(goodList.at(i));
 		if (_seedNode == other) continue;
 		generateTranslations(_seedNode, other);

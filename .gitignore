@@ -31,4 +31,4 @@
 input/*.ast
 input/*.xml
 bin/ast2xml
-bin/xml2index
+bin/shaman
